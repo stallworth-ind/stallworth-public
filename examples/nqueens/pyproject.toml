@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stallworth-nqueens"
+version = "0.1.0"
+description = "A standalone N-Queens example for Stallworth Workbench"
+readme = "README.md"
+requires-python = ">=3.12"
+license = {file = "LICENSE"}
+dependencies = []
+
+[project.optional-dependencies]
+test = ["pytest>=8", "pytest-cov>=7"]
+
+[project.scripts]
+"stallworth-nqueens" = "stallworth_nqueens.main:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+include-package-data = false
+license-files = ["LICENSE", "PROVENANCE.md"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["stallworth_nqueens", "stallworth_nqueens.*"]
+namespaces = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v"
+
+[tool.coverage.run]
+source = ["stallworth_nqueens"]

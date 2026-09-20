@@ -1,0 +1,1527 @@
+Module inventory for Stallworth N-Queens
+========================================
+
+- stallworth_nqueens
+  file: ./src/stallworth_nqueens/__init__.py
+  package: (root)
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.abstract
+  file: ./src/stallworth_nqueens/abstract/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.abstract.bitmask
+  file: ./src/stallworth_nqueens/abstract/bitmask.py
+  package: stallworth_nqueens.abstract
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 3
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 3
+  async_function_count: 0
+  functions:
+   - full_mask
+   - available_positions
+   - next_state
+
+- stallworth_nqueens.abstract.constraints
+  file: ./src/stallworth_nqueens/abstract/constraints.py
+  package: stallworth_nqueens.abstract
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 5
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 5
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 5
+  async_function_count: 0
+  functions:
+   - major_diagonal
+   - minor_diagonal
+   - is_safe
+   - place
+   - valid_columns
+
+- stallworth_nqueens.benchmarking
+  file: ./src/stallworth_nqueens/benchmarking/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.benchmarking.adapter
+  file: ./src/stallworth_nqueens/benchmarking/adapter.py
+  package: stallworth_nqueens.benchmarking
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 5
+  top_level_assignment_count: 0
+  import_statement_count: 3
+  definition_count: 2
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 3
+  imported_symbol_count: 5
+  internal_import_count: 3
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.common.benchmarking module_asname=none names=BenchmarkResult level=0
+    - module=stallworth_nqueens.metrics module_asname=none names=NQueensSolverExecution, NQueensSolverFailure, execute_with_metrics level=0
+    - module=stallworth_nqueens.solvers.registry module_asname=none names=SOLVERS level=0
+  re_exported_imports:
+    - none
+  class_count: 1
+  classes:
+   - NQueensAdapter
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - find_sample_solution
+
+- stallworth_nqueens.cli
+  file: ./src/stallworth_nqueens/cli/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.cli.args
+  file: ./src/stallworth_nqueens/cli/args.py
+  package: stallworth_nqueens.cli
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 6
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 4
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 2
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=argparse module_asname=none names=none level=0
+    - module=stallworth_nqueens.profiles.registry module_asname=none names=get_profile level=0
+  re_exported_imports:
+    - none
+  class_count: 1
+  classes:
+   - NQueensArgumentParser
+  function_count: 3
+  async_function_count: 0
+  functions:
+   - build_parser
+   - build_args
+   - format_usage
+
+- stallworth_nqueens.cli.n_queens_cli
+  file: ./src/stallworth_nqueens/cli/n_queens_cli.py
+  package: stallworth_nqueens.cli
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 10
+  top_level_assignment_count: 1
+  import_statement_count: 8
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 8
+  imported_symbol_count: 15
+  internal_import_count: 6
+  external_import_count: 0
+  stdlib_import_count: 2
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=logging module_asname=none names=none level=0
+    - module=stallworth_nqueens.common.logging.logger module_asname=none names=format_unexpected_error, setup_logging level=0
+    - module=difflib module_asname=none names=get_close_matches level=0
+    - module=stallworth_nqueens.cli.args module_asname=none names=build_args, format_usage level=0
+    - module=stallworth_nqueens.execution.engine module_asname=none names=execute level=0
+    - module=stallworth_nqueens.profiles.registry module_asname=none names=get_profile, get_profile_names level=0
+    - module=stallworth_nqueens.reporting.display module_asname=none names=display_usage, display_execution_result, display_run_header, display_unknown_solver, display_unexpected_error level=0
+    - module=stallworth_nqueens.solvers.registry module_asname=none names=get_solver_names level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - run_n_queens_cli
+
+- stallworth_nqueens.common
+  file: ./src/stallworth_nqueens/common/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.common.benchmarking
+  file: ./src/stallworth_nqueens/common/benchmarking/__init__.py
+  package: stallworth_nqueens.common
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 0
+  has_all_exports: True
+  has_dynamic_all_exports: False
+  has_re_exports: True
+  has_star_imports: False
+  is_api_surface_candidate: True
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 5
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 5
+  all_exports: BenchmarkResult, CommonExecutionMetrics, annotate_speedups, run_benchmark, run_benchmarks
+  re_exported_import_count: 2
+  imports:
+    - module=stallworth_nqueens.common.benchmarking.models module_asname=none names=BenchmarkResult, CommonExecutionMetrics, annotate_speedups level=0
+    - module=stallworth_nqueens.common.benchmarking.runner module_asname=none names=run_benchmark, run_benchmarks level=0
+  re_exported_imports:
+    - module=stallworth_nqueens.common.benchmarking.models module_asname=none names=BenchmarkResult, CommonExecutionMetrics, annotate_speedups level=0
+    - module=stallworth_nqueens.common.benchmarking.runner module_asname=none names=run_benchmark, run_benchmarks level=0
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.common.benchmarking.adapters
+  file: ./src/stallworth_nqueens/common/benchmarking/adapters.py
+  package: stallworth_nqueens.common.benchmarking
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 3
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=typing module_asname=none names=Any, Protocol level=0
+    - module=stallworth_nqueens.common.benchmarking.models module_asname=none names=BenchmarkResult level=0
+  re_exported_imports:
+    - none
+  class_count: 1
+  classes:
+   - DomainBenchmarkAdapter
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.common.benchmarking.models
+  file: ./src/stallworth_nqueens/common/benchmarking/models.py
+  package: stallworth_nqueens.common.benchmarking
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 6
+  top_level_assignment_count: 1
+  import_statement_count: 2
+  definition_count: 3
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 4
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 2
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=dataclasses module_asname=none names=dataclass, field level=0
+    - module=typing module_asname=none names=Any, Literal level=0
+  re_exported_imports:
+    - none
+  class_count: 2
+  classes:
+   - BenchmarkResult
+   - CommonExecutionMetrics
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - annotate_speedups
+
+- stallworth_nqueens.common.benchmarking.runner
+  file: ./src/stallworth_nqueens/common/benchmarking/runner.py
+  package: stallworth_nqueens.common.benchmarking
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 6
+  top_level_assignment_count: 0
+  import_statement_count: 4
+  definition_count: 2
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 4
+  imported_symbol_count: 5
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 2
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=time module_asname=none names=none level=0
+    - module=typing module_asname=none names=Any level=0
+    - module=stallworth_nqueens.common.benchmarking.adapters module_asname=none names=DomainBenchmarkAdapter level=0
+    - module=stallworth_nqueens.common.benchmarking.models module_asname=none names=BenchmarkResult, annotate_speedups level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 2
+  async_function_count: 0
+  functions:
+   - run_benchmark
+   - run_benchmarks
+
+- stallworth_nqueens.common.logging
+  file: ./src/stallworth_nqueens/common/logging/__init__.py
+  package: stallworth_nqueens.common
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.common.logging.logger
+  file: ./src/stallworth_nqueens/common/logging/logger.py
+  package: stallworth_nqueens.common.logging
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 1
+  definition_count: 2
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 1
+  imported_symbol_count: 1
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=logging module_asname=none names=none level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 2
+  async_function_count: 0
+  functions:
+   - setup_logging
+   - format_unexpected_error
+
+- stallworth_nqueens.execution
+  file: ./src/stallworth_nqueens/execution/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.execution.engine
+  file: ./src/stallworth_nqueens/execution/engine.py
+  package: stallworth_nqueens.execution
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 3
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.execution.runner module_asname=none names=execute_all, execute_solver level=0
+    - module=stallworth_nqueens.solvers.registry module_asname=none names=SOLVERS level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - execute
+
+- stallworth_nqueens.execution.runner
+  file: ./src/stallworth_nqueens/execution/runner.py
+  package: stallworth_nqueens.execution
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 11
+  top_level_assignment_count: 1
+  import_statement_count: 6
+  definition_count: 4
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 6
+  imported_symbol_count: 8
+  internal_import_count: 4
+  external_import_count: 0
+  stdlib_import_count: 2
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=threading module_asname=none names=none level=0
+    - module=time module_asname=none names=none level=0
+    - module=stallworth_nqueens.common.benchmarking module_asname=none names=run_benchmark, run_benchmarks level=0
+    - module=stallworth_nqueens.benchmarking.adapter module_asname=none names=NQueensAdapter level=0
+    - module=stallworth_nqueens.metrics module_asname=none names=execute_with_metrics level=0
+    - module=stallworth_nqueens.solvers.registry module_asname=none names=DEFAULT_BASELINE, SOLVERS level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 4
+  async_function_count: 0
+  functions:
+   - collect_single
+   - collect_all
+   - execute_solver
+   - execute_all
+
+- stallworth_nqueens.main
+  file: ./src/stallworth_nqueens/main.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: True
+  has_module_docstring: False
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 1
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: True
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 1
+  imported_symbol_count: 1
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.cli.n_queens_cli module_asname=none names=run_n_queens_cli level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - main
+
+- stallworth_nqueens.metrics
+  file: ./src/stallworth_nqueens/metrics.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 17
+  top_level_assignment_count: 5
+  import_statement_count: 4
+  definition_count: 8
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 1
+  has_unused_imports: True
+  imports_count: 4
+  imported_symbol_count: 5
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 4
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=__future__ module_asname=none names=annotations level=0
+    - module=dataclasses module_asname=none names=dataclass level=0
+    - module=inspect module_asname=none names=Parameter, signature level=0
+    - module=typing module_asname=none names=Callable level=0
+  re_exported_imports:
+    - none
+  class_count: 7
+  classes:
+   - NQueensSearchShapeCounters
+   - NQueensConstraintCounters
+   - NQueensBacktrackingCounters
+   - NQueensBitmaskCounters
+   - NQueensSearchMetrics
+   - NQueensSolverExecution
+   - NQueensSolverFailure
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - execute_with_metrics
+
+- stallworth_nqueens.models
+  file: ./src/stallworth_nqueens/models/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.models.board
+  file: ./src/stallworth_nqueens/models/board.py
+  package: stallworth_nqueens.models
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 3
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=dataclasses module_asname=none names=dataclass level=0
+    - module=stallworth_nqueens.abstract.constraints module_asname=none names=major_diagonal, minor_diagonal level=0
+  re_exported_imports:
+    - none
+  class_count: 1
+  classes:
+   - NQueensBoard
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.profiles
+  file: ./src/stallworth_nqueens/profiles/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 2
+  top_level_assignment_count: 0
+  import_statement_count: 1
+  definition_count: 0
+  has_all_exports: True
+  has_dynamic_all_exports: False
+  has_re_exports: True
+  has_star_imports: False
+  is_api_surface_candidate: True
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 1
+  imported_symbol_count: 3
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 3
+  all_exports: NQueensProfile, get_profile, get_profile_names
+  re_exported_import_count: 1
+  imports:
+    - module=stallworth_nqueens.profiles.registry module_asname=none names=NQueensProfile, get_profile, get_profile_names level=0
+  re_exported_imports:
+    - module=stallworth_nqueens.profiles.registry module_asname=none names=NQueensProfile, get_profile, get_profile_names level=0
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.profiles.registry
+  file: ./src/stallworth_nqueens/profiles/registry.py
+  package: stallworth_nqueens.profiles
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 5
+  top_level_assignment_count: 1
+  import_statement_count: 1
+  definition_count: 3
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 1
+  imported_symbol_count: 1
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=dataclasses module_asname=none names=dataclass level=0
+  re_exported_imports:
+    - none
+  class_count: 1
+  classes:
+   - NQueensProfile
+  function_count: 2
+  async_function_count: 0
+  functions:
+   - get_profile_names
+   - get_profile
+
+- stallworth_nqueens.reporting
+  file: ./src/stallworth_nqueens/reporting/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.reporting.display
+  file: ./src/stallworth_nqueens/reporting/display.py
+  package: stallworth_nqueens.reporting
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 13
+  top_level_assignment_count: 1
+  import_statement_count: 2
+  definition_count: 10
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 2
+  internal_import_count: 1
+  external_import_count: 0
+  stdlib_import_count: 1
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=logging module_asname=none names=none level=0
+    - module=stallworth_nqueens.models.board module_asname=none names=NQueensBoard level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 10
+  async_function_count: 0
+  functions:
+   - _metric_value
+   - _speedup_value
+   - display_usage
+   - display_run_header
+   - display_unknown_solver
+   - display_unexpected_error
+   - display_single_result
+   - display_benchmark_results
+   - display_all_results
+   - display_execution_result
+
+- stallworth_nqueens.solvers
+  file: ./src/stallworth_nqueens/solvers/__init__.py
+  package: stallworth_nqueens
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.solvers.bitmask
+  file: ./src/stallworth_nqueens/solvers/bitmask/__init__.py
+  package: stallworth_nqueens.solvers
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.solvers.bitmask.backtracking
+  file: ./src/stallworth_nqueens/solvers/bitmask/backtracking.py
+  package: stallworth_nqueens.solvers.bitmask
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 4
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.abstract.bitmask module_asname=none names=available_positions, full_mask, next_state level=0
+    - module=stallworth_nqueens.metrics module_asname=none names=NQueensSearchMetrics level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - solve_n_queens
+
+- stallworth_nqueens.solvers.constraint
+  file: ./src/stallworth_nqueens/solvers/constraint.py
+  package: stallworth_nqueens.solvers
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 3
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.abstract.constraints module_asname=none names=minor_diagonal, major_diagonal level=0
+    - module=stallworth_nqueens.metrics module_asname=none names=NQueensSearchMetrics level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - solve_n_queens
+
+- stallworth_nqueens.solvers.dfs
+  file: ./src/stallworth_nqueens/solvers/dfs/__init__.py
+  package: stallworth_nqueens.solvers
+  top_level_package: stallworth_nqueens
+  is_package_init: True
+  is_empty_module: True
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 0
+  top_level_assignment_count: 0
+  import_statement_count: 0
+  definition_count: 0
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 0
+  imported_symbol_count: 0
+  internal_import_count: 0
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - none
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 0
+  async_function_count: 0
+  functions:
+    - none
+
+- stallworth_nqueens.solvers.dfs.backtracking
+  file: ./src/stallworth_nqueens/solvers/dfs/backtracking.py
+  package: stallworth_nqueens.solvers.dfs
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: False
+  has_main_guard: False
+  has_module_docstring: True
+  top_level_statement_count: 3
+  top_level_assignment_count: 0
+  import_statement_count: 2
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 2
+  imported_symbol_count: 4
+  internal_import_count: 2
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.abstract.constraints module_asname=none names=is_safe, major_diagonal, minor_diagonal level=0
+    - module=stallworth_nqueens.metrics module_asname=none names=NQueensSearchMetrics level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - solve_n_queens
+
+- stallworth_nqueens.solvers.registry
+  file: ./src/stallworth_nqueens/solvers/registry.py
+  package: stallworth_nqueens.solvers
+  top_level_package: stallworth_nqueens
+  is_package_init: False
+  is_empty_module: False
+  has_top_level_code: True
+  has_main_guard: False
+  has_module_docstring: False
+  top_level_statement_count: 6
+  top_level_assignment_count: 2
+  import_statement_count: 3
+  definition_count: 1
+  has_all_exports: False
+  has_dynamic_all_exports: False
+  has_re_exports: False
+  has_star_imports: False
+  is_api_surface_candidate: False
+  is_script_entry_candidate: False
+  unused_import_count: 0
+  has_unused_imports: False
+  imports_count: 3
+  imported_symbol_count: 3
+  internal_import_count: 3
+  external_import_count: 0
+  stdlib_import_count: 0
+  unresolved_import_count: 0
+  star_import_count: 0
+  all_exports_count: 0
+  all_exports: none
+  re_exported_import_count: 0
+  imports:
+    - module=stallworth_nqueens.solvers.dfs module_asname=none names=backtracking as dfs_backtracking level=0
+    - module=stallworth_nqueens.solvers module_asname=none names=constraint level=0
+    - module=stallworth_nqueens.solvers.bitmask module_asname=none names=backtracking as bitmask_backtracking level=0
+  re_exported_imports:
+    - none
+  class_count: 0
+  classes:
+    - none
+  function_count: 1
+  async_function_count: 0
+  functions:
+   - get_solver_names

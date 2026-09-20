@@ -1,0 +1,2 @@
+# Preserve qualified source, report and manifest bytes across checkouts.
+* -text

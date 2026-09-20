@@ -1,0 +1,9 @@
+........................................................................ [ 72%]
+...........................                                              [100%]
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.3-final-0 ________________
+
+Coverage HTML written to dir ./devtools-reports/htmlcov
+Coverage XML written to file ./devtools-reports/evidence/coverage.xml
+Coverage JSON written to file ./devtools-reports/evidence/coverage.json
+99 passed in 1.35s

@@ -1,0 +1,82 @@
+{
+  "findings": [],
+  "invalid_exceptions": [],
+  "manifest": {
+    "path": ".devtools/security-exceptions.json",
+    "present": false,
+    "schema_version": null,
+    "sha256": null,
+    "valid": true
+  },
+  "project": "stallworth-nqueens",
+  "project_revision": "unknown",
+  "scan_label": "src",
+  "scan_path": "src",
+  "scanner": {
+    "name": "bandit",
+    "version": "1.9.4"
+  },
+  "schema_version": "1.0",
+  "stale_exceptions": [],
+  "summary": {
+    "accepted": 0,
+    "active": 0,
+    "changed": 0,
+    "invalid": 0,
+    "relocated": 0,
+    "stale": 0
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.1.0",
+    "source_tree_sha256": "c65bb5f7a1ba377d63679af9c7cb442f5f3d8444ed921e5093407a96ee0bc17d",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:a3c1174783d0621c3d3c6ff8863db68c5faeff2d866ca2082805416c8b9f723a",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}
