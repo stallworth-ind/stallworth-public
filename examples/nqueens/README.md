@@ -65,4 +65,4 @@ source attribution accompany the package metadata.
 
 The selected source is refreshed through the versioned extraction recipe.
 See [PROVENANCE.md](PROVENANCE.md) for its origin and [LICENSE](LICENSE) for the
-preserved upstream license. This snapshot is version 0.1.1.
+preserved upstream license. This snapshot is version 0.1.2.

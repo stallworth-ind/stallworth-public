@@ -1,0 +1,2557 @@
+{
+  "report_type": "module_structure",
+  "schema_version": 1,
+  "graph_name": "Stallworth N-Queens",
+  "project_path": "./src",
+  "analysis_maturity": "provisional",
+  "explicit_limitations": [
+    "Static source analysis does not resolve dynamic imports or runtime mutation.",
+    "Dependency relationships represent resolved imports, not runtime calls or data flow.",
+    "API-surface and entrypoint traits are syntax-based candidates, not runtime guarantees.",
+    "Import declaration evidence remains owned by the import report."
+  ],
+  "summary": {
+    "module_count": 35,
+    "package_count": 14,
+    "internal_dependency_edge_count": 34,
+    "package_initializer_count": 14,
+    "api_surface_candidate_count": 2,
+    "script_entry_candidate_count": 1,
+    "top_level_code_module_count": 8,
+    "empty_module_count": 12
+  },
+  "modules": [
+    {
+      "identity": {
+        "name": "stallworth_nqueens",
+        "source_file": "./src/stallworth_nqueens/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/__init__.py",
+        "package": null,
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.abstract",
+        "source_file": "./src/stallworth_nqueens/abstract/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/abstract/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.abstract.bitmask",
+        "source_file": "./src/stallworth_nqueens/abstract/bitmask.py",
+        "display_source_file": "src/stallworth_nqueens/abstract/bitmask.py",
+        "package": "stallworth_nqueens.abstract",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 3,
+        "functions": [
+          "full_mask",
+          "available_positions",
+          "next_state"
+        ],
+        "async_function_count": 0,
+        "definition_count": 3,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.solvers.bitmask.backtracking"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.abstract.constraints",
+        "source_file": "./src/stallworth_nqueens/abstract/constraints.py",
+        "display_source_file": "src/stallworth_nqueens/abstract/constraints.py",
+        "package": "stallworth_nqueens.abstract",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 5,
+        "functions": [
+          "major_diagonal",
+          "minor_diagonal",
+          "is_safe",
+          "place",
+          "valid_columns"
+        ],
+        "async_function_count": 0,
+        "definition_count": 5,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 5
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 3,
+        "dependent_modules": [
+          "stallworth_nqueens.models.board",
+          "stallworth_nqueens.solvers.constraint",
+          "stallworth_nqueens.solvers.dfs.backtracking"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.benchmarking",
+        "source_file": "./src/stallworth_nqueens/benchmarking/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/benchmarking/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.benchmarking.adapter",
+        "source_file": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "display_source_file": "src/stallworth_nqueens/benchmarking/adapter.py",
+        "package": "stallworth_nqueens.benchmarking",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 1,
+        "classes": [
+          "NQueensAdapter"
+        ],
+        "function_count": 1,
+        "functions": [
+          "find_sample_solution"
+        ],
+        "async_function_count": 0,
+        "definition_count": 2,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 5
+      },
+      "dependency_surface": {
+        "import_count": 3,
+        "import_statement_count": 3,
+        "imported_symbol_count": 5,
+        "internal_import_count": 3,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 3,
+        "internal_dependencies": [
+          "stallworth_nqueens.common.benchmarking",
+          "stallworth_nqueens.metrics",
+          "stallworth_nqueens.solvers.registry"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.execution.runner"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.cli",
+        "source_file": "./src/stallworth_nqueens/cli/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/cli/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.cli.args",
+        "source_file": "./src/stallworth_nqueens/cli/args.py",
+        "display_source_file": "src/stallworth_nqueens/cli/args.py",
+        "package": "stallworth_nqueens.cli",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 1,
+        "classes": [
+          "NQueensArgumentParser"
+        ],
+        "function_count": 3,
+        "functions": [
+          "build_parser",
+          "build_args",
+          "format_usage"
+        ],
+        "async_function_count": 0,
+        "definition_count": 4,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 6
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 2,
+        "internal_import_count": 1,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.profiles.registry"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.cli.n_queens_cli"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.cli.n_queens_cli",
+        "source_file": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+        "display_source_file": "src/stallworth_nqueens/cli/n_queens_cli.py",
+        "package": "stallworth_nqueens.cli",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "run_n_queens_cli"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 1,
+        "top_level_statement_count": 10
+      },
+      "dependency_surface": {
+        "import_count": 8,
+        "import_statement_count": 8,
+        "imported_symbol_count": 15,
+        "internal_import_count": 6,
+        "standard_library_import_count": 2,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 6,
+        "internal_dependencies": [
+          "stallworth_nqueens.cli.args",
+          "stallworth_nqueens.common.logging.logger",
+          "stallworth_nqueens.execution.engine",
+          "stallworth_nqueens.profiles.registry",
+          "stallworth_nqueens.reporting.display",
+          "stallworth_nqueens.solvers.registry"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.main"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common",
+        "source_file": "./src/stallworth_nqueens/common/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/common/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.benchmarking",
+        "source_file": "./src/stallworth_nqueens/common/benchmarking/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/common/benchmarking/__init__.py",
+        "package": "stallworth_nqueens.common",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 5,
+        "internal_import_count": 2,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.common.benchmarking.models",
+          "stallworth_nqueens.common.benchmarking.runner"
+        ],
+        "dependent_module_count": 2,
+        "dependent_modules": [
+          "stallworth_nqueens.benchmarking.adapter",
+          "stallworth_nqueens.execution.runner"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": true,
+        "all_exports_count": 5,
+        "all_exports": [
+          "BenchmarkResult",
+          "CommonExecutionMetrics",
+          "annotate_speedups",
+          "run_benchmark",
+          "run_benchmarks"
+        ],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": true,
+        "re_exported_import_count": 2,
+        "re_exported_imports": [
+          {
+            "module": "stallworth_nqueens.common.benchmarking.models",
+            "module_asname": null,
+            "imported_names": [
+              {
+                "name": "BenchmarkResult",
+                "asname": null
+              },
+              {
+                "name": "CommonExecutionMetrics",
+                "asname": null
+              },
+              {
+                "name": "annotate_speedups",
+                "asname": null
+              }
+            ],
+            "level": 0
+          },
+          {
+            "module": "stallworth_nqueens.common.benchmarking.runner",
+            "module_asname": null,
+            "imported_names": [
+              {
+                "name": "run_benchmark",
+                "asname": null
+              },
+              {
+                "name": "run_benchmarks",
+                "asname": null
+              }
+            ],
+            "level": 0
+          }
+        ],
+        "is_api_surface_candidate": true
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "api_surface_candidate",
+        "re_export_surface"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.benchmarking.adapters",
+        "source_file": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "display_source_file": "src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "package": "stallworth_nqueens.common.benchmarking",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 1,
+        "classes": [
+          "DomainBenchmarkAdapter"
+        ],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 3,
+        "internal_import_count": 1,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.common.benchmarking.models"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.common.benchmarking.runner"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.benchmarking.models",
+        "source_file": "./src/stallworth_nqueens/common/benchmarking/models.py",
+        "display_source_file": "src/stallworth_nqueens/common/benchmarking/models.py",
+        "package": "stallworth_nqueens.common.benchmarking",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 2,
+        "classes": [
+          "BenchmarkResult",
+          "CommonExecutionMetrics"
+        ],
+        "function_count": 1,
+        "functions": [
+          "annotate_speedups"
+        ],
+        "async_function_count": 0,
+        "definition_count": 3,
+        "top_level_assignment_count": 1,
+        "top_level_statement_count": 6
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 4,
+        "internal_import_count": 0,
+        "standard_library_import_count": 2,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 3,
+        "dependent_modules": [
+          "stallworth_nqueens.common.benchmarking",
+          "stallworth_nqueens.common.benchmarking.adapters",
+          "stallworth_nqueens.common.benchmarking.runner"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.benchmarking.runner",
+        "source_file": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+        "display_source_file": "src/stallworth_nqueens/common/benchmarking/runner.py",
+        "package": "stallworth_nqueens.common.benchmarking",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 2,
+        "functions": [
+          "run_benchmark",
+          "run_benchmarks"
+        ],
+        "async_function_count": 0,
+        "definition_count": 2,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 6
+      },
+      "dependency_surface": {
+        "import_count": 4,
+        "import_statement_count": 4,
+        "imported_symbol_count": 5,
+        "internal_import_count": 2,
+        "standard_library_import_count": 2,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.common.benchmarking.adapters",
+          "stallworth_nqueens.common.benchmarking.models"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.common.benchmarking"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.logging",
+        "source_file": "./src/stallworth_nqueens/common/logging/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/common/logging/__init__.py",
+        "package": "stallworth_nqueens.common",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.common.logging.logger",
+        "source_file": "./src/stallworth_nqueens/common/logging/logger.py",
+        "display_source_file": "src/stallworth_nqueens/common/logging/logger.py",
+        "package": "stallworth_nqueens.common.logging",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 2,
+        "functions": [
+          "setup_logging",
+          "format_unexpected_error"
+        ],
+        "async_function_count": 0,
+        "definition_count": 2,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 1,
+        "import_statement_count": 1,
+        "imported_symbol_count": 1,
+        "internal_import_count": 0,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.cli.n_queens_cli"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.execution",
+        "source_file": "./src/stallworth_nqueens/execution/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/execution/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.execution.engine",
+        "source_file": "./src/stallworth_nqueens/execution/engine.py",
+        "display_source_file": "src/stallworth_nqueens/execution/engine.py",
+        "package": "stallworth_nqueens.execution",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "execute"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 3,
+        "internal_import_count": 2,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.execution.runner",
+          "stallworth_nqueens.solvers.registry"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.cli.n_queens_cli"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.execution.runner",
+        "source_file": "./src/stallworth_nqueens/execution/runner.py",
+        "display_source_file": "src/stallworth_nqueens/execution/runner.py",
+        "package": "stallworth_nqueens.execution",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 4,
+        "functions": [
+          "collect_single",
+          "collect_all",
+          "execute_solver",
+          "execute_all"
+        ],
+        "async_function_count": 0,
+        "definition_count": 4,
+        "top_level_assignment_count": 1,
+        "top_level_statement_count": 11
+      },
+      "dependency_surface": {
+        "import_count": 6,
+        "import_statement_count": 6,
+        "imported_symbol_count": 8,
+        "internal_import_count": 4,
+        "standard_library_import_count": 2,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 4,
+        "internal_dependencies": [
+          "stallworth_nqueens.benchmarking.adapter",
+          "stallworth_nqueens.common.benchmarking",
+          "stallworth_nqueens.metrics",
+          "stallworth_nqueens.solvers.registry"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.execution.engine"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.main",
+        "source_file": "./src/stallworth_nqueens/main.py",
+        "display_source_file": "src/stallworth_nqueens/main.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "main"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 1,
+        "import_statement_count": 1,
+        "imported_symbol_count": 1,
+        "internal_import_count": 1,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.cli.n_queens_cli"
+        ],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": true,
+        "is_script_entry_candidate": true,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "script_entrypoint_candidate",
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.metrics",
+        "source_file": "./src/stallworth_nqueens/metrics.py",
+        "display_source_file": "src/stallworth_nqueens/metrics.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 7,
+        "classes": [
+          "NQueensSearchShapeCounters",
+          "NQueensConstraintCounters",
+          "NQueensBacktrackingCounters",
+          "NQueensBitmaskCounters",
+          "NQueensSearchMetrics",
+          "NQueensSolverExecution",
+          "NQueensSolverFailure"
+        ],
+        "function_count": 1,
+        "functions": [
+          "execute_with_metrics"
+        ],
+        "async_function_count": 0,
+        "definition_count": 8,
+        "top_level_assignment_count": 5,
+        "top_level_statement_count": 17
+      },
+      "dependency_surface": {
+        "import_count": 4,
+        "import_statement_count": 4,
+        "imported_symbol_count": 5,
+        "internal_import_count": 0,
+        "standard_library_import_count": 4,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 5,
+        "dependent_modules": [
+          "stallworth_nqueens.benchmarking.adapter",
+          "stallworth_nqueens.execution.runner",
+          "stallworth_nqueens.solvers.bitmask.backtracking",
+          "stallworth_nqueens.solvers.constraint",
+          "stallworth_nqueens.solvers.dfs.backtracking"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 1,
+        "has_unused_imports": true
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.models",
+        "source_file": "./src/stallworth_nqueens/models/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/models/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.models.board",
+        "source_file": "./src/stallworth_nqueens/models/board.py",
+        "display_source_file": "src/stallworth_nqueens/models/board.py",
+        "package": "stallworth_nqueens.models",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 1,
+        "classes": [
+          "NQueensBoard"
+        ],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 3,
+        "internal_import_count": 1,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.abstract.constraints"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.reporting.display"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.profiles",
+        "source_file": "./src/stallworth_nqueens/profiles/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/profiles/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 2
+      },
+      "dependency_surface": {
+        "import_count": 1,
+        "import_statement_count": 1,
+        "imported_symbol_count": 3,
+        "internal_import_count": 1,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.profiles.registry"
+        ],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": true,
+        "all_exports_count": 3,
+        "all_exports": [
+          "NQueensProfile",
+          "get_profile",
+          "get_profile_names"
+        ],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": true,
+        "re_exported_import_count": 1,
+        "re_exported_imports": [
+          {
+            "module": "stallworth_nqueens.profiles.registry",
+            "module_asname": null,
+            "imported_names": [
+              {
+                "name": "NQueensProfile",
+                "asname": null
+              },
+              {
+                "name": "get_profile",
+                "asname": null
+              },
+              {
+                "name": "get_profile_names",
+                "asname": null
+              }
+            ],
+            "level": 0
+          }
+        ],
+        "is_api_surface_candidate": true
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "api_surface_candidate",
+        "re_export_surface"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.profiles.registry",
+        "source_file": "./src/stallworth_nqueens/profiles/registry.py",
+        "display_source_file": "src/stallworth_nqueens/profiles/registry.py",
+        "package": "stallworth_nqueens.profiles",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 1,
+        "classes": [
+          "NQueensProfile"
+        ],
+        "function_count": 2,
+        "functions": [
+          "get_profile_names",
+          "get_profile"
+        ],
+        "async_function_count": 0,
+        "definition_count": 3,
+        "top_level_assignment_count": 1,
+        "top_level_statement_count": 5
+      },
+      "dependency_surface": {
+        "import_count": 1,
+        "import_statement_count": 1,
+        "imported_symbol_count": 1,
+        "internal_import_count": 0,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 3,
+        "dependent_modules": [
+          "stallworth_nqueens.cli.args",
+          "stallworth_nqueens.cli.n_queens_cli",
+          "stallworth_nqueens.profiles"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.reporting",
+        "source_file": "./src/stallworth_nqueens/reporting/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/reporting/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.reporting.display",
+        "source_file": "./src/stallworth_nqueens/reporting/display.py",
+        "display_source_file": "src/stallworth_nqueens/reporting/display.py",
+        "package": "stallworth_nqueens.reporting",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 10,
+        "functions": [
+          "_metric_value",
+          "_speedup_value",
+          "display_usage",
+          "display_run_header",
+          "display_unknown_solver",
+          "display_unexpected_error",
+          "display_single_result",
+          "display_benchmark_results",
+          "display_all_results",
+          "display_execution_result"
+        ],
+        "async_function_count": 0,
+        "definition_count": 10,
+        "top_level_assignment_count": 1,
+        "top_level_statement_count": 13
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 2,
+        "internal_import_count": 1,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 1,
+        "internal_dependencies": [
+          "stallworth_nqueens.models.board"
+        ],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.cli.n_queens_cli"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.sast_demo",
+        "source_file": "./src/stallworth_nqueens/sast_demo.py",
+        "display_source_file": "src/stallworth_nqueens/sast_demo.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "subprocess_example"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 2
+      },
+      "dependency_surface": {
+        "import_count": 1,
+        "import_statement_count": 1,
+        "imported_symbol_count": 1,
+        "internal_import_count": 0,
+        "standard_library_import_count": 1,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers",
+        "source_file": "./src/stallworth_nqueens/solvers/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/__init__.py",
+        "package": "stallworth_nqueens",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.solvers.registry"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.bitmask",
+        "source_file": "./src/stallworth_nqueens/solvers/bitmask/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/bitmask/__init__.py",
+        "package": "stallworth_nqueens.solvers",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.solvers.registry"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.bitmask.backtracking",
+        "source_file": "./src/stallworth_nqueens/solvers/bitmask/backtracking.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/bitmask/backtracking.py",
+        "package": "stallworth_nqueens.solvers.bitmask",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "solve_n_queens"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 4,
+        "internal_import_count": 2,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.abstract.bitmask",
+          "stallworth_nqueens.metrics"
+        ],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.constraint",
+        "source_file": "./src/stallworth_nqueens/solvers/constraint.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/constraint.py",
+        "package": "stallworth_nqueens.solvers",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "solve_n_queens"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 3,
+        "internal_import_count": 2,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.abstract.constraints",
+          "stallworth_nqueens.metrics"
+        ],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.dfs",
+        "source_file": "./src/stallworth_nqueens/solvers/dfs/__init__.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/dfs/__init__.py",
+        "package": "stallworth_nqueens.solvers",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": true
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 0,
+        "functions": [],
+        "async_function_count": 0,
+        "definition_count": 0,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 0
+      },
+      "dependency_surface": {
+        "import_count": 0,
+        "import_statement_count": 0,
+        "imported_symbol_count": 0,
+        "internal_import_count": 0,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 0,
+        "internal_dependencies": [],
+        "dependent_module_count": 1,
+        "dependent_modules": [
+          "stallworth_nqueens.solvers.registry"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": true
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "package_initializer",
+        "empty_module"
+      ]
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.dfs.backtracking",
+        "source_file": "./src/stallworth_nqueens/solvers/dfs/backtracking.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/dfs/backtracking.py",
+        "package": "stallworth_nqueens.solvers.dfs",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "solve_n_queens"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 0,
+        "top_level_statement_count": 3
+      },
+      "dependency_surface": {
+        "import_count": 2,
+        "import_statement_count": 2,
+        "imported_symbol_count": 4,
+        "internal_import_count": 2,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 2,
+        "internal_dependencies": [
+          "stallworth_nqueens.abstract.constraints",
+          "stallworth_nqueens.metrics"
+        ],
+        "dependent_module_count": 0,
+        "dependent_modules": []
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": false,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": true,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": []
+    },
+    {
+      "identity": {
+        "name": "stallworth_nqueens.solvers.registry",
+        "source_file": "./src/stallworth_nqueens/solvers/registry.py",
+        "display_source_file": "src/stallworth_nqueens/solvers/registry.py",
+        "package": "stallworth_nqueens.solvers",
+        "top_level_package": "stallworth_nqueens",
+        "is_package_initializer": false
+      },
+      "composition": {
+        "class_count": 0,
+        "classes": [],
+        "function_count": 1,
+        "functions": [
+          "get_solver_names"
+        ],
+        "async_function_count": 0,
+        "definition_count": 1,
+        "top_level_assignment_count": 2,
+        "top_level_statement_count": 6
+      },
+      "dependency_surface": {
+        "import_count": 3,
+        "import_statement_count": 3,
+        "imported_symbol_count": 3,
+        "internal_import_count": 3,
+        "standard_library_import_count": 0,
+        "external_import_count": 0,
+        "unresolved_import_count": 0,
+        "internal_dependency_count": 3,
+        "internal_dependencies": [
+          "stallworth_nqueens.solvers",
+          "stallworth_nqueens.solvers.bitmask",
+          "stallworth_nqueens.solvers.dfs"
+        ],
+        "dependent_module_count": 4,
+        "dependent_modules": [
+          "stallworth_nqueens.benchmarking.adapter",
+          "stallworth_nqueens.cli.n_queens_cli",
+          "stallworth_nqueens.execution.engine",
+          "stallworth_nqueens.execution.runner"
+        ]
+      },
+      "public_surface": {
+        "has_all_exports": false,
+        "all_exports_count": 0,
+        "all_exports": [],
+        "has_dynamic_all_exports": false,
+        "has_re_exports": false,
+        "re_exported_import_count": 0,
+        "re_exported_imports": [],
+        "is_api_surface_candidate": false
+      },
+      "execution_behavior": {
+        "has_top_level_code": true,
+        "has_main_guard": false,
+        "is_script_entry_candidate": false,
+        "is_empty_module": false
+      },
+      "documentation_and_hygiene": {
+        "has_module_docstring": false,
+        "star_import_count": 0,
+        "has_star_imports": false,
+        "unused_import_count": 0,
+        "has_unused_imports": false
+      },
+      "traits": [
+        "top_level_executable_code"
+      ]
+    }
+  ],
+  "internal_dependencies": [
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.common.benchmarking",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.metrics",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.solvers.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.args",
+      "target": "stallworth_nqueens.profiles.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.cli.args",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.common.logging.logger",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.execution.engine",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.profiles.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.solvers.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking",
+      "target": "stallworth_nqueens.common.benchmarking.runner",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.adapters",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "stallworth_nqueens.common.benchmarking.adapters",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine",
+      "target": "stallworth_nqueens.execution.runner",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine",
+      "target": "stallworth_nqueens.solvers.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.benchmarking.adapter",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.common.benchmarking",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.metrics",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.solvers.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.main",
+      "target": "stallworth_nqueens.cli.n_queens_cli",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.models.board",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.profiles",
+      "target": "stallworth_nqueens.profiles.registry",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display",
+      "target": "stallworth_nqueens.models.board",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "target": "stallworth_nqueens.abstract.bitmask",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "target": "stallworth_nqueens.metrics",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.constraint",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.constraint",
+      "target": "stallworth_nqueens.metrics",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.dfs.backtracking",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.dfs.backtracking",
+      "target": "stallworth_nqueens.metrics",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers.bitmask",
+      "type": "depends_on"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers.dfs",
+      "type": "depends_on"
+    }
+  ],
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.1.2",
+    "source_tree_sha256": "61e73f4286af46223588f9cb7283339d8eec6070142caa914759d51dda10475d",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:5344ec7163459d3b006ab655ab71eb93ae382a54abd6ffafa38262d1698d0fc4",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

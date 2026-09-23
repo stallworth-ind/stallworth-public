@@ -1,0 +1,254 @@
+digraph CodeViz {
+  graph [fontname="Helvetica", fontsize=20, rankdir=LR, compound=true, newrank=true, nodesep=0.22, ranksep=0.42, splines=ortho, overlap=false, outputorder=edgesfirst, pad=0.12, dpi=72];
+  node [fontname="Helvetica", shape=box, style="filled,rounded", margin="0.12,0.06", penwidth=2.2];
+  edge [fontname="Helvetica", arrowsize=0.7, penwidth=1.2, color="gray45"];
+
+    "difflib.get_close_matches" [label="get_close_matches\ndifflib", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-difflib-get_close_matches-caa20640", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "inspect.signature" [label="signature\ninspect", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-inspect-signature-eab0fea4", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "logging.basicConfig" [label="basicConfig\nlogging", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-logging-basicConfig-2e76adb4", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "logging.getLogger" [label="getLogger\nlogging", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-logging-getLogger-48bea44e", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "subprocess.run" [label="run\nsubprocess", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-subprocess-run-303c6abb", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "threading.Thread" [label="Thread\nthreading", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-threading-Thread-673307e6", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    "time.perf_counter" [label="perf_counter\ntime", style="filled,dashed,rounded", fillcolor="#5b85e0", color="#5b85e0", fontcolor="#000000", id="codeviz-node-time-perf_counter-61009b49", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    subgraph cluster_group_833eee901c6a {
+      label="stallworth_nqueens";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.main.<module>" [label="<module>\nmain", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-main-module-2d119bca", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.main.main" [label="main\nmain", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-main-main-fa88982c", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking" [label="NQueensSearchMetrics._backtracking\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-_backtracking-4de12fa2", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask" [label="NQueensSearchMetrics._bitmask\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-_bitmask-0f6e66b4", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint" [label="NQueensSearchMetrics._constraint\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-_constraint-eb47e5fa", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape" [label="NQueensSearchMetrics._search_shape\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-_search_shape-33d78194", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.capability_metrics_payload" [label="NQueensSearchMetrics.capability_metrics_payload\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-capability_metrics_payload-d32da3b5", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint" [label="NQueensSearchMetrics.check_constraint\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-check_constraint-a36d91ed", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask" [label="NQueensSearchMetrics.compute_available_mask\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-compute_available_mask-ce9fddfc", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.consider_placement" [label="NQueensSearchMetrics.consider_placement\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-consider_placement-05229ee1", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state" [label="NQueensSearchMetrics.enter_child_state\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-enter_child_state-a8a77794", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state" [label="NQueensSearchMetrics.enter_search_state\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-enter_search_state-6dd6cea7", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit" [label="NQueensSearchMetrics.extract_candidate_bit\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-extract_candidate_bit-9bada416", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack" [label="NQueensSearchMetrics.record_backtrack\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-record_backtrack-073cccdd", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end" [label="NQueensSearchMetrics.record_dead_end\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-record_dead_end-666c322e", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state" [label="NQueensSearchMetrics.record_leaf_state\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-record_leaf_state-55888d9a", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state" [label="NQueensSearchMetrics.visit_state\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSearchMetrics-visit_state-3f530f3d", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.NQueensSolverFailure.__init__" [label="NQueensSolverFailure.__init__\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-NQueensSolverFailure-__init__-6a0bb0ce", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.metrics.execute_with_metrics" [label="execute_with_metrics\nmetrics", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-metrics-execute_with_metrics-1753038d", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.sast_demo.subprocess_example" [label="subprocess_example\nsast_demo", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-sast_demo-subprocess_example-c7d17623", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_001781916cf4 {
+      label="stallworth_nqueens.abstract";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.abstract.bitmask.available_positions" [label="available_positions\nabstract.bitmask", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-bitmask-available_positions-74aa4206", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.bitmask.full_mask" [label="full_mask\nabstract.bitmask", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-bitmask-full_mask-6eb0abe0", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.bitmask.next_state" [label="next_state\nabstract.bitmask", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-bitmask-next_state-298630d2", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.constraints.is_safe" [label="is_safe\nabstract.constraints", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-constraints-is_safe-37250b4e", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.constraints.major_diagonal" [label="major_diagonal\nabstract.constraints", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-constraints-major_diagonal-c418a344", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.constraints.minor_diagonal" [label="minor_diagonal\nabstract.constraints", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-constraints-minor_diagonal-d7f15948", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.constraints.place" [label="place\nabstract.constraints", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-constraints-place-6c59098c", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.abstract.constraints.valid_columns" [label="valid_columns\nabstract.constraints", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-abstract-constraints-valid_columns-4acb1fa5", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_7a75bad22b9f {
+      label="stallworth_nqueens.benchmarking";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run" [label="NQueensAdapter.run\nbenchmarking.adapter", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-benchmarking-adapter-NQueensAdapter-run-2e0086ec", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result" [label="NQueensAdapter.to_benchmark_result\nbenchmarking.adapter", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-benchmarking-adapter-NQueensAdapter-to_benchmark_result-cf7a585d", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_failed_benchmark_result" [label="NQueensAdapter.to_failed_benchmark_result\nbenchmarking.adapter", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-benchmarking-adapter-NQueensAdapter-to_failed_benchmark_result-04386411", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.benchmarking.adapter.find_sample_solution" [label="find_sample_solution\nbenchmarking.adapter", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-benchmarking-adapter-find_sample_solution-8040c959", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_c0670d334691 {
+      label="stallworth_nqueens.cli";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.cli.args.NQueensArgumentParser.error" [label="NQueensArgumentParser.error\ncli.args", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-args-NQueensArgumentParser-error-032bd7fc", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.cli.args.build_args" [label="build_args\ncli.args", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-args-build_args-1ad2d940", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.cli.args.build_parser" [label="build_parser\ncli.args", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-args-build_parser-7f1e0da9", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.cli.args.format_usage" [label="format_usage\ncli.args", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-args-format_usage-355dc1cf", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.cli.n_queens_cli.<module>" [label="<module>\ncli.n_queens_cli", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-n_queens_cli-module-79340a5c", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" [label="run_n_queens_cli\ncli.n_queens_cli", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-cli-n_queens_cli-run_n_queens_cli-c7c8ba44", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_af7027d27e1f {
+      label="stallworth_nqueens.common.benchmarking";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.run" [label="DomainBenchmarkAdapter.run\ncommon.benchmarking.adapters", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-adapters-DomainBenchmarkAdapter-run-90a6712b", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.to_benchmark_result" [label="DomainBenchmarkAdapter.to_benchmark_result\ncommon.benchmarking.adapters", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-adapters-DomainBenchmarkAdapter-to_benchmark_result-60d6fa7e", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.to_failed_benchmark_result" [label="DomainBenchmarkAdapter.to_failed_benchmark_result\ncommon.benchmarking.adapters", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-adapters-DomainBenchmarkAdapter-to_failed_benchmark_result-d6d5b4b5", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.models.CommonExecutionMetrics.from_benchmark_result" [label="CommonExecutionMetrics.from_benchmark_result\ncommon.benchmarking.models", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-models-CommonExecutionMetrics-from_benchmark_result-1c130417", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.models.annotate_speedups" [label="annotate_speedups\ncommon.benchmarking.models", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-models-annotate_speedups-e2c3736d", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.runner.run_benchmark" [label="run_benchmark\ncommon.benchmarking.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-runner-run_benchmark-8089f3a0", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.benchmarking.runner.run_benchmarks" [label="run_benchmarks\ncommon.benchmarking.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-benchmarking-runner-run_benchmarks-52f8cb0d", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_536afe3daf9b {
+      label="stallworth_nqueens.common.logging";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.common.logging.logger.format_unexpected_error" [label="format_unexpected_error\ncommon.logging.logger", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-logging-logger-format_unexpected_error-314889c6", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.common.logging.logger.setup_logging" [label="setup_logging\ncommon.logging.logger", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-common-logging-logger-setup_logging-b561f43f", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_885d4dfae962 {
+      label="stallworth_nqueens.execution";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.execution.engine.execute" [label="execute\nexecution.engine", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-engine-execute-c7c9b09e", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.execution.runner.<module>" [label="<module>\nexecution.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-runner-module-c7951670", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.execution.runner.collect_all" [label="collect_all\nexecution.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-runner-collect_all-d6ed9914", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.execution.runner.collect_single" [label="collect_single\nexecution.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-runner-collect_single-2a4c2c41", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.execution.runner.execute_all" [label="execute_all\nexecution.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-runner-execute_all-59ba72a1", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.execution.runner.execute_solver" [label="execute_solver\nexecution.runner", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-execution-runner-execute_solver-9a85e618", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_b6ed0279e80d {
+      label="stallworth_nqueens.models";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.models.board.NQueensBoard.__post_init__" [label="NQueensBoard.__post_init__\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-__post_init__-b24f43cb", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.models.board.NQueensBoard.__str__" [label="NQueensBoard.__str__\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-__str__-083b9253", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.models.board.NQueensBoard.from_columns" [label="NQueensBoard.from_columns\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-from_columns-8409c095", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.models.board.NQueensBoard.is_valid" [label="NQueensBoard.is_valid\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-is_valid-e20798a8", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.models.board.NQueensBoard.queen_positions" [label="NQueensBoard.queen_positions\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-queen_positions-bdd0ab28", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.models.board.NQueensBoard.to_ascii" [label="NQueensBoard.to_ascii\nmodels.board", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-models-board-NQueensBoard-to_ascii-322dde23", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_babe366d18cc {
+      label="stallworth_nqueens.profiles";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.profiles.registry.<module>" [label="<module>\nprofiles.registry", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-profiles-registry-module-5b8bbc58", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.profiles.registry.get_profile" [label="get_profile\nprofiles.registry", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-profiles-registry-get_profile-365f0332", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.profiles.registry.get_profile_names" [label="get_profile_names\nprofiles.registry", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-profiles-registry-get_profile_names-456bc0bf", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_8ad4b5eefbb8 {
+      label="stallworth_nqueens.reporting";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.reporting.display.<module>" [label="<module>\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-module-2c2fe201", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display._metric_value" [label="_metric_value\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-_metric_value-73662309", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display._speedup_value" [label="_speedup_value\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-_speedup_value-f3d61799", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_all_results" [label="display_all_results\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_all_results-7033b084", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_benchmark_results" [label="display_benchmark_results\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_benchmark_results-e28913c4", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_execution_result" [label="display_execution_result\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_execution_result-f61279b5", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_run_header" [label="display_run_header\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_run_header-1c185572", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_single_result" [label="display_single_result\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_single_result-e5e87664", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_unexpected_error" [label="display_unexpected_error\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_unexpected_error-135e67c1", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_unknown_solver" [label="display_unknown_solver\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_unknown_solver-f131d8c7", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.reporting.display.display_usage" [label="display_usage\nreporting.display", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-reporting-display-display_usage-09e9493c", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_5ed89439bf41 {
+      label="stallworth_nqueens.solvers";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.solvers.constraint.solve_n_queens" [label="solve_n_queens\nsolvers.constraint", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-solvers-constraint-solve_n_queens-fbe4ff8c", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+      "stallworth_nqueens.solvers.registry.get_solver_names" [label="get_solver_names\nsolvers.registry", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-solvers-registry-get_solver_names-7c42efd0", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_df003b98bded {
+      label="stallworth_nqueens.solvers.bitmask";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens" [label="solve_n_queens\nsolvers.bitmask.backtracking", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-solvers-bitmask-backtracking-solve_n_queens-4c5d9236", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+    subgraph cluster_group_dbfbf5be17f7 {
+      label="stallworth_nqueens.solvers.dfs";
+      color="#7d65c1";
+      fontcolor="#1f2937";
+      style="rounded";
+      penwidth=1.4;
+      margin=14;
+      "stallworth_nqueens.solvers.dfs.backtracking.solve_n_queens" [label="solve_n_queens\nsolvers.dfs.backtracking", fillcolor="#35bb62", color="#7d65c1", id="codeviz-node-stallworth_nqueens-solvers-dfs-backtracking-solve_n_queens-1ed63feb", class="codeviz-node codeviz-node-inspectable", tooltip="View node details"];
+    }
+
+    "stallworth_nqueens.abstract.constraints.is_safe" -> "stallworth_nqueens.abstract.constraints.major_diagonal";
+    "stallworth_nqueens.abstract.constraints.is_safe" -> "stallworth_nqueens.abstract.constraints.minor_diagonal";
+    "stallworth_nqueens.abstract.constraints.place" -> "stallworth_nqueens.abstract.constraints.major_diagonal";
+    "stallworth_nqueens.abstract.constraints.place" -> "stallworth_nqueens.abstract.constraints.minor_diagonal";
+    "stallworth_nqueens.abstract.constraints.valid_columns" -> "stallworth_nqueens.abstract.constraints.is_safe";
+    "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run" -> "stallworth_nqueens.metrics.execute_with_metrics";
+    "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result" -> "stallworth_nqueens.benchmarking.adapter.find_sample_solution";
+    "stallworth_nqueens.cli.args.build_args" -> "stallworth_nqueens.cli.args.build_parser";
+    "stallworth_nqueens.cli.args.build_args" -> "stallworth_nqueens.profiles.registry.get_profile";
+    "stallworth_nqueens.cli.args.format_usage" -> "stallworth_nqueens.cli.args.build_parser";
+    "stallworth_nqueens.cli.n_queens_cli.<module>" -> "logging.getLogger" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "difflib.get_close_matches" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.cli.args.build_args";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.cli.args.format_usage";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.common.logging.logger.format_unexpected_error";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.common.logging.logger.setup_logging";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.execution.engine.execute";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.profiles.registry.get_profile";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.profiles.registry.get_profile_names";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.reporting.display.display_execution_result";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.reporting.display.display_run_header";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.reporting.display.display_unexpected_error";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.reporting.display.display_unknown_solver";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.reporting.display.display_usage";
+    "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli" -> "stallworth_nqueens.solvers.registry.get_solver_names";
+    "stallworth_nqueens.common.benchmarking.runner.run_benchmark" -> "time.perf_counter" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.common.benchmarking.runner.run_benchmarks" -> "stallworth_nqueens.common.benchmarking.models.annotate_speedups";
+    "stallworth_nqueens.common.benchmarking.runner.run_benchmarks" -> "stallworth_nqueens.common.benchmarking.runner.run_benchmark";
+    "stallworth_nqueens.common.logging.logger.setup_logging" -> "logging.basicConfig" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.execution.engine.execute" -> "stallworth_nqueens.execution.runner.execute_all";
+    "stallworth_nqueens.execution.engine.execute" -> "stallworth_nqueens.execution.runner.execute_solver";
+    "stallworth_nqueens.execution.runner.collect_single" -> "stallworth_nqueens.metrics.execute_with_metrics";
+    "stallworth_nqueens.execution.runner.collect_single" -> "threading.Thread" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.execution.runner.collect_single" -> "time.perf_counter" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.execution.runner.execute_all" -> "stallworth_nqueens.execution.runner.execute_solver";
+    "stallworth_nqueens.main.<module>" -> "stallworth_nqueens.main.main";
+    "stallworth_nqueens.main.main" -> "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state" -> "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking";
+    "stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state" -> "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape";
+    "stallworth_nqueens.metrics.execute_with_metrics" -> "inspect.signature" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.models.board.NQueensBoard.__str__" -> "stallworth_nqueens.models.board.NQueensBoard.to_ascii";
+    "stallworth_nqueens.models.board.NQueensBoard.is_valid" -> "stallworth_nqueens.abstract.constraints.major_diagonal";
+    "stallworth_nqueens.models.board.NQueensBoard.is_valid" -> "stallworth_nqueens.abstract.constraints.minor_diagonal";
+    "stallworth_nqueens.reporting.display.<module>" -> "logging.getLogger" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.reporting.display.display_all_results" -> "stallworth_nqueens.reporting.display.display_single_result";
+    "stallworth_nqueens.reporting.display.display_benchmark_results" -> "stallworth_nqueens.reporting.display._speedup_value";
+    "stallworth_nqueens.reporting.display.display_execution_result" -> "stallworth_nqueens.reporting.display.display_all_results";
+    "stallworth_nqueens.reporting.display.display_execution_result" -> "stallworth_nqueens.reporting.display.display_single_result";
+    "stallworth_nqueens.reporting.display.display_single_result" -> "stallworth_nqueens.models.board.NQueensBoard.from_columns";
+    "stallworth_nqueens.reporting.display.display_single_result" -> "stallworth_nqueens.reporting.display._metric_value";
+    "stallworth_nqueens.sast_demo.subprocess_example" -> "subprocess.run" [style="dashed", color="#5b85e0"];
+    "stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens" -> "stallworth_nqueens.abstract.bitmask.full_mask";
+}

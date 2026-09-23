@@ -1,0 +1,1941 @@
+{
+  "report_type": "imports",
+  "graph_name": "Stallworth N-Queens",
+  "internal_import_edge_count": 34,
+  "external_import_edge_count": 0,
+  "stdlib_import_edge_count": 19,
+  "unresolved_import_edge_count": 0,
+  "threshold_diagnostic": {
+    "metrics": {
+      "average": 1.94,
+      "median": 2.0,
+      "upper_half_average": 3.39
+    },
+    "threshold": 10,
+    "warning": true,
+    "suggested_threshold": 3,
+    "reason": "Configured threshold exceeds observed dependency concentration"
+  },
+  "findings": [
+    {
+      "code": "unused_import",
+      "strength": "Strong",
+      "title": "Unused import: annotations",
+      "summary": "`stallworth_nqueens.metrics` imports `annotations` from `__future__`, but `annotations` is not referenced in the module.",
+      "evidence": [
+        "binding_name=annotations",
+        "source=from __future__ import annotations",
+        "usage_count=0"
+      ],
+      "module_paths": [
+        "./src/stallworth_nqueens/metrics.py"
+      ],
+      "suggestion": "Remove the unused import.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.metrics",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 1,
+          "end_line_number": 1
+        }
+      ]
+    }
+  ],
+  "modules": [
+    {
+      "name": "stallworth_nqueens",
+      "file": "./src/stallworth_nqueens/__init__.py",
+      "package": null,
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.abstract",
+      "file": "./src/stallworth_nqueens/abstract/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.abstract.bitmask",
+      "file": "./src/stallworth_nqueens/abstract/bitmask.py",
+      "package": "stallworth_nqueens.abstract",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.abstract.constraints",
+      "file": "./src/stallworth_nqueens/abstract/constraints.py",
+      "package": "stallworth_nqueens.abstract",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.benchmarking",
+      "file": "./src/stallworth_nqueens/benchmarking/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.benchmarking.adapter",
+      "file": "./src/stallworth_nqueens/benchmarking/adapter.py",
+      "package": "stallworth_nqueens.benchmarking",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 3,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 3,
+      "imported_symbol_count": 5,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.common.benchmarking",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "BenchmarkResult",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "BenchmarkResult"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.metrics",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensSolverExecution",
+              "asname": null
+            },
+            {
+              "name": "NQueensSolverFailure",
+              "asname": null
+            },
+            {
+              "name": "execute_with_metrics",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensSolverExecution",
+            "NQueensSolverFailure",
+            "execute_with_metrics"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.metrics",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "SOLVERS",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "SOLVERS"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.cli",
+      "file": "./src/stallworth_nqueens/cli/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.cli.args",
+      "file": "./src/stallworth_nqueens/cli/args.py",
+      "package": "stallworth_nqueens.cli",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 2,
+      "imports": [
+        {
+          "module": "argparse",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "argparse"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "argparse",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.profiles.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "get_profile",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "get_profile"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.profiles.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.cli.n_queens_cli",
+      "file": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+      "package": "stallworth_nqueens.cli",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 6,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 2,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 8,
+      "imported_symbol_count": 15,
+      "imports": [
+        {
+          "module": "logging",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "logging"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "logging",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.common.logging.logger",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "format_unexpected_error",
+              "asname": null
+            },
+            {
+              "name": "setup_logging",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "format_unexpected_error",
+            "setup_logging"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.logging.logger",
+          "import_type": "internal"
+        },
+        {
+          "module": "difflib",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "get_close_matches",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "get_close_matches"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "difflib",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.cli.args",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "build_args",
+              "asname": null
+            },
+            {
+              "name": "format_usage",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "build_args",
+            "format_usage"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.cli.args",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.execution.engine",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "execute",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "execute"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.execution.engine",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.profiles.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "get_profile",
+              "asname": null
+            },
+            {
+              "name": "get_profile_names",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "get_profile",
+            "get_profile_names"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.profiles.registry",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.reporting.display",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "display_usage",
+              "asname": null
+            },
+            {
+              "name": "display_execution_result",
+              "asname": null
+            },
+            {
+              "name": "display_run_header",
+              "asname": null
+            },
+            {
+              "name": "display_unknown_solver",
+              "asname": null
+            },
+            {
+              "name": "display_unexpected_error",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "display_usage",
+            "display_execution_result",
+            "display_run_header",
+            "display_unknown_solver",
+            "display_unexpected_error"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.reporting.display",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "get_solver_names",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "get_solver_names"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common",
+      "file": "./src/stallworth_nqueens/common/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.common.benchmarking",
+      "file": "./src/stallworth_nqueens/common/benchmarking/__init__.py",
+      "package": "stallworth_nqueens.common",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 5,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.common.benchmarking.models",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "BenchmarkResult",
+              "asname": null
+            },
+            {
+              "name": "CommonExecutionMetrics",
+              "asname": null
+            },
+            {
+              "name": "annotate_speedups",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "BenchmarkResult",
+            "CommonExecutionMetrics",
+            "annotate_speedups"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking.models",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.common.benchmarking.runner",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "run_benchmark",
+              "asname": null
+            },
+            {
+              "name": "run_benchmarks",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "run_benchmark",
+            "run_benchmarks"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking.runner",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common.benchmarking.adapters",
+      "file": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "typing",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "Any",
+              "asname": null
+            },
+            {
+              "name": "Protocol",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "Any",
+            "Protocol"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "typing",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.common.benchmarking.models",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "BenchmarkResult",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "BenchmarkResult"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking.models",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common.benchmarking.models",
+      "file": "./src/stallworth_nqueens/common/benchmarking/models.py",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 2,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 4,
+      "imports": [
+        {
+          "module": "dataclasses",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "dataclass",
+              "asname": null
+            },
+            {
+              "name": "field",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "dataclass",
+            "field"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "dataclasses",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "typing",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "Any",
+              "asname": null
+            },
+            {
+              "name": "Literal",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "Any",
+            "Literal"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "typing",
+          "import_type": "stdlib"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common.benchmarking.runner",
+      "file": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 2,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 4,
+      "imported_symbol_count": 5,
+      "imports": [
+        {
+          "module": "time",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "time"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "time",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "typing",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "Any",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "Any"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "typing",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.common.benchmarking.adapters",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "DomainBenchmarkAdapter",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "DomainBenchmarkAdapter"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking.adapters",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.common.benchmarking.models",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "BenchmarkResult",
+              "asname": null
+            },
+            {
+              "name": "annotate_speedups",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "BenchmarkResult",
+            "annotate_speedups"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking.models",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common.logging",
+      "file": "./src/stallworth_nqueens/common/logging/__init__.py",
+      "package": "stallworth_nqueens.common",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.common.logging.logger",
+      "file": "./src/stallworth_nqueens/common/logging/logger.py",
+      "package": "stallworth_nqueens.common.logging",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 1,
+      "imported_symbol_count": 1,
+      "imports": [
+        {
+          "module": "logging",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "logging"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "logging",
+          "import_type": "stdlib"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.execution",
+      "file": "./src/stallworth_nqueens/execution/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.execution.engine",
+      "file": "./src/stallworth_nqueens/execution/engine.py",
+      "package": "stallworth_nqueens.execution",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.execution.runner",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "execute_all",
+              "asname": null
+            },
+            {
+              "name": "execute_solver",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "execute_all",
+            "execute_solver"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.execution.runner",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "SOLVERS",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "SOLVERS"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.execution.runner",
+      "file": "./src/stallworth_nqueens/execution/runner.py",
+      "package": "stallworth_nqueens.execution",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 4,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 2,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 6,
+      "imported_symbol_count": 8,
+      "imports": [
+        {
+          "module": "threading",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "threading"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "threading",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "time",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "time"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "time",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.common.benchmarking",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "run_benchmark",
+              "asname": null
+            },
+            {
+              "name": "run_benchmarks",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "run_benchmark",
+            "run_benchmarks"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.common.benchmarking",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.benchmarking.adapter",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensAdapter",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensAdapter"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.benchmarking.adapter",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.metrics",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "execute_with_metrics",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "execute_with_metrics"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.metrics",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "DEFAULT_BASELINE",
+              "asname": null
+            },
+            {
+              "name": "SOLVERS",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "DEFAULT_BASELINE",
+            "SOLVERS"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.main",
+      "file": "./src/stallworth_nqueens/main.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 1,
+      "imported_symbol_count": 1,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.cli.n_queens_cli",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "run_n_queens_cli",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "run_n_queens_cli"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.cli.n_queens_cli",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.metrics",
+      "file": "./src/stallworth_nqueens/metrics.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 4,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 4,
+      "imported_symbol_count": 5,
+      "imports": [
+        {
+          "module": "__future__",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "annotations",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "annotations"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "__future__",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "dataclasses",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "dataclass",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "dataclass"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "dataclasses",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "inspect",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "Parameter",
+              "asname": null
+            },
+            {
+              "name": "signature",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "Parameter",
+            "signature"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "inspect",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "typing",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "Callable",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "Callable"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "typing",
+          "import_type": "stdlib"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.models",
+      "file": "./src/stallworth_nqueens/models/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.models.board",
+      "file": "./src/stallworth_nqueens/models/board.py",
+      "package": "stallworth_nqueens.models",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "dataclasses",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "dataclass",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "dataclass"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "dataclasses",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.abstract.constraints",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "major_diagonal",
+              "asname": null
+            },
+            {
+              "name": "minor_diagonal",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "major_diagonal",
+            "minor_diagonal"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.abstract.constraints",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.profiles",
+      "file": "./src/stallworth_nqueens/profiles/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 1,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.profiles.registry",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensProfile",
+              "asname": null
+            },
+            {
+              "name": "get_profile",
+              "asname": null
+            },
+            {
+              "name": "get_profile_names",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensProfile",
+            "get_profile",
+            "get_profile_names"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.profiles.registry",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.profiles.registry",
+      "file": "./src/stallworth_nqueens/profiles/registry.py",
+      "package": "stallworth_nqueens.profiles",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 1,
+      "imported_symbol_count": 1,
+      "imports": [
+        {
+          "module": "dataclasses",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "dataclass",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "dataclass"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "dataclasses",
+          "import_type": "stdlib"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.reporting",
+      "file": "./src/stallworth_nqueens/reporting/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.reporting.display",
+      "file": "./src/stallworth_nqueens/reporting/display.py",
+      "package": "stallworth_nqueens.reporting",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 1,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 2,
+      "imports": [
+        {
+          "module": "logging",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "logging"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "logging",
+          "import_type": "stdlib"
+        },
+        {
+          "module": "stallworth_nqueens.models.board",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensBoard",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensBoard"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.models.board",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.sast_demo",
+      "file": "./src/stallworth_nqueens/sast_demo.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 1,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 1,
+      "imported_symbol_count": 1,
+      "imports": [
+        {
+          "module": "subprocess",
+          "module_asname": null,
+          "imported_names": [],
+          "level": 0,
+          "binding_names": [
+            "subprocess"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "subprocess",
+          "import_type": "stdlib"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers",
+      "file": "./src/stallworth_nqueens/solvers/__init__.py",
+      "package": "stallworth_nqueens",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.solvers.bitmask",
+      "file": "./src/stallworth_nqueens/solvers/bitmask/__init__.py",
+      "package": "stallworth_nqueens.solvers",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "file": "./src/stallworth_nqueens/solvers/bitmask/backtracking.py",
+      "package": "stallworth_nqueens.solvers.bitmask",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 4,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.abstract.bitmask",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "available_positions",
+              "asname": null
+            },
+            {
+              "name": "full_mask",
+              "asname": null
+            },
+            {
+              "name": "next_state",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "available_positions",
+            "full_mask",
+            "next_state"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.abstract.bitmask",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.metrics",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensSearchMetrics",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensSearchMetrics"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.metrics",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers.constraint",
+      "file": "./src/stallworth_nqueens/solvers/constraint.py",
+      "package": "stallworth_nqueens.solvers",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.abstract.constraints",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "minor_diagonal",
+              "asname": null
+            },
+            {
+              "name": "major_diagonal",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "minor_diagonal",
+            "major_diagonal"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.abstract.constraints",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.metrics",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensSearchMetrics",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensSearchMetrics"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.metrics",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers.dfs",
+      "file": "./src/stallworth_nqueens/solvers/dfs/__init__.py",
+      "package": "stallworth_nqueens.solvers",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 0,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 0,
+      "imported_symbol_count": 0,
+      "imports": []
+    },
+    {
+      "name": "stallworth_nqueens.solvers.dfs.backtracking",
+      "file": "./src/stallworth_nqueens/solvers/dfs/backtracking.py",
+      "package": "stallworth_nqueens.solvers.dfs",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 2,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 2,
+      "imported_symbol_count": 4,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.abstract.constraints",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "is_safe",
+              "asname": null
+            },
+            {
+              "name": "major_diagonal",
+              "asname": null
+            },
+            {
+              "name": "minor_diagonal",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "is_safe",
+            "major_diagonal",
+            "minor_diagonal"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.abstract.constraints",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.metrics",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "NQueensSearchMetrics",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "NQueensSearchMetrics"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.metrics",
+          "import_type": "internal"
+        }
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers.registry",
+      "file": "./src/stallworth_nqueens/solvers/registry.py",
+      "package": "stallworth_nqueens.solvers",
+      "top_level_package": "stallworth_nqueens",
+      "role_hints": [],
+      "internal_import_edge_count": 3,
+      "external_import_edge_count": 0,
+      "stdlib_import_edge_count": 0,
+      "unresolved_import_edge_count": 0,
+      "imports_count": 3,
+      "imported_symbol_count": 3,
+      "imports": [
+        {
+          "module": "stallworth_nqueens.solvers.dfs",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "backtracking",
+              "asname": "dfs_backtracking"
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "dfs_backtracking"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.dfs",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "constraint",
+              "asname": null
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "constraint"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers",
+          "import_type": "internal"
+        },
+        {
+          "module": "stallworth_nqueens.solvers.bitmask",
+          "module_asname": null,
+          "imported_names": [
+            {
+              "name": "backtracking",
+              "asname": "bitmask_backtracking"
+            }
+          ],
+          "level": 0,
+          "binding_names": [
+            "bitmask_backtracking"
+          ],
+          "is_star_import": false,
+          "star_import_info": null,
+          "resolved_target": "stallworth_nqueens.solvers.bitmask",
+          "import_type": "internal"
+        }
+      ]
+    }
+  ],
+  "import_edges": [
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.common.benchmarking",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.metrics",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter",
+      "target": "stallworth_nqueens.solvers.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.args",
+      "target": "argparse",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.cli.args",
+      "target": "stallworth_nqueens.profiles.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "difflib",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "logging",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.cli.args",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.common.logging.logger",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.execution.engine",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.profiles.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli",
+      "target": "stallworth_nqueens.solvers.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking",
+      "target": "stallworth_nqueens.common.benchmarking.runner",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.adapters",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.adapters",
+      "target": "typing",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.models",
+      "target": "dataclasses",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.models",
+      "target": "typing",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "stallworth_nqueens.common.benchmarking.adapters",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "stallworth_nqueens.common.benchmarking.models",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "time",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner",
+      "target": "typing",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.common.logging.logger",
+      "target": "logging",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine",
+      "target": "stallworth_nqueens.execution.runner",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine",
+      "target": "stallworth_nqueens.solvers.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.benchmarking.adapter",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.common.benchmarking",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.metrics",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "stallworth_nqueens.solvers.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "threading",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner",
+      "target": "time",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.main",
+      "target": "stallworth_nqueens.cli.n_queens_cli",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.metrics",
+      "target": "__future__",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.metrics",
+      "target": "dataclasses",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.metrics",
+      "target": "inspect",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.metrics",
+      "target": "typing",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.models.board",
+      "target": "dataclasses",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.models.board",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.profiles",
+      "target": "stallworth_nqueens.profiles.registry",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.profiles.registry",
+      "target": "dataclasses",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display",
+      "target": "logging",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display",
+      "target": "stallworth_nqueens.models.board",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.sast_demo",
+      "target": "subprocess",
+      "target_type": "stdlib"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "target": "stallworth_nqueens.abstract.bitmask",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "target": "stallworth_nqueens.metrics",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.constraint",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.constraint",
+      "target": "stallworth_nqueens.metrics",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.dfs.backtracking",
+      "target": "stallworth_nqueens.abstract.constraints",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.dfs.backtracking",
+      "target": "stallworth_nqueens.metrics",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers.bitmask",
+      "target_type": "internal"
+    },
+    {
+      "source": "stallworth_nqueens.solvers.registry",
+      "target": "stallworth_nqueens.solvers.dfs",
+      "target_type": "internal"
+    }
+  ],
+  "report_finding": {
+    "finding_strength": "Strong",
+    "summary": "1 unused import detected across 1 module. Remove the unused import.",
+    "display": "[Strong] 1 unused import detected across 1 module. Remove the unused import."
+  },
+  "report_voice": {
+    "finding_strength": "Strong",
+    "tagline": "This report is mostly asking for cleanup, not rescue.",
+    "display": "[Strong] This report is mostly asking for cleanup, not rescue."
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.1.2",
+    "source_tree_sha256": "61e73f4286af46223588f9cb7283339d8eec6070142caa914759d51dda10475d",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:5344ec7163459d3b006ab655ab71eb93ae382a54abd6ffafa38262d1698d0fc4",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

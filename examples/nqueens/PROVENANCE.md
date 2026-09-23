@@ -5,9 +5,9 @@ project; packaging and extraction changes belong in the versioned recipe.
 
 - Upstream AlgoBox commit: `5b54bdbc8a56d08c879d32421eb345805cc5a2f9`
 - Recipe: `nqueens`, schema `1.0`, version `1.2`
-- Recipe content revision: `sha256:6f0db4f560550afd9bb121b1e8eec6967a202efc2ab478abe1ab79cf3c3ec820`
+- Recipe content revision: `sha256:5344ec7163459d3b006ab655ab71eb93ae382a54abd6ffafa38262d1698d0fc4`
 - Extractor content revision: `sha256:93ecda5f8952da87ef1343d4b425cff6b385cad08e36b30f259f13324728b76f`
-- Example version: `0.1.1`
+- Example version: `0.1.2`
 
 Source paths below are relative to the upstream repository. Output paths are
 relative to this example. The separate extraction manifest records hashes and
