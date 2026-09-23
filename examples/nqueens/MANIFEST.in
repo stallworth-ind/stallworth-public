@@ -31,6 +31,7 @@ include src/stallworth_nqueens/profiles/__init__.py
 include src/stallworth_nqueens/profiles/registry.py
 include src/stallworth_nqueens/reporting/__init__.py
 include src/stallworth_nqueens/reporting/display.py
+include src/stallworth_nqueens/sast_demo.py
 include src/stallworth_nqueens/solvers/__init__.py
 include src/stallworth_nqueens/solvers/bitmask/__init__.py
 include src/stallworth_nqueens/solvers/bitmask/backtracking.py

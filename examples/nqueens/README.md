@@ -43,6 +43,13 @@ HTML/JSON report generation belongs to the internal
 Stallworth Workbench automation. Published reports can be opened with their
 companion assets; generation tools are not runtime dependencies of this example.
 
+The `src/stallworth_nqueens/sast_demo.py` module is an uncalled demonstration
+for the SAST and CodeViz reports. Its subprocess import and call intentionally
+produce Bandit B404 and B603, with source context and interactive review controls.
+No solver, CLI, registry, or test imports or calls it. The example publication
+gate permits only these two findings from the exact demonstration source;
+unexpected findings and scanner failures still block publication.
+
 To run the source tests with publicly available dependencies:
 
 ```text
@@ -58,4 +65,4 @@ source attribution accompany the package metadata.
 
 The selected source is refreshed through the versioned extraction recipe.
 See [PROVENANCE.md](PROVENANCE.md) for its origin and [LICENSE](LICENSE) for the
-preserved upstream license. This snapshot is version 0.1.0.
+preserved upstream license. This snapshot is version 0.1.1.

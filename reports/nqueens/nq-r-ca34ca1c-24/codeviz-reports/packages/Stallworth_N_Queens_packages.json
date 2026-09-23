@@ -1,0 +1,479 @@
+{
+  "report_type": "package_boundary",
+  "graph_name": "Stallworth N-Queens",
+  "internal_import_edge_count": 23,
+  "external_import_edge_count": 0,
+  "stdlib_import_edge_count": 17,
+  "unresolved_import_edge_count": 0,
+  "threshold_diagnostic": {
+    "metrics": {
+      "average": 3.29,
+      "median": 3.0,
+      "upper_half_average": 5.0
+    },
+    "threshold": 10,
+    "warning": true,
+    "suggested_threshold": 5,
+    "reason": "Configured threshold exceeds observed dependency concentration"
+  },
+  "findings": [
+    {
+      "code": "leaf_package",
+      "strength": "Light",
+      "title": "Leaf package observed",
+      "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+      "evidence": [
+        "Inbound package dependencies remain limited.",
+        "Outbound package dependencies remain limited.",
+        "package_name=stallworth_nqueens.common",
+        "inbound_package_dependencies=0",
+        "outbound_package_dependencies=0",
+        "role_threshold=10"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.common"
+      ],
+      "suggestion": "Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.common",
+          "file_path": "./src/stallworth_nqueens/common",
+          "line_number": null,
+          "end_line_number": null
+        }
+      ]
+    },
+    {
+      "code": "leaf_package",
+      "strength": "Light",
+      "title": "Leaf package observed",
+      "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+      "evidence": [
+        "Inbound package dependencies remain limited.",
+        "Outbound package dependencies remain limited.",
+        "package_name=stallworth_nqueens.common.logging",
+        "inbound_package_dependencies=1",
+        "outbound_package_dependencies=0",
+        "role_threshold=10"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.common.logging",
+        "stallworth_nqueens.common.logging.logger"
+      ],
+      "suggestion": "Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.common.logging",
+          "file_path": "./src/stallworth_nqueens/common/logging",
+          "line_number": null,
+          "end_line_number": null
+        }
+      ]
+    },
+    {
+      "code": "leaf_package",
+      "strength": "Light",
+      "title": "Leaf package observed",
+      "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+      "evidence": [
+        "Inbound package dependencies remain limited.",
+        "Outbound package dependencies remain limited.",
+        "package_name=stallworth_nqueens.models",
+        "inbound_package_dependencies=1",
+        "outbound_package_dependencies=1",
+        "role_threshold=10"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.models",
+        "stallworth_nqueens.models.board"
+      ],
+      "suggestion": "Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.models",
+          "file_path": "./src/stallworth_nqueens/models",
+          "line_number": null,
+          "end_line_number": null
+        }
+      ]
+    },
+    {
+      "code": "leaf_package",
+      "strength": "Light",
+      "title": "Leaf package observed",
+      "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+      "evidence": [
+        "Inbound package dependencies remain limited.",
+        "Outbound package dependencies remain limited.",
+        "package_name=stallworth_nqueens.profiles",
+        "inbound_package_dependencies=1",
+        "outbound_package_dependencies=0",
+        "role_threshold=10"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.profiles",
+        "stallworth_nqueens.profiles.registry"
+      ],
+      "suggestion": "Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.profiles",
+          "file_path": "./src/stallworth_nqueens/profiles",
+          "line_number": null,
+          "end_line_number": null
+        }
+      ]
+    },
+    {
+      "code": "leaf_package",
+      "strength": "Light",
+      "title": "Leaf package observed",
+      "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+      "evidence": [
+        "Inbound package dependencies remain limited.",
+        "Outbound package dependencies remain limited.",
+        "package_name=stallworth_nqueens.reporting",
+        "inbound_package_dependencies=1",
+        "outbound_package_dependencies=1",
+        "role_threshold=10"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.reporting",
+        "stallworth_nqueens.reporting.display"
+      ],
+      "suggestion": "Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.reporting",
+          "file_path": "./src/stallworth_nqueens/reporting",
+          "line_number": null,
+          "end_line_number": null
+        }
+      ]
+    }
+  ],
+  "packages": [
+    {
+      "name": "stallworth_nqueens",
+      "role_hints": [],
+      "module_count": 4,
+      "modules": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.main",
+        "stallworth_nqueens.metrics",
+        "stallworth_nqueens.sast_demo"
+      ],
+      "depends_on": [
+        "__future__",
+        "dataclasses",
+        "inspect",
+        "stallworth_nqueens.cli",
+        "subprocess",
+        "typing"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.benchmarking",
+        "stallworth_nqueens.execution",
+        "stallworth_nqueens.solvers",
+        "stallworth_nqueens.solvers.bitmask",
+        "stallworth_nqueens.solvers.dfs"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.abstract",
+      "role_hints": [],
+      "module_count": 3,
+      "modules": [
+        "stallworth_nqueens.abstract",
+        "stallworth_nqueens.abstract.bitmask",
+        "stallworth_nqueens.abstract.constraints"
+      ],
+      "depends_on": [],
+      "depended_on_by": [
+        "stallworth_nqueens.models",
+        "stallworth_nqueens.solvers",
+        "stallworth_nqueens.solvers.bitmask",
+        "stallworth_nqueens.solvers.dfs"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.benchmarking",
+      "role_hints": [],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.benchmarking",
+        "stallworth_nqueens.benchmarking.adapter"
+      ],
+      "depends_on": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.common.benchmarking",
+        "stallworth_nqueens.solvers"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.execution"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.cli",
+      "role_hints": [],
+      "module_count": 3,
+      "modules": [
+        "stallworth_nqueens.cli",
+        "stallworth_nqueens.cli.args",
+        "stallworth_nqueens.cli.n_queens_cli"
+      ],
+      "depends_on": [
+        "argparse",
+        "difflib",
+        "logging",
+        "stallworth_nqueens.common.logging",
+        "stallworth_nqueens.execution",
+        "stallworth_nqueens.profiles",
+        "stallworth_nqueens.reporting",
+        "stallworth_nqueens.solvers"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common",
+      "role_hints": [
+        "leaf_package"
+      ],
+      "module_count": 1,
+      "modules": [
+        "stallworth_nqueens.common"
+      ],
+      "depends_on": [],
+      "depended_on_by": []
+    },
+    {
+      "name": "stallworth_nqueens.common.benchmarking",
+      "role_hints": [],
+      "module_count": 4,
+      "modules": [
+        "stallworth_nqueens.common.benchmarking",
+        "stallworth_nqueens.common.benchmarking.adapters",
+        "stallworth_nqueens.common.benchmarking.models",
+        "stallworth_nqueens.common.benchmarking.runner"
+      ],
+      "depends_on": [
+        "dataclasses",
+        "time",
+        "typing"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.benchmarking",
+        "stallworth_nqueens.execution"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.common.logging",
+      "role_hints": [
+        "leaf_package"
+      ],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.common.logging",
+        "stallworth_nqueens.common.logging.logger"
+      ],
+      "depends_on": [
+        "logging"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.cli"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.execution",
+      "role_hints": [],
+      "module_count": 3,
+      "modules": [
+        "stallworth_nqueens.execution",
+        "stallworth_nqueens.execution.engine",
+        "stallworth_nqueens.execution.runner"
+      ],
+      "depends_on": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.benchmarking",
+        "stallworth_nqueens.common.benchmarking",
+        "stallworth_nqueens.solvers",
+        "threading",
+        "time"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.cli"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.models",
+      "role_hints": [
+        "leaf_package"
+      ],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.models",
+        "stallworth_nqueens.models.board"
+      ],
+      "depends_on": [
+        "dataclasses",
+        "stallworth_nqueens.abstract"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.reporting"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.profiles",
+      "role_hints": [
+        "leaf_package"
+      ],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.profiles",
+        "stallworth_nqueens.profiles.registry"
+      ],
+      "depends_on": [
+        "dataclasses"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.cli"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.reporting",
+      "role_hints": [
+        "leaf_package"
+      ],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.reporting",
+        "stallworth_nqueens.reporting.display"
+      ],
+      "depends_on": [
+        "logging",
+        "stallworth_nqueens.models"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.cli"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers",
+      "role_hints": [],
+      "module_count": 3,
+      "modules": [
+        "stallworth_nqueens.solvers",
+        "stallworth_nqueens.solvers.constraint",
+        "stallworth_nqueens.solvers.registry"
+      ],
+      "depends_on": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.abstract",
+        "stallworth_nqueens.solvers.bitmask",
+        "stallworth_nqueens.solvers.dfs"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.benchmarking",
+        "stallworth_nqueens.cli",
+        "stallworth_nqueens.execution"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers.bitmask",
+      "role_hints": [],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.solvers.bitmask",
+        "stallworth_nqueens.solvers.bitmask.backtracking"
+      ],
+      "depends_on": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.abstract"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.solvers"
+      ]
+    },
+    {
+      "name": "stallworth_nqueens.solvers.dfs",
+      "role_hints": [],
+      "module_count": 2,
+      "modules": [
+        "stallworth_nqueens.solvers.dfs",
+        "stallworth_nqueens.solvers.dfs.backtracking"
+      ],
+      "depends_on": [
+        "stallworth_nqueens",
+        "stallworth_nqueens.abstract"
+      ],
+      "depended_on_by": [
+        "stallworth_nqueens.solvers"
+      ]
+    }
+  ],
+  "report_finding": {
+    "finding_strength": "Light",
+    "summary": "This package has little or no inward or outward coupling and appears relatively isolated.",
+    "display": "[Light] This package has little or no inward or outward coupling and appears relatively isolated."
+  },
+  "report_voice": {
+    "finding_strength": "Light",
+    "tagline": "Messy is fine. Hidden is the problem.",
+    "display": "[Light] Messy is fine. Hidden is the problem."
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.1.1",
+    "source_tree_sha256": "4a23d51839015f276858d3fa120bf066994a379137b83cafb5a4e4d8077275d2",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:6f0db4f560550afd9bb121b1e8eec6967a202efc2ab478abe1ab79cf3c3ec820",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

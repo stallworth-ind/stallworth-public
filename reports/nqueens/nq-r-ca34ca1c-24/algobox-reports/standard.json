@@ -1,0 +1,261 @@
+{
+  "schema_version": "1.0",
+  "subject": "Stallworth N-Queens",
+  "distribution": "stallworth-nqueens",
+  "version": "0.1.1",
+  "generated_at": "2026-09-23T20:52:45.802529+00:00",
+  "python_version": "3.12.3",
+  "platform": "Linux",
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.1.1",
+    "source_tree_sha256": "4a23d51839015f276858d3fa120bf066994a379137b83cafb5a4e4d8077275d2",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:6f0db4f560550afd9bb121b1e8eec6967a202efc2ab478abe1ab79cf3c3ec820",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  },
+  "profile": "standard",
+  "configuration": {
+    "name": "standard",
+    "problem_size": 8,
+    "default_solver": "all",
+    "solver_names": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "description": "Classic N=8 run across the default domain flow.",
+    "baseline_solver": "dfs_backtracking",
+    "comparison_metric_groups": [
+      "common",
+      "search_shape",
+      "constraint",
+      "backtracking",
+      "bitmask"
+    ],
+    "finding_priorities": [
+      "elapsed_seconds",
+      "states_visited",
+      "candidate_placements_considered"
+    ]
+  },
+  "expected_solutions": 92,
+  "command": "stallworth-nqueens --profile standard",
+  "method": "Elapsed time measures the installed solver execution once. The adapter finds a representative board afterward; that sample search is outside the measured interval. These timings describe this run and are not statistical performance estimates. Missing measurements remain unavailable. Capability groups are comparable only among solvers that report that group. The source of the domain code is AlgoBox; the evaluated subject is Stallworth N-Queens.",
+  "capability_comparisons": {
+    "search_shape": {
+      "eligible_solvers": [
+        "dfs_backtracking",
+        "constraint",
+        "bitmask_backtracking"
+      ],
+      "excluded_solvers": []
+    },
+    "constraint": {
+      "eligible_solvers": [
+        "dfs_backtracking",
+        "constraint"
+      ],
+      "excluded_solvers": [
+        "bitmask_backtracking"
+      ]
+    },
+    "backtracking": {
+      "eligible_solvers": [
+        "dfs_backtracking",
+        "constraint",
+        "bitmask_backtracking"
+      ],
+      "excluded_solvers": []
+    },
+    "bitmask": {
+      "eligible_solvers": [
+        "bitmask_backtracking"
+      ],
+      "excluded_solvers": [
+        "dfs_backtracking",
+        "constraint"
+      ]
+    }
+  },
+  "results": [
+    {
+      "domain": "nqueens",
+      "solver": "dfs_backtracking",
+      "time": 0.006384413980413228,
+      "success": true,
+      "payload": {
+        "problem_size": 8,
+        "solutions": 92,
+        "sample_solution": [
+          0,
+          4,
+          7,
+          5,
+          2,
+          6,
+          1,
+          3
+        ],
+        "states_visited": 2057,
+        "candidate_placements_considered": 15720,
+        "capability_metrics": {
+          "search_shape": {
+            "schema_version": "1.0",
+            "root_entries": 1,
+            "leaf_states": 736,
+            "child_states_entered": 2056,
+            "maximum_depth_reached": 8
+          },
+          "constraint": {
+            "schema_version": "1.0",
+            "constraint_checks": 15720,
+            "constraint_rejections": 13664
+          },
+          "backtracking": {
+            "schema_version": "1.0",
+            "backtracks": 2056,
+            "dead_ends": 644
+          }
+        }
+      },
+      "sample_valid": true,
+      "validation": "verified",
+      "speedup_vs_baseline": 1.0
+    },
+    {
+      "domain": "nqueens",
+      "solver": "constraint",
+      "time": 0.00424597505480051,
+      "success": true,
+      "payload": {
+        "problem_size": 8,
+        "solutions": 92,
+        "sample_solution": [
+          0,
+          4,
+          7,
+          5,
+          2,
+          6,
+          1,
+          3
+        ],
+        "states_visited": 2057,
+        "candidate_placements_considered": 5508,
+        "capability_metrics": {
+          "search_shape": {
+            "schema_version": "1.0",
+            "root_entries": 1,
+            "leaf_states": 736,
+            "child_states_entered": 2056,
+            "maximum_depth_reached": 8
+          },
+          "constraint": {
+            "schema_version": "1.0",
+            "constraint_checks": 5508,
+            "constraint_rejections": 3452
+          },
+          "backtracking": {
+            "schema_version": "1.0",
+            "backtracks": 2056,
+            "dead_ends": 644
+          }
+        }
+      },
+      "sample_valid": true,
+      "validation": "verified",
+      "speedup_vs_baseline": 1.5036390694747472
+    },
+    {
+      "domain": "nqueens",
+      "solver": "bitmask_backtracking",
+      "time": 0.0024216840392909944,
+      "success": true,
+      "payload": {
+        "problem_size": 8,
+        "solutions": 92,
+        "sample_solution": [
+          0,
+          4,
+          7,
+          5,
+          2,
+          6,
+          1,
+          3
+        ],
+        "states_visited": 2057,
+        "candidate_placements_considered": 2056,
+        "capability_metrics": {
+          "search_shape": {
+            "schema_version": "1.0",
+            "root_entries": 1,
+            "leaf_states": 736,
+            "child_states_entered": 2056,
+            "maximum_depth_reached": 8
+          },
+          "backtracking": {
+            "schema_version": "1.0",
+            "backtracks": 2056,
+            "dead_ends": 644
+          },
+          "bitmask": {
+            "schema_version": "1.0",
+            "available_masks_computed": 1965,
+            "candidate_bits_extracted": 2056,
+            "zero_availability_masks": 644
+          }
+        }
+      },
+      "sample_valid": true,
+      "validation": "verified",
+      "speedup_vs_baseline": 2.636352999329515
+    }
+  ]
+}

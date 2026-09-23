@@ -1,0 +1,64 @@
+Class relationships for Stallworth N-Queens
+===========================================
+
+  analysis_maturity: provisional
+  internal_classes: 14
+  referenced_classes: 3
+  inheritance_edges: 3
+  annotation_reference_edges: 8
+  class_findings: 0
+  shared_base_threshold: 3
+  deep_inheritance_threshold: 3
+
+- stallworth_nqueens.benchmarking.adapter
+  package: stallworth_nqueens.benchmarking
+  class_count: 1
+  classes:
+    - name=NQueensAdapter bases=none derived=none references=none traits=none method_count=3
+
+- stallworth_nqueens.cli.args
+  package: stallworth_nqueens.cli
+  class_count: 1
+  classes:
+    - name=NQueensArgumentParser bases=argparse.ArgumentParser derived=none references=none traits=none method_count=1
+
+- stallworth_nqueens.common.benchmarking.adapters
+  package: stallworth_nqueens.common.benchmarking
+  class_count: 1
+  classes:
+    - name=DomainBenchmarkAdapter bases=typing.Protocol derived=none references=stallworth_nqueens.common.benchmarking.models.BenchmarkResult traits=protocol method_count=3
+
+- stallworth_nqueens.common.benchmarking.models
+  package: stallworth_nqueens.common.benchmarking
+  class_count: 2
+  classes:
+    - name=BenchmarkResult bases=none derived=none references=none traits=none method_count=0
+    - name=CommonExecutionMetrics bases=none derived=none references=stallworth_nqueens.common.benchmarking.models.BenchmarkResult traits=none method_count=1
+
+- stallworth_nqueens.metrics
+  package: stallworth_nqueens
+  class_count: 7
+  classes:
+    - name=NQueensBacktrackingCounters bases=none derived=none references=none traits=none method_count=0
+    - name=NQueensBitmaskCounters bases=none derived=none references=none traits=none method_count=0
+    - name=NQueensConstraintCounters bases=none derived=none references=none traits=none method_count=0
+    - name=NQueensSearchMetrics bases=none derived=none references=stallworth_nqueens.metrics.NQueensBacktrackingCounters, stallworth_nqueens.metrics.NQueensBitmaskCounters, stallworth_nqueens.metrics.NQueensConstraintCounters, stallworth_nqueens.metrics.NQueensSearchShapeCounters traits=none method_count=15
+    - name=NQueensSearchShapeCounters bases=none derived=none references=none traits=none method_count=0
+    - name=NQueensSolverExecution bases=none derived=none references=stallworth_nqueens.metrics.NQueensSearchMetrics traits=none method_count=0
+    - name=NQueensSolverFailure bases=builtins.RuntimeError derived=none references=stallworth_nqueens.metrics.NQueensSearchMetrics traits=none method_count=1
+
+- stallworth_nqueens.models.board
+  package: stallworth_nqueens.models
+  class_count: 1
+  classes:
+    - name=NQueensBoard bases=none derived=none references=none traits=none method_count=6
+
+- stallworth_nqueens.profiles.registry
+  package: stallworth_nqueens.profiles
+  class_count: 1
+  classes:
+    - name=NQueensProfile bases=none derived=none references=none traits=none method_count=0
+
+Findings
+========
+- none
