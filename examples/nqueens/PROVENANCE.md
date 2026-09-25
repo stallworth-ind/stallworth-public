@@ -4,10 +4,10 @@ This is generated example source. Domain changes belong in the upstream AlgoBox
 project; packaging and extraction changes belong in the versioned recipe.
 
 - Upstream AlgoBox commit: `5b54bdbc8a56d08c879d32421eb345805cc5a2f9`
-- Recipe: `nqueens`, schema `1.0`, version `1.2`
-- Recipe content revision: `sha256:5344ec7163459d3b006ab655ab71eb93ae382a54abd6ffafa38262d1698d0fc4`
-- Extractor content revision: `sha256:93ecda5f8952da87ef1343d4b425cff6b385cad08e36b30f259f13324728b76f`
-- Example version: `0.1.2`
+- Recipe: `nqueens`, schema `1.0`, version `1.3`
+- Recipe content revision: `sha256:23eaa088530a98dae4d68f8b97fcd32b135d43c890b5ddd1066d646917be866c`
+- Extractor content revision: `sha256:54ce9bbc590f1a4a330a029589a91590ec47476dd24fea956208279df5ce2c68`
+- Example version: `0.2.1`
 
 Source paths below are relative to the upstream repository. Output paths are
 relative to this example. The separate extraction manifest records hashes and
@@ -18,6 +18,11 @@ The uncalled `src/stallworth_nqueens/sast_demo.py` module is supplied by the
 Pipelines extraction recipe for the SAST/CodeViz demonstration. It is not
 copied from AlgoBox. Its template origin and hash are recorded in the extraction
 manifest alongside the upstream-derived files.
+
+The uncalled `src/stallworth_nqueens/codeviz_demo/` package also comes from
+explicit recipe templates. It demonstrates Codeviz findings without changing
+solver execution. Each template origin and content hash is recorded in the
+extraction manifest.
 
 | Upstream source | Example output |
 | --- | --- |

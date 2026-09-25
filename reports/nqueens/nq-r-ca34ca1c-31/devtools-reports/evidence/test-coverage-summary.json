@@ -1,0 +1,83 @@
+{
+  "execution": {
+    "duration_seconds": 2.119753352017142,
+    "exit_code": 0,
+    "log": "pytest.log",
+    "name": "pytest-coverage",
+    "timestamp": "2026-09-25 12:54:23"
+  },
+  "tests": {
+    "total": 99,
+    "passed": 99,
+    "failed": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "coverage": {
+    "total_percent_display": "85",
+    "total_percent_value": 84.64125560538116,
+    "total_statements": 734,
+    "total_covered": 614,
+    "total_missing": 120,
+    "total_excluded": 22,
+    "file_count": 50,
+    "branch_coverage": true,
+    "total_branches": 158,
+    "covered_branches": 141,
+    "missing_branches": 17,
+    "partial_branches": 11
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.2.1",
+    "source_tree_sha256": "606a77210d684fd943b3c410f48ee02611bcfa227ab59829987b52a056444edd",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:23eaa088530a98dae4d68f8b97fcd32b135d43c890b5ddd1066d646917be866c",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

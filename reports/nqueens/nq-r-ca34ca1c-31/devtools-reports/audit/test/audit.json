@@ -1,0 +1,88 @@
+{
+  "dependencies": [
+    {
+      "name": "pytest",
+      "version": "9.1.1",
+      "vulns": []
+    },
+    {
+      "name": "pluggy",
+      "version": "1.6.0",
+      "vulns": []
+    },
+    {
+      "name": "pytest-cov",
+      "version": "7.1.0",
+      "vulns": []
+    },
+    {
+      "name": "coverage",
+      "version": "7.16.1",
+      "vulns": []
+    },
+    {
+      "name": "iniconfig",
+      "version": "2.3.0",
+      "vulns": []
+    },
+    {
+      "name": "pygments",
+      "version": "2.21.0",
+      "vulns": []
+    }
+  ],
+  "fixes": [],
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.2.1",
+    "source_tree_sha256": "606a77210d684fd943b3c410f48ee02611bcfa227ab59829987b52a056444edd",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:23eaa088530a98dae4d68f8b97fcd32b135d43c890b5ddd1066d646917be866c",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

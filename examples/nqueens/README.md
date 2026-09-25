@@ -43,6 +43,15 @@ HTML/JSON report generation belongs to the internal
 Stallworth Workbench automation. Published reports can be opened with their
 companion assets; generation tools are not runtime dependencies of this example.
 
+The `src/stallworth_nqueens/codeviz_demo/` package contains uncalled examples
+for Codeviz: shared base classes and deep inheritance, direct and mutual
+recursion, and dynamic module exports. Ten explicit demo
+stages give the hub ten inbound and ten outbound internal dependencies; the
+orchestrator has ten outbound dependencies and the models module is shared
+by all ten stages. These produce findings at `orchestration_hub_threshold = 10`.
+The CLI, solvers, and registries do not import this package. The examples are
+recipe-supplied teaching source, separate from the N-Queens implementation.
+
 The `src/stallworth_nqueens/sast_demo.py` module is an uncalled demonstration
 for the SAST and CodeViz reports. Its subprocess import and call intentionally
 produce Bandit B404 and B603, with source context and interactive review controls.
@@ -65,4 +74,4 @@ source attribution accompany the package metadata.
 
 The selected source is refreshed through the versioned extraction recipe.
 See [PROVENANCE.md](PROVENANCE.md) for its origin and [LICENSE](LICENSE) for the
-preserved upstream license. This snapshot is version 0.1.2.
+preserved upstream license. This snapshot is version 0.2.1.
