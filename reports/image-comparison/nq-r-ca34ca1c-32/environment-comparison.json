@@ -1,0 +1,701 @@
+{
+  "metadata": {
+    "schema_version": "1.0",
+    "generated_at": "2026-09-25T22:06:33.182849-04:00",
+    "generated_date": "September 25, 2026",
+    "generated_time": "10:06 PM EDT",
+    "experiment_id": "Debian vs Alpine",
+    "experiment_status": "complete",
+    "experiment_created_at": "2026-08-02T04:28:59.813173+00:00",
+    "source_schema_version": "1.0",
+    "source_sha256": "2536741837e2c627246cd824b08cdcc6ea8bc3ee4d82d353229247b1a7e07021"
+  },
+  "purpose": "Compare the same AlgoBox workloads in pinned Debian slim and Alpine Python images under one recorded host and resource envelope.",
+  "host": {
+    "operating_system": "Windows",
+    "architecture": "AMD64",
+    "cpu_model": "AMD Ryzen 5 5500",
+    "logical_cpu_count": 12,
+    "memory_bytes": 34245017600,
+    "docker_server_version": "28.0.4",
+    "docker_operating_system": "Docker Desktop",
+    "docker_architecture": "x86_64",
+    "virtualization": "Docker Desktop / wsl2"
+  },
+  "profile": {
+    "profile_id": "baseline",
+    "verification_status": "verified",
+    "cpu_limit": 1.0,
+    "memory_limit_bytes": 536870912,
+    "swap_limit_bytes": 0,
+    "process_limit": 128,
+    "worker_count": 1,
+    "network_interfaces": [
+      "lo"
+    ],
+    "runtime_uid": 10001,
+    "read_only_root_filesystem": true,
+    "capabilities_effective": "0000000000000000",
+    "no_new_privileges": true
+  },
+  "environments": [
+    {
+      "image_id": "algobox-runtime-debian-slim",
+      "display_name": "Debian slim",
+      "image_digest": "sha256:b7f5d4e6c452324284051ebc8bef7cbd8f3b9470f2ceccaa6091a350d81add50",
+      "base_image_id": "python-official-debian-slim",
+      "build": {
+        "elapsed_seconds": 6.0,
+        "compressed_size_bytes": 47329174,
+        "unpacked_size_bytes": 47719602,
+        "dependency_install_state": "unavailable",
+        "dependency_install_reason": "The current Docker build interface does not export machine-readable per-step timing."
+      },
+      "security": {
+        "eligible": true,
+        "total_findings": 201,
+        "accepted_findings": 166,
+        "deferred_findings": 35,
+        "blocking_findings": 0
+      }
+    },
+    {
+      "image_id": "algobox-runtime-alpine",
+      "display_name": "Alpine",
+      "image_digest": "sha256:66f26b38907e7ef9b1190a47b0cb4a4fcfc2106112c6b41889eda24a3298e2f7",
+      "base_image_id": "python-official-alpine",
+      "build": {
+        "elapsed_seconds": 5.0,
+        "compressed_size_bytes": 20241687,
+        "unpacked_size_bytes": 20312599,
+        "dependency_install_state": "unavailable",
+        "dependency_install_reason": "The current Docker build interface does not export machine-readable per-step timing."
+      },
+      "security": {
+        "eligible": true,
+        "total_findings": 9,
+        "accepted_findings": 7,
+        "deferred_findings": 2,
+        "blocking_findings": 0
+      }
+    }
+  ],
+  "observations": {
+    "total": 32,
+    "warmup": 6,
+    "measured": 26,
+    "aggregate_eligible": 26,
+    "excluded": 0
+  },
+  "workloads": [
+    {
+      "workload_id": "nqueens-bitmask-cpu",
+      "display_name": "CPU-oriented bitmask search",
+      "measured_observation_count": 10,
+      "eligible_observation_count": 10,
+      "excluded_observation_count": 0,
+      "failure_count": 0,
+      "validation_status": "Valid; deterministic work stable",
+      "metrics": [
+        {
+          "metric_id": "command_elapsed_seconds",
+          "label": "Command elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 17.3828101,
+              "minimum": 17.1803359,
+              "maximum": 17.5870285,
+              "range": 0.4066925999999995,
+              "raw_values": [
+                17.4326934,
+                17.1803359,
+                17.2651049,
+                17.3828101,
+                17.5870285
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 18.2147898,
+              "minimum": 17.9709386,
+              "maximum": 19.1744859,
+              "range": 1.2035473000000003,
+              "raw_values": [
+                19.1744859,
+                18.0777698,
+                18.2147898,
+                18.2558413,
+                17.9709386
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.831979699999998,
+          "percent_second_vs_first": 4.786220957450361
+        },
+        {
+          "metric_id": "algorithm_elapsed_seconds",
+          "label": "Algorithm elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 16.623863,
+              "minimum": 16.365004,
+              "maximum": 16.814109,
+              "range": 0.4491049999999994,
+              "raw_values": [
+                16.638608,
+                16.365004,
+                16.504279,
+                16.623863,
+                16.814109
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 17.18575,
+              "minimum": 16.896125,
+              "maximum": 18.02115,
+              "range": 1.1250249999999973,
+              "raw_values": [
+                18.02115,
+                17.069069,
+                17.18575,
+                17.208474,
+                16.896125
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.5618869999999987,
+          "percent_second_vs_first": 3.38000259025233
+        },
+        {
+          "metric_id": "user_cpu_seconds",
+          "label": "User CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 16.459296,
+              "minimum": 16.287359,
+              "maximum": 16.67848,
+              "range": 0.39112100000000183,
+              "raw_values": [
+                16.488393,
+                16.287359,
+                16.357782,
+                16.459296,
+                16.67848
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 17.053022,
+              "minimum": 16.846315,
+              "maximum": 17.982155,
+              "range": 1.1358399999999982,
+              "raw_values": [
+                17.982155,
+                16.892121,
+                17.053022,
+                17.115818,
+                16.846315
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.5937260000000002,
+          "percent_second_vs_first": 3.6072381224567582
+        },
+        {
+          "metric_id": "system_cpu_seconds",
+          "label": "System CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 0.029027999999999998,
+              "minimum": 0.0,
+              "maximum": 0.048367,
+              "range": 0.048367,
+              "raw_values": [
+                0.029027999999999998,
+                0.0,
+                0.048367,
+                0.038636,
+                0.019358999999999998
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 0.125922,
+              "minimum": 0.10643799999999999,
+              "maximum": 0.154618,
+              "range": 0.048180000000000014,
+              "raw_values": [
+                0.12595199999999998,
+                0.154618,
+                0.125674,
+                0.125922,
+                0.10643799999999999
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.09689400000000001,
+          "percent_second_vs_first": 333.7949565936338
+        },
+        {
+          "metric_id": "peak_resident_memory_bytes",
+          "label": "Peak resident memory",
+          "unit": "bytes",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 19800064.0,
+              "minimum": 19779584.0,
+              "maximum": 19836928.0,
+              "range": 57344.0,
+              "raw_values": [
+                19787776.0,
+                19836928.0,
+                19800064.0,
+                19800064.0,
+                19779584.0
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 19165184.0,
+              "minimum": 19111936.0,
+              "maximum": 19181568.0,
+              "range": 69632.0,
+              "raw_values": [
+                19111936.0,
+                19165184.0,
+                19152896.0,
+                19169280.0,
+                19181568.0
+              ]
+            }
+          ],
+          "delta_second_minus_first": -634880.0,
+          "percent_second_vs_first": -3.206454282167977
+        }
+      ]
+    },
+    {
+      "workload_id": "nqueens-bitmask-frontier",
+      "display_name": "Allocation-oriented frontier search",
+      "measured_observation_count": 10,
+      "eligible_observation_count": 10,
+      "excluded_observation_count": 0,
+      "failure_count": 0,
+      "validation_status": "Valid; deterministic work stable",
+      "metrics": [
+        {
+          "metric_id": "command_elapsed_seconds",
+          "label": "Command elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 2.3208168,
+              "minimum": 2.2921251,
+              "maximum": 2.4996396,
+              "range": 0.20751450000000027,
+              "raw_values": [
+                2.3189932,
+                2.3395287,
+                2.4996396,
+                2.3208168,
+                2.2921251
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 2.5727767,
+              "minimum": 2.5489225,
+              "maximum": 2.5929961,
+              "range": 0.044073599999999935,
+              "raw_values": [
+                2.5757357,
+                2.5929961,
+                2.5489225,
+                2.5727767,
+                2.5500292
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.2519599000000001,
+          "percent_second_vs_first": 10.85651827408351
+        },
+        {
+          "metric_id": "algorithm_elapsed_seconds",
+          "label": "Algorithm elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 1.053779,
+              "minimum": 1.047131,
+              "maximum": 1.08366,
+              "range": 0.036529000000000034,
+              "raw_values": [
+                1.062453,
+                1.05291,
+                1.08366,
+                1.047131,
+                1.053779
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 1.100891,
+              "minimum": 1.092914,
+              "maximum": 1.119674,
+              "range": 0.026760000000000117,
+              "raw_values": [
+                1.093274,
+                1.103216,
+                1.092914,
+                1.119674,
+                1.100891
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.04711200000000004,
+          "percent_second_vs_first": 4.470766640823174
+        },
+        {
+          "metric_id": "user_cpu_seconds",
+          "label": "User CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 1.360148,
+              "minimum": 1.334711,
+              "maximum": 1.4047290000000001,
+              "range": 0.07001800000000014,
+              "raw_values": [
+                1.391704,
+                1.334711,
+                1.4047290000000001,
+                1.345381,
+                1.360148
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 1.401732,
+              "minimum": 1.3580649999999999,
+              "maximum": 1.453551,
+              "range": 0.09548600000000018,
+              "raw_values": [
+                1.371349,
+                1.401732,
+                1.412613,
+                1.453551,
+                1.3580649999999999
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.041584000000000065,
+          "percent_second_vs_first": 3.0573143510853282
+        },
+        {
+          "metric_id": "system_cpu_seconds",
+          "label": "System CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 0.09679,
+              "minimum": 0.057587,
+              "maximum": 0.135405,
+              "range": 0.077818,
+              "raw_values": [
+                0.057587,
+                0.135405,
+                0.106565,
+                0.09679,
+                0.08681799999999999
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 0.183833,
+              "minimum": 0.155045,
+              "maximum": 0.23115999999999998,
+              "range": 0.07611499999999999,
+              "raw_values": [
+                0.21246199999999998,
+                0.183675,
+                0.183833,
+                0.155045,
+                0.23115999999999998
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.087043,
+          "percent_second_vs_first": 89.92974480834796
+        },
+        {
+          "metric_id": "peak_resident_memory_bytes",
+          "label": "Peak resident memory",
+          "unit": "bytes",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 5,
+              "median": 85377024.0,
+              "minimum": 85237760.0,
+              "maximum": 85463040.0,
+              "range": 225280.0,
+              "raw_values": [
+                85364736.0,
+                85463040.0,
+                85237760.0,
+                85405696.0,
+                85377024.0
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 5,
+              "median": 80392192.0,
+              "minimum": 80322560.0,
+              "maximum": 80412672.0,
+              "range": 90112.0,
+              "raw_values": [
+                80412672.0,
+                80322560.0,
+                80396288.0,
+                80392192.0,
+                80388096.0
+              ]
+            }
+          ],
+          "delta_second_minus_first": -4984832.0,
+          "percent_second_vs_first": -5.838610631356746
+        }
+      ]
+    },
+    {
+      "workload_id": "nqueens-report-application",
+      "display_name": "Report-generation application path",
+      "measured_observation_count": 6,
+      "eligible_observation_count": 6,
+      "excluded_observation_count": 0,
+      "failure_count": 0,
+      "validation_status": "Valid; deterministic work stable",
+      "metrics": [
+        {
+          "metric_id": "command_elapsed_seconds",
+          "label": "Command elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 3,
+              "median": 4.3336004,
+              "minimum": 4.3098189,
+              "maximum": 4.3607361,
+              "range": 0.050917199999999774,
+              "raw_values": [
+                4.3607361,
+                4.3098189,
+                4.3336004
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 3,
+              "median": 4.6478482,
+              "minimum": 4.5845465,
+              "maximum": 4.6837988,
+              "range": 0.09925229999999985,
+              "raw_values": [
+                4.6478482,
+                4.6837988,
+                4.5845465
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.3142478000000004,
+          "percent_second_vs_first": 7.251425396767094
+        },
+        {
+          "metric_id": "algorithm_elapsed_seconds",
+          "label": "Algorithm elapsed",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 3,
+              "median": 3.0260011890204623,
+              "minimum": 3.024696958018467,
+              "maximum": 3.0711694140918553,
+              "range": 0.04647245607338846,
+              "raw_values": [
+                3.0711694140918553,
+                3.0260011890204623,
+                3.024696958018467
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 3,
+              "median": 3.11444621195551,
+              "minimum": 3.10999572603032,
+              "maximum": 3.1244266770081595,
+              "range": 0.01443095097783953,
+              "raw_values": [
+                3.10999572603032,
+                3.1244266770081595,
+                3.11444621195551
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.08844502293504775,
+          "percent_second_vs_first": 2.922835035754828
+        },
+        {
+          "metric_id": "user_cpu_seconds",
+          "label": "User CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 3,
+              "median": 3.38801,
+              "minimum": 3.377212,
+              "maximum": 3.427538,
+              "range": 0.05032600000000009,
+              "raw_values": [
+                3.427538,
+                3.38801,
+                3.377212
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 3,
+              "median": 3.505252,
+              "minimum": 3.443955,
+              "maximum": 3.53218,
+              "range": 0.088225,
+              "raw_values": [
+                3.505252,
+                3.53218,
+                3.443955
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.11724200000000007,
+          "percent_second_vs_first": 3.4604974601609815
+        },
+        {
+          "metric_id": "system_cpu_seconds",
+          "label": "System CPU",
+          "unit": "seconds",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 3,
+              "median": 0.048383999999999996,
+              "minimum": 0.01936,
+              "maximum": 0.058511,
+              "range": 0.039151000000000005,
+              "raw_values": [
+                0.058511,
+                0.01936,
+                0.048383999999999996
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 3,
+              "median": 0.145524,
+              "minimum": 0.10649,
+              "maximum": 0.174585,
+              "range": 0.06809499999999999,
+              "raw_values": [
+                0.10649,
+                0.145524,
+                0.174585
+              ]
+            }
+          ],
+          "delta_second_minus_first": 0.09713999999999999,
+          "percent_second_vs_first": 200.76884920634922
+        },
+        {
+          "metric_id": "peak_resident_memory_bytes",
+          "label": "Peak resident memory",
+          "unit": "bytes",
+          "series": [
+            {
+              "environment_id": "algobox-runtime-debian-slim",
+              "count": 3,
+              "median": 22900736.0,
+              "minimum": 22892544.0,
+              "maximum": 23113728.0,
+              "range": 221184.0,
+              "raw_values": [
+                22900736.0,
+                23113728.0,
+                22892544.0
+              ]
+            },
+            {
+              "environment_id": "algobox-runtime-alpine",
+              "count": 3,
+              "median": 22343680.0,
+              "minimum": 22302720.0,
+              "maximum": 22343680.0,
+              "range": 40960.0,
+              "raw_values": [
+                22343680.0,
+                22302720.0,
+                22343680.0
+              ]
+            }
+          ],
+          "delta_second_minus_first": -557056.0,
+          "percent_second_vs_first": -2.4324807726703632
+        }
+      ]
+    }
+  ],
+  "security_status": "4/4 images eligible",
+  "startup_measurement_state": "unavailable",
+  "startup_measurement_reason": "The docker run boundary combines container startup, command execution, and teardown; startup is not inferred by subtraction.",
+  "limitations": [
+    "Container startup is retained as unavailable because the docker run boundary combines startup, command execution, and teardown.",
+    "Process CPU and resident-memory values come from Linux getrusage for the measured child process.",
+    "Control-group availability differs by cgroup version; each missing measurement has an explicit state and reason.",
+    "Terminal solver workloads expose normalized common metrics but not capability groups; capability stability is checked where AlgoBox report JSON supplies compatible contracts.",
+    "The bundle describes this host, Docker environment, exact application revision, and fixed workload only.",
+    "Deterministic stability findings: [{\"workload_id\": \"nqueens-bitmask-cpu\", \"stable\": true, \"observations_compared\": 12, \"signature_count\": 1}, {\"workload_id\": \"nqueens-bitmask-frontier\", \"stable\": true, \"observations_compared\": 12, \"signature_count\": 1}, {\"workload_id\": \"nqueens-report-application\", \"stable\": true, \"observations_compared\": 8, \"signature_count\": 1}]"
+  ]
+}

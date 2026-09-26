@@ -1,0 +1,837 @@
+Function calls for Stallworth N-Queens
+======================================
+
+  finding_strength: Observation
+  report_summary: 1 directly recursive callable and 1 resolved multi-callable cycle observed. No change is implied; inspect these call paths when tracing control flow.
+  report_tagline: No alarm. Just a useful path to trace.
+
+  analysis_maturity: provisional
+  callable_nodes: 101
+  top_level_function_nodes: 58
+  method_nodes: 30
+  module_execution_nodes: 6
+  stdlib_callable_nodes: 7
+  external_callable_nodes: 0
+  async_callable_nodes: 0
+  direct_call_edges: 73
+  analyzed_call_sites: 268
+  resolved_call_sites: 86
+  unresolved_call_sites: 182
+  awaited_call_sites: 0
+  resolved_awaited_call_sites: 0
+  unresolved_awaited_call_sites: 0
+  function_observations: 2
+
+- stallworth_nqueens.abstract.bitmask
+  package: stallworth_nqueens.abstract
+  function_count: 3
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=available_positions owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=full_mask owner_class=none async=False callers=stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=next_state owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.abstract.constraints
+  package: stallworth_nqueens.abstract
+  function_count: 5
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=is_safe owner_class=none async=False callers=stallworth_nqueens.abstract.constraints.valid_columns callees=stallworth_nqueens.abstract.constraints.major_diagonal, stallworth_nqueens.abstract.constraints.minor_diagonal resolved_calls=2 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=major_diagonal owner_class=none async=False callers=stallworth_nqueens.abstract.constraints.is_safe, stallworth_nqueens.abstract.constraints.place, stallworth_nqueens.models.board.NQueensBoard.is_valid callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=minor_diagonal owner_class=none async=False callers=stallworth_nqueens.abstract.constraints.is_safe, stallworth_nqueens.abstract.constraints.place, stallworth_nqueens.models.board.NQueensBoard.is_valid callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=place owner_class=none async=False callers=none callees=stallworth_nqueens.abstract.constraints.major_diagonal, stallworth_nqueens.abstract.constraints.minor_diagonal resolved_calls=2 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=valid_columns owner_class=none async=False callers=none callees=stallworth_nqueens.abstract.constraints.is_safe resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.benchmarking.adapter
+  package: stallworth_nqueens.benchmarking
+  function_count: 1
+  method_count: 3
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=run owner_class=NQueensAdapter async=False callers=none callees=stallworth_nqueens.metrics.execute_with_metrics resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=to_benchmark_result owner_class=NQueensAdapter async=False callers=none callees=stallworth_nqueens.benchmarking.adapter.find_sample_solution resolved_calls=1 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=to_failed_benchmark_result owner_class=NQueensAdapter async=False callers=none callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+    - name=find_sample_solution owner_class=none async=False callers=stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.cli.args
+  package: stallworth_nqueens.cli
+  function_count: 3
+  method_count: 1
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=error owner_class=NQueensArgumentParser async=False callers=none callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=build_args owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=stallworth_nqueens.cli.args.build_parser, stallworth_nqueens.profiles.registry.get_profile resolved_calls=2 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+    - name=build_parser owner_class=none async=False callers=stallworth_nqueens.cli.args.build_args, stallworth_nqueens.cli.args.format_usage callees=none resolved_calls=0 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+    - name=format_usage owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=stallworth_nqueens.cli.args.build_parser resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.cli.n_queens_cli
+  package: stallworth_nqueens.cli
+  function_count: 1
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=logging.getLogger resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=run_n_queens_cli owner_class=none async=False callers=stallworth_nqueens.main.main callees=difflib.get_close_matches, stallworth_nqueens.cli.args.build_args, stallworth_nqueens.cli.args.format_usage, stallworth_nqueens.common.logging.logger.format_unexpected_error, stallworth_nqueens.common.logging.logger.setup_logging, stallworth_nqueens.execution.engine.execute, stallworth_nqueens.profiles.registry.get_profile, stallworth_nqueens.profiles.registry.get_profile_names, stallworth_nqueens.reporting.display.display_execution_result, stallworth_nqueens.reporting.display.display_run_header, stallworth_nqueens.reporting.display.display_unexpected_error, stallworth_nqueens.reporting.display.display_unknown_solver, stallworth_nqueens.reporting.display.display_usage, stallworth_nqueens.solvers.registry.get_solver_names resolved_calls=20 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.api
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.api.export_names resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=export_names owner_class=none async=False callers=stallworth_nqueens.codeviz_demo.api.<module> callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.backtracking
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.board
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.candidates
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.columns
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.diagonals
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.formatting
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.hub
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=stage_names owner_class=none async=False callers=stallworth_nqueens.codeviz_demo.backtracking.describe, stallworth_nqueens.codeviz_demo.board.describe, stallworth_nqueens.codeviz_demo.candidates.describe, stallworth_nqueens.codeviz_demo.columns.describe, stallworth_nqueens.codeviz_demo.diagonals.describe, stallworth_nqueens.codeviz_demo.formatting.describe, stallworth_nqueens.codeviz_demo.metrics.describe, stallworth_nqueens.codeviz_demo.placement.describe, stallworth_nqueens.codeviz_demo.solutions.describe, stallworth_nqueens.codeviz_demo.summary.describe callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.metrics
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.models
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 3
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=even_row owner_class=none async=False callers=stallworth_nqueens.codeviz_demo.models.odd_row callees=stallworth_nqueens.codeviz_demo.models.odd_row resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=odd_row owner_class=none async=False callers=stallworth_nqueens.codeviz_demo.models.even_row callees=stallworth_nqueens.codeviz_demo.models.even_row resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=remaining_rows owner_class=none async=False callers=stallworth_nqueens.codeviz_demo.models.remaining_rows callees=stallworth_nqueens.codeviz_demo.models.remaining_rows resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.orchestrator
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=stage_names owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.placement
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.solutions
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.codeviz_demo.summary
+  package: stallworth_nqueens.codeviz_demo
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=describe owner_class=none async=False callers=none callees=stallworth_nqueens.codeviz_demo.hub.stage_names resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.common.benchmarking.adapters
+  package: stallworth_nqueens.common.benchmarking
+  function_count: 0
+  method_count: 3
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=run owner_class=DomainBenchmarkAdapter async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=to_benchmark_result owner_class=DomainBenchmarkAdapter async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=to_failed_benchmark_result owner_class=DomainBenchmarkAdapter async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.common.benchmarking.models
+  package: stallworth_nqueens.common.benchmarking
+  function_count: 1
+  method_count: 1
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=from_benchmark_result owner_class=CommonExecutionMetrics async=False callers=none callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+    - name=annotate_speedups owner_class=none async=False callers=stallworth_nqueens.common.benchmarking.runner.run_benchmarks callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.common.benchmarking.runner
+  package: stallworth_nqueens.common.benchmarking
+  function_count: 2
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=run_benchmark owner_class=none async=False callers=stallworth_nqueens.common.benchmarking.runner.run_benchmarks callees=time.perf_counter resolved_calls=3 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+    - name=run_benchmarks owner_class=none async=False callers=none callees=stallworth_nqueens.common.benchmarking.models.annotate_speedups, stallworth_nqueens.common.benchmarking.runner.run_benchmark resolved_calls=2 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.common.logging.logger
+  package: stallworth_nqueens.common.logging
+  function_count: 2
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=format_unexpected_error owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+    - name=setup_logging owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=logging.basicConfig resolved_calls=1 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.execution.engine
+  package: stallworth_nqueens.execution
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=execute owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=stallworth_nqueens.execution.runner.execute_all, stallworth_nqueens.execution.runner.execute_solver resolved_calls=2 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.execution.runner
+  package: stallworth_nqueens.execution
+  function_count: 4
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=collect_all owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=collect_single owner_class=none async=False callers=none callees=stallworth_nqueens.metrics.execute_with_metrics, threading.Thread, time.perf_counter resolved_calls=4 unresolved_calls=4 awaited_calls=0 unresolved_awaited_calls=0
+    - name=execute_all owner_class=none async=False callers=stallworth_nqueens.execution.engine.execute callees=stallworth_nqueens.execution.runner.execute_solver resolved_calls=1 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=execute_solver owner_class=none async=False callers=stallworth_nqueens.execution.engine.execute, stallworth_nqueens.execution.runner.execute_all callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.main
+  package: stallworth_nqueens
+  function_count: 1
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=stallworth_nqueens.main.main resolved_calls=1 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=main owner_class=none async=False callers=stallworth_nqueens.main.<module> callees=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.metrics
+  package: stallworth_nqueens
+  function_count: 1
+  method_count: 16
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=_backtracking owner_class=NQueensSearchMetrics async=False callers=stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack, stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=_bitmask owner_class=NQueensSearchMetrics async=False callers=stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask, stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=_constraint owner_class=NQueensSearchMetrics async=False callers=stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=_search_shape owner_class=NQueensSearchMetrics async=False callers=stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state, stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state, stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=capability_metrics_payload owner_class=NQueensSearchMetrics async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=check_constraint owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._constraint resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=compute_available_mask owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=consider_placement owner_class=NQueensSearchMetrics async=False callers=none callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=enter_child_state owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=enter_search_state owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape, stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state resolved_calls=2 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=extract_candidate_bit owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=record_backtrack owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=record_dead_end owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=record_leaf_state owner_class=NQueensSearchMetrics async=False callers=none callees=stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=visit_state owner_class=NQueensSearchMetrics async=False callers=stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state callees=none resolved_calls=0 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=__init__ owner_class=NQueensSolverFailure async=False callers=none callees=none resolved_calls=0 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=execute_with_metrics owner_class=none async=False callers=stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run, stallworth_nqueens.execution.runner.collect_single callees=inspect.signature resolved_calls=1 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.models.board
+  package: stallworth_nqueens.models
+  function_count: 0
+  method_count: 6
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=__post_init__ owner_class=NQueensBoard async=False callers=none callees=none resolved_calls=0 unresolved_calls=4 awaited_calls=0 unresolved_awaited_calls=0
+    - name=__str__ owner_class=NQueensBoard async=False callers=none callees=stallworth_nqueens.models.board.NQueensBoard.to_ascii resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=from_columns owner_class=NQueensBoard async=False callers=stallworth_nqueens.reporting.display.display_single_result callees=none resolved_calls=0 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=is_valid owner_class=NQueensBoard async=False callers=none callees=stallworth_nqueens.abstract.constraints.major_diagonal, stallworth_nqueens.abstract.constraints.minor_diagonal resolved_calls=4 unresolved_calls=6 awaited_calls=0 unresolved_awaited_calls=0
+    - name=queen_positions owner_class=NQueensBoard async=False callers=none callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+    - name=to_ascii owner_class=NQueensBoard async=False callers=stallworth_nqueens.models.board.NQueensBoard.__str__ callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.profiles.registry
+  package: stallworth_nqueens.profiles
+  function_count: 2
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+    - name=get_profile owner_class=none async=False callers=stallworth_nqueens.cli.args.build_args, stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=get_profile_names owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.reporting.display
+  package: stallworth_nqueens.reporting
+  function_count: 10
+  method_count: 0
+  module_execution_count: 1
+  async_function_count: 0
+  functions:
+    - name=<module> owner_class=none async=False callers=none callees=logging.getLogger resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=_metric_value owner_class=none async=False callers=stallworth_nqueens.reporting.display.display_single_result callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=_speedup_value owner_class=none async=False callers=stallworth_nqueens.reporting.display.display_benchmark_results callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_all_results owner_class=none async=False callers=stallworth_nqueens.reporting.display.display_execution_result callees=stallworth_nqueens.reporting.display.display_single_result resolved_calls=1 unresolved_calls=3 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_benchmark_results owner_class=none async=False callers=none callees=stallworth_nqueens.reporting.display._speedup_value resolved_calls=2 unresolved_calls=7 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_execution_result owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=stallworth_nqueens.reporting.display.display_all_results, stallworth_nqueens.reporting.display.display_single_result resolved_calls=2 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_run_header owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_single_result owner_class=none async=False callers=stallworth_nqueens.reporting.display.display_all_results, stallworth_nqueens.reporting.display.display_execution_result callees=stallworth_nqueens.models.board.NQueensBoard.from_columns, stallworth_nqueens.reporting.display._metric_value resolved_calls=3 unresolved_calls=20 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_unexpected_error owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=1 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_unknown_solver owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=4 awaited_calls=0 unresolved_awaited_calls=0
+    - name=display_usage owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.sast_demo
+  package: stallworth_nqueens
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=subprocess_example owner_class=none async=False callers=none callees=subprocess.run resolved_calls=1 unresolved_calls=0 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.solvers.bitmask.backtracking
+  package: stallworth_nqueens.solvers.bitmask
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=solve_n_queens owner_class=none async=False callers=none callees=stallworth_nqueens.abstract.bitmask.full_mask resolved_calls=1 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.solvers.constraint
+  package: stallworth_nqueens.solvers
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=solve_n_queens owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=6 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.solvers.dfs.backtracking
+  package: stallworth_nqueens.solvers.dfs
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=solve_n_queens owner_class=none async=False callers=none callees=none resolved_calls=0 unresolved_calls=5 awaited_calls=0 unresolved_awaited_calls=0
+
+- stallworth_nqueens.solvers.registry
+  package: stallworth_nqueens.solvers
+  function_count: 1
+  method_count: 0
+  module_execution_count: 0
+  async_function_count: 0
+  functions:
+    - name=get_solver_names owner_class=none async=False callers=stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli callees=none resolved_calls=0 unresolved_calls=2 awaited_calls=0 unresolved_awaited_calls=0
+
+Declared call targets
+=====================
+  targets:
+    - id=difflib.get_close_matches kind=stdlib
+    - id=inspect.signature kind=stdlib
+    - id=logging.basicConfig kind=stdlib
+    - id=logging.getLogger kind=stdlib
+    - id=subprocess.run kind=stdlib
+    - id=threading.Thread kind=stdlib
+    - id=time.perf_counter kind=stdlib
+
+Direct calls
+============
+- stallworth_nqueens.abstract.constraints.is_safe -> stallworth_nqueens.abstract.constraints.major_diagonal
+  call_site_count: 1
+  evidence:
+    - expression='major_diagonal(row, col)' callee=major_diagonal resolution=same_module awaited=False file=./src/stallworth_nqueens/abstract/constraints.py lines=18
+
+- stallworth_nqueens.abstract.constraints.is_safe -> stallworth_nqueens.abstract.constraints.minor_diagonal
+  call_site_count: 1
+  evidence:
+    - expression='minor_diagonal(row, col)' callee=minor_diagonal resolution=same_module awaited=False file=./src/stallworth_nqueens/abstract/constraints.py lines=19
+
+- stallworth_nqueens.abstract.constraints.place -> stallworth_nqueens.abstract.constraints.major_diagonal
+  call_site_count: 1
+  evidence:
+    - expression='major_diagonal(row, col)' callee=major_diagonal resolution=same_module awaited=False file=./src/stallworth_nqueens/abstract/constraints.py lines=27
+
+- stallworth_nqueens.abstract.constraints.place -> stallworth_nqueens.abstract.constraints.minor_diagonal
+  call_site_count: 1
+  evidence:
+    - expression='minor_diagonal(row, col)' callee=minor_diagonal resolution=same_module awaited=False file=./src/stallworth_nqueens/abstract/constraints.py lines=28
+
+- stallworth_nqueens.abstract.constraints.valid_columns -> stallworth_nqueens.abstract.constraints.is_safe
+  call_site_count: 1
+  evidence:
+    - expression='is_safe(row, col, cols, diag1, diag2)' callee=is_safe resolution=same_module awaited=False file=./src/stallworth_nqueens/abstract/constraints.py lines=34
+
+- stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run -> stallworth_nqueens.metrics.execute_with_metrics
+  call_site_count: 1
+  evidence:
+    - expression='execute_with_metrics(SOLVERS[solver], n)' callee=execute_with_metrics resolution=imported_function awaited=False file=./src/stallworth_nqueens/benchmarking/adapter.py lines=61
+
+- stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result -> stallworth_nqueens.benchmarking.adapter.find_sample_solution
+  call_site_count: 1
+  evidence:
+    - expression='find_sample_solution(n)' callee=find_sample_solution resolution=same_module awaited=False file=./src/stallworth_nqueens/benchmarking/adapter.py lines=88
+
+- stallworth_nqueens.cli.args.build_args -> stallworth_nqueens.cli.args.build_parser
+  call_site_count: 1
+  evidence:
+    - expression='build_parser(solver_names, profile_names)' callee=build_parser resolution=same_module awaited=False file=./src/stallworth_nqueens/cli/args.py lines=51
+
+- stallworth_nqueens.cli.args.build_args -> stallworth_nqueens.profiles.registry.get_profile
+  call_site_count: 1
+  evidence:
+    - expression='get_profile(args.profile)' callee=get_profile resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/args.py lines=55
+
+- stallworth_nqueens.cli.args.format_usage -> stallworth_nqueens.cli.args.build_parser
+  call_site_count: 1
+  evidence:
+    - expression='build_parser(solver_names, profile_names)' callee=build_parser resolution=same_module awaited=False file=./src/stallworth_nqueens/cli/args.py lines=71
+
+- stallworth_nqueens.cli.n_queens_cli.<module> -> logging.getLogger
+  call_site_count: 1
+  evidence:
+    - expression='logging.getLogger(__name__)' callee=logging.getLogger resolution=imported_module awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=16
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> difflib.get_close_matches
+  call_site_count: 1
+  evidence:
+    - expression='get_close_matches(choice, solver_names, n=1)' callee=get_close_matches resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=42
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.cli.args.build_args
+  call_site_count: 1
+  evidence:
+    - expression='build_args(solver_names, profile_names)' callee=build_args resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=23
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.cli.args.format_usage
+  call_site_count: 2
+  evidence:
+    - expression='format_usage(solver_names, profile_names)' callee=format_usage resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=37
+    - expression='format_usage(solver_names, profile_names)' callee=format_usage resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=39
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.common.logging.logger.format_unexpected_error
+  call_site_count: 1
+  evidence:
+    - expression='format_unexpected_error(exc)' callee=format_unexpected_error resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=51
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.common.logging.logger.setup_logging
+  call_site_count: 2
+  evidence:
+    - expression='setup_logging(args.log_level)' callee=setup_logging resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=24
+    - expression='setup_logging("info")' callee=setup_logging resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=35
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.execution.engine.execute
+  call_site_count: 1
+  evidence:
+    - expression='execute(args.n, choice, solver_names=solver_subset, profile_name=args.profile)' callee=execute resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=29
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.profiles.registry.get_profile
+  call_site_count: 1
+  evidence:
+    - expression='get_profile(args.profile)' callee=get_profile resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=26
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.profiles.registry.get_profile_names
+  call_site_count: 1
+  evidence:
+    - expression='get_profile_names()' callee=get_profile_names resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=20
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.reporting.display.display_execution_result
+  call_site_count: 1
+  evidence:
+    - expression='display_execution_result(result)' callee=display_execution_result resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=30
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.reporting.display.display_run_header
+  call_site_count: 1
+  evidence:
+    - expression='display_run_header(args.n, profile_name=args.profile)' callee=display_run_header resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=28
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.reporting.display.display_unexpected_error
+  call_site_count: 4
+  evidence:
+    - expression='display_unexpected_error(message)' callee=display_unexpected_error resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=40
+    - expression='display_unexpected_error(message)' callee=display_unexpected_error resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=45
+    - expression='display_unexpected_error(str(exc))' callee=display_unexpected_error resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=48
+    - expression='display_unexpected_error(format_unexpected_error(exc))' callee=display_unexpected_error resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=51
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.reporting.display.display_unknown_solver
+  call_site_count: 1
+  evidence:
+    - expression='display_unknown_solver(choice, suggestions, solver_names)' callee=display_unknown_solver resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=43
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.reporting.display.display_usage
+  call_site_count: 2
+  evidence:
+    - expression='display_usage(format_usage(solver_names, profile_names))' callee=display_usage resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=37
+    - expression='display_usage(format_usage(solver_names, profile_names))' callee=display_usage resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=39
+
+- stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli -> stallworth_nqueens.solvers.registry.get_solver_names
+  call_site_count: 1
+  evidence:
+    - expression='get_solver_names()' callee=get_solver_names resolution=imported_function awaited=False file=./src/stallworth_nqueens/cli/n_queens_cli.py lines=19
+
+- stallworth_nqueens.codeviz_demo.api.<module> -> stallworth_nqueens.codeviz_demo.api.export_names
+  call_site_count: 1
+  evidence:
+    - expression='export_names()' callee=export_names resolution=same_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/api.py lines=11
+
+- stallworth_nqueens.codeviz_demo.backtracking.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/backtracking.py lines=11
+
+- stallworth_nqueens.codeviz_demo.board.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/board.py lines=11
+
+- stallworth_nqueens.codeviz_demo.candidates.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/candidates.py lines=11
+
+- stallworth_nqueens.codeviz_demo.columns.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/columns.py lines=11
+
+- stallworth_nqueens.codeviz_demo.diagonals.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/diagonals.py lines=11
+
+- stallworth_nqueens.codeviz_demo.formatting.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/formatting.py lines=11
+
+- stallworth_nqueens.codeviz_demo.metrics.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/metrics.py lines=11
+
+- stallworth_nqueens.codeviz_demo.models.even_row -> stallworth_nqueens.codeviz_demo.models.odd_row
+  call_site_count: 1
+  evidence:
+    - expression='odd_row(size - 1)' callee=odd_row resolution=same_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/models.py lines=39
+
+- stallworth_nqueens.codeviz_demo.models.odd_row -> stallworth_nqueens.codeviz_demo.models.even_row
+  call_site_count: 1
+  evidence:
+    - expression='even_row(size - 1)' callee=even_row resolution=same_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/models.py lines=46
+
+- stallworth_nqueens.codeviz_demo.models.remaining_rows -> stallworth_nqueens.codeviz_demo.models.remaining_rows
+  call_site_count: 1
+  evidence:
+    - expression='remaining_rows(size - 1)' callee=remaining_rows resolution=same_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/models.py lines=32
+
+- stallworth_nqueens.codeviz_demo.placement.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/placement.py lines=11
+
+- stallworth_nqueens.codeviz_demo.solutions.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/solutions.py lines=11
+
+- stallworth_nqueens.codeviz_demo.summary.describe -> stallworth_nqueens.codeviz_demo.hub.stage_names
+  call_site_count: 1
+  evidence:
+    - expression='hub.stage_names()' callee=hub.stage_names resolution=imported_module awaited=False file=./src/stallworth_nqueens/codeviz_demo/summary.py lines=11
+
+- stallworth_nqueens.common.benchmarking.runner.run_benchmark -> time.perf_counter
+  call_site_count: 3
+  evidence:
+    - expression='time.perf_counter()' callee=time.perf_counter resolution=imported_module awaited=False file=./src/stallworth_nqueens/common/benchmarking/runner.py lines=14
+    - expression='time.perf_counter()' callee=time.perf_counter resolution=imported_module awaited=False file=./src/stallworth_nqueens/common/benchmarking/runner.py lines=18
+    - expression='time.perf_counter()' callee=time.perf_counter resolution=imported_module awaited=False file=./src/stallworth_nqueens/common/benchmarking/runner.py lines=42
+
+- stallworth_nqueens.common.benchmarking.runner.run_benchmarks -> stallworth_nqueens.common.benchmarking.models.annotate_speedups
+  call_site_count: 1
+  evidence:
+    - expression='annotate_speedups(results, baseline_solver=baseline_solver)' callee=annotate_speedups resolution=imported_function awaited=False file=./src/stallworth_nqueens/common/benchmarking/runner.py lines=68
+
+- stallworth_nqueens.common.benchmarking.runner.run_benchmarks -> stallworth_nqueens.common.benchmarking.runner.run_benchmark
+  call_site_count: 1
+  evidence:
+    - expression='run_benchmark(adapter, solver=solver, **kwargs)' callee=run_benchmark resolution=same_module awaited=False file=./src/stallworth_nqueens/common/benchmarking/runner.py lines=59
+
+- stallworth_nqueens.common.logging.logger.setup_logging -> logging.basicConfig
+  call_site_count: 1
+  evidence:
+    - expression='logging.basicConfig(\n        level=numeric_level,\n        format="%(message)s"\n    )' callee=logging.basicConfig resolution=imported_module awaited=False file=./src/stallworth_nqueens/common/logging/logger.py lines=8-11
+
+- stallworth_nqueens.execution.engine.execute -> stallworth_nqueens.execution.runner.execute_all
+  call_site_count: 1
+  evidence:
+    - expression='execute_all(problem_size, solver_names=solver_names)' callee=execute_all resolution=imported_function awaited=False file=./src/stallworth_nqueens/execution/engine.py lines=20
+
+- stallworth_nqueens.execution.engine.execute -> stallworth_nqueens.execution.runner.execute_solver
+  call_site_count: 1
+  evidence:
+    - expression='execute_solver(problem_size, choice)' callee=execute_solver resolution=imported_function awaited=False file=./src/stallworth_nqueens/execution/engine.py lines=31
+
+- stallworth_nqueens.execution.runner.collect_single -> stallworth_nqueens.metrics.execute_with_metrics
+  call_site_count: 1
+  evidence:
+    - expression='execute_with_metrics(solver, problem_size)' callee=execute_with_metrics resolution=imported_function awaited=False file=./src/stallworth_nqueens/execution/runner.py lines=36
+
+- stallworth_nqueens.execution.runner.collect_single -> threading.Thread
+  call_site_count: 1
+  evidence:
+    - expression='threading.Thread(target=timer)' callee=threading.Thread resolution=imported_module awaited=False file=./src/stallworth_nqueens/execution/runner.py lines=30
+
+- stallworth_nqueens.execution.runner.collect_single -> time.perf_counter
+  call_site_count: 2
+  evidence:
+    - expression='time.perf_counter()' callee=time.perf_counter resolution=imported_module awaited=False file=./src/stallworth_nqueens/execution/runner.py lines=19
+    - expression='time.perf_counter()' callee=time.perf_counter resolution=imported_module awaited=False file=./src/stallworth_nqueens/execution/runner.py lines=44
+
+- stallworth_nqueens.execution.runner.execute_all -> stallworth_nqueens.execution.runner.execute_solver
+  call_site_count: 1
+  evidence:
+    - expression='execute_solver(problem_size, solver_name)' callee=execute_solver resolution=same_module awaited=False file=./src/stallworth_nqueens/execution/runner.py lines=93
+
+- stallworth_nqueens.main.<module> -> stallworth_nqueens.main.main
+  call_site_count: 1
+  evidence:
+    - expression='main()' callee=main resolution=same_module awaited=False file=./src/stallworth_nqueens/main.py lines=9
+
+- stallworth_nqueens.main.main -> stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli
+  call_site_count: 1
+  evidence:
+    - expression='run_n_queens_cli()' callee=run_n_queens_cli resolution=imported_function awaited=False file=./src/stallworth_nqueens/main.py lines=5
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint -> stallworth_nqueens.metrics.NQueensSearchMetrics._constraint
+  call_site_count: 1
+  evidence:
+    - expression='self._constraint()' callee=self._constraint resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=108
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask -> stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask
+  call_site_count: 1
+  evidence:
+    - expression='self._bitmask()' callee=self._bitmask resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=120
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state -> stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape
+  call_site_count: 1
+  evidence:
+    - expression='self._search_shape()' callee=self._search_shape resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=97
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state -> stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape
+  call_site_count: 1
+  evidence:
+    - expression='self._search_shape()' callee=self._search_shape resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=88
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state -> stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state
+  call_site_count: 1
+  evidence:
+    - expression='self.visit_state()' callee=self.visit_state resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=87
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit -> stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask
+  call_site_count: 1
+  evidence:
+    - expression='self._bitmask()' callee=self._bitmask resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=126
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack -> stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking
+  call_site_count: 1
+  evidence:
+    - expression='self._backtracking()' callee=self._backtracking resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=114
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end -> stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking
+  call_site_count: 1
+  evidence:
+    - expression='self._backtracking()' callee=self._backtracking resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=117
+
+- stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state -> stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape
+  call_site_count: 1
+  evidence:
+    - expression='self._search_shape()' callee=self._search_shape resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/metrics.py lines=100
+
+- stallworth_nqueens.metrics.execute_with_metrics -> inspect.signature
+  call_site_count: 1
+  evidence:
+    - expression='signature(solver)' callee=signature resolution=imported_function awaited=False file=./src/stallworth_nqueens/metrics.py lines=221
+
+- stallworth_nqueens.models.board.NQueensBoard.__str__ -> stallworth_nqueens.models.board.NQueensBoard.to_ascii
+  call_site_count: 1
+  evidence:
+    - expression='self.to_ascii()' callee=self.to_ascii resolution=same_class_instance awaited=False file=./src/stallworth_nqueens/models/board.py lines=76
+
+- stallworth_nqueens.models.board.NQueensBoard.is_valid -> stallworth_nqueens.abstract.constraints.major_diagonal
+  call_site_count: 2
+  evidence:
+    - expression='major_diagonal(row, col)' callee=major_diagonal resolution=imported_function awaited=False file=./src/stallworth_nqueens/models/board.py lines=47
+    - expression='major_diagonal(row, col)' callee=major_diagonal resolution=imported_function awaited=False file=./src/stallworth_nqueens/models/board.py lines=53
+
+- stallworth_nqueens.models.board.NQueensBoard.is_valid -> stallworth_nqueens.abstract.constraints.minor_diagonal
+  call_site_count: 2
+  evidence:
+    - expression='minor_diagonal(row, col)' callee=minor_diagonal resolution=imported_function awaited=False file=./src/stallworth_nqueens/models/board.py lines=48
+    - expression='minor_diagonal(row, col)' callee=minor_diagonal resolution=imported_function awaited=False file=./src/stallworth_nqueens/models/board.py lines=54
+
+- stallworth_nqueens.reporting.display.<module> -> logging.getLogger
+  call_site_count: 1
+  evidence:
+    - expression='logging.getLogger(__name__)' callee=logging.getLogger resolution=imported_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=5
+
+- stallworth_nqueens.reporting.display.display_all_results -> stallworth_nqueens.reporting.display.display_single_result
+  call_site_count: 1
+  evidence:
+    - expression='display_single_result(result)' callee=display_single_result resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=128
+
+- stallworth_nqueens.reporting.display.display_benchmark_results -> stallworth_nqueens.reporting.display._speedup_value
+  call_site_count: 2
+  evidence:
+    - expression="_speedup_value(result.payload.get('speedup_best'), 3)" callee=_speedup_value resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=116
+    - expression="_speedup_value(result.payload.get('speedup_baseline'), 2)" callee=_speedup_value resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=117
+
+- stallworth_nqueens.reporting.display.display_execution_result -> stallworth_nqueens.reporting.display.display_all_results
+  call_site_count: 1
+  evidence:
+    - expression='display_all_results(\n            execution_result["results"],\n        )' callee=display_all_results resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=133-135
+
+- stallworth_nqueens.reporting.display.display_execution_result -> stallworth_nqueens.reporting.display.display_single_result
+  call_site_count: 1
+  evidence:
+    - expression='display_single_result(execution_result["result"])' callee=display_single_result resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=138
+
+- stallworth_nqueens.reporting.display.display_single_result -> stallworth_nqueens.models.board.NQueensBoard.from_columns
+  call_site_count: 1
+  evidence:
+    - expression='NQueensBoard.from_columns(sample_solution)' callee=NQueensBoard.from_columns resolution=imported_class awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=87
+
+- stallworth_nqueens.reporting.display.display_single_result -> stallworth_nqueens.reporting.display._metric_value
+  call_site_count: 2
+  evidence:
+    - expression='_metric_value(data.payload.get("states_visited"))' callee=_metric_value resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=63
+    - expression='_metric_value(\n            data.payload.get("candidate_placements_considered")\n        )' callee=_metric_value resolution=same_module awaited=False file=./src/stallworth_nqueens/reporting/display.py lines=67-69
+
+- stallworth_nqueens.sast_demo.subprocess_example -> subprocess.run
+  call_site_count: 1
+  evidence:
+    - expression='subprocess.run(arguments, check=True)' callee=subprocess.run resolution=imported_module awaited=False file=./src/stallworth_nqueens/sast_demo.py lines=13
+
+- stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens -> stallworth_nqueens.abstract.bitmask.full_mask
+  call_site_count: 1
+  evidence:
+    - expression='full_mask(n)' callee=full_mask resolution=imported_function awaited=False file=./src/stallworth_nqueens/solvers/bitmask/backtracking.py lines=16
+
+Findings
+========
+- [Observation] Resolved call cycle observed
+  code: resolved_call_cycle
+  callables:
+    - stallworth_nqueens.codeviz_demo.models.even_row
+    - stallworth_nqueens.codeviz_demo.models.odd_row
+  relationships:
+    - stallworth_nqueens.codeviz_demo.models.even_row -> stallworth_nqueens.codeviz_demo.models.odd_row
+    - stallworth_nqueens.codeviz_demo.models.odd_row -> stallworth_nqueens.codeviz_demo.models.even_row
+  resolved_call_site_count: 2
+  evidence:
+    - Every participating callable is reachable from the others through resolved CALLS relationships.
+    - callable_count=2
+    - callables=stallworth_nqueens.codeviz_demo.models.even_row,stallworth_nqueens.codeviz_demo.models.odd_row
+    - resolved_relationships=stallworth_nqueens.codeviz_demo.models.even_row->stallworth_nqueens.codeviz_demo.models.odd_row,stallworth_nqueens.codeviz_demo.models.odd_row->stallworth_nqueens.codeviz_demo.models.even_row
+    - resolved_call_site_count=2
+  suggestion: No change is implied. Inspect the participating callables together when tracing this control flow.
+
+- [Observation] Direct recursion observed
+  code: direct_recursion
+  callables:
+    - stallworth_nqueens.codeviz_demo.models.remaining_rows
+  relationships:
+    - stallworth_nqueens.codeviz_demo.models.remaining_rows -> stallworth_nqueens.codeviz_demo.models.remaining_rows
+  resolved_call_site_count: 1
+  evidence:
+    - A resolved CALLS relationship returns to its source callable.
+    - callable=stallworth_nqueens.codeviz_demo.models.remaining_rows
+    - resolved_call_site_count=1
+    - call_site=remaining_rows(size - 1)@./src/stallworth_nqueens/codeviz_demo/models.py:32
+  suggestion: No change is implied. Inspect the termination condition when tracing this control flow.
+
+Explicit exclusions
+===================
+  excluded:
+    - inherited, overridden, and dynamic method dispatch
+    - methods called through arbitrary object expressions
+    - nested functions, closures, and lambdas
+    - callables stored in variables or collections
+    - dependency-injected and callback targets
+    - decorated replacement callables
+    - dynamic imports and reflection
+    - undeclared or unclassified third-party imports
+    - builtins without an explicit import binding
+    - module-level assignment rebinding of imported names
+    - function and class definition-time expressions
+    - class-body executable calls

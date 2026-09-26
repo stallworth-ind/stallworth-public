@@ -1,0 +1,345 @@
+Package boundary report for Stallworth N-Queens
+===============================================
+
+  finding_strength: Light
+  report_summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  report_tagline: Not pristine. Still navigable.
+
+  internal_import_edge_count: 23
+  external_import_edge_count: 0
+  stdlib_import_edge_count: 17
+  unresolved_import_edge_count: 0
+  configured_role_threshold: 10
+  avg_total_degree: 3.07
+  median_total_degree: 3.0
+  upper_half_total_degree_avg: 4.75
+  threshold_warning: True
+  suggested_role_threshold: 5
+  threshold_warning_reason: Configured threshold exceeds observed dependency concentration
+
+- stallworth_nqueens
+  role_hints: none
+  module_count: 4
+  modules:
+    - stallworth_nqueens
+    - stallworth_nqueens.main
+    - stallworth_nqueens.metrics
+    - stallworth_nqueens.sast_demo
+  depends_on:
+    - __future__
+    - dataclasses
+    - inspect
+    - stallworth_nqueens.cli
+    - subprocess
+    - typing
+  depended_on_by:
+    - stallworth_nqueens.benchmarking
+    - stallworth_nqueens.execution
+    - stallworth_nqueens.solvers
+    - stallworth_nqueens.solvers.bitmask
+    - stallworth_nqueens.solvers.dfs
+
+- stallworth_nqueens.abstract
+  role_hints: none
+  module_count: 3
+  modules:
+    - stallworth_nqueens.abstract
+    - stallworth_nqueens.abstract.bitmask
+    - stallworth_nqueens.abstract.constraints
+  depends_on:
+    - none
+  depended_on_by:
+    - stallworth_nqueens.models
+    - stallworth_nqueens.solvers
+    - stallworth_nqueens.solvers.bitmask
+    - stallworth_nqueens.solvers.dfs
+
+- stallworth_nqueens.benchmarking
+  role_hints: none
+  module_count: 2
+  modules:
+    - stallworth_nqueens.benchmarking
+    - stallworth_nqueens.benchmarking.adapter
+  depends_on:
+    - stallworth_nqueens
+    - stallworth_nqueens.common.benchmarking
+    - stallworth_nqueens.solvers
+  depended_on_by:
+    - stallworth_nqueens.execution
+
+- stallworth_nqueens.cli
+  role_hints: none
+  module_count: 3
+  modules:
+    - stallworth_nqueens.cli
+    - stallworth_nqueens.cli.args
+    - stallworth_nqueens.cli.n_queens_cli
+  depends_on:
+    - argparse
+    - difflib
+    - logging
+    - stallworth_nqueens.common.logging
+    - stallworth_nqueens.execution
+    - stallworth_nqueens.profiles
+    - stallworth_nqueens.reporting
+    - stallworth_nqueens.solvers
+  depended_on_by:
+    - stallworth_nqueens
+
+- stallworth_nqueens.codeviz_demo
+  role_hints: leaf_package
+  module_count: 15
+  modules:
+    - stallworth_nqueens.codeviz_demo
+    - stallworth_nqueens.codeviz_demo.api
+    - stallworth_nqueens.codeviz_demo.backtracking
+    - stallworth_nqueens.codeviz_demo.board
+    - stallworth_nqueens.codeviz_demo.candidates
+    - stallworth_nqueens.codeviz_demo.columns
+    - stallworth_nqueens.codeviz_demo.diagonals
+    - stallworth_nqueens.codeviz_demo.formatting
+    - stallworth_nqueens.codeviz_demo.hub
+    - stallworth_nqueens.codeviz_demo.metrics
+    - stallworth_nqueens.codeviz_demo.models
+    - stallworth_nqueens.codeviz_demo.orchestrator
+    - stallworth_nqueens.codeviz_demo.placement
+    - stallworth_nqueens.codeviz_demo.solutions
+    - stallworth_nqueens.codeviz_demo.summary
+  depends_on:
+    - none
+  depended_on_by:
+    - none
+
+- stallworth_nqueens.common
+  role_hints: leaf_package
+  module_count: 1
+  modules:
+    - stallworth_nqueens.common
+  depends_on:
+    - none
+  depended_on_by:
+    - none
+
+- stallworth_nqueens.common.benchmarking
+  role_hints: none
+  module_count: 4
+  modules:
+    - stallworth_nqueens.common.benchmarking
+    - stallworth_nqueens.common.benchmarking.adapters
+    - stallworth_nqueens.common.benchmarking.models
+    - stallworth_nqueens.common.benchmarking.runner
+  depends_on:
+    - dataclasses
+    - time
+    - typing
+  depended_on_by:
+    - stallworth_nqueens.benchmarking
+    - stallworth_nqueens.execution
+
+- stallworth_nqueens.common.logging
+  role_hints: leaf_package
+  module_count: 2
+  modules:
+    - stallworth_nqueens.common.logging
+    - stallworth_nqueens.common.logging.logger
+  depends_on:
+    - logging
+  depended_on_by:
+    - stallworth_nqueens.cli
+
+- stallworth_nqueens.execution
+  role_hints: none
+  module_count: 3
+  modules:
+    - stallworth_nqueens.execution
+    - stallworth_nqueens.execution.engine
+    - stallworth_nqueens.execution.runner
+  depends_on:
+    - stallworth_nqueens
+    - stallworth_nqueens.benchmarking
+    - stallworth_nqueens.common.benchmarking
+    - stallworth_nqueens.solvers
+    - threading
+    - time
+  depended_on_by:
+    - stallworth_nqueens.cli
+
+- stallworth_nqueens.models
+  role_hints: leaf_package
+  module_count: 2
+  modules:
+    - stallworth_nqueens.models
+    - stallworth_nqueens.models.board
+  depends_on:
+    - dataclasses
+    - stallworth_nqueens.abstract
+  depended_on_by:
+    - stallworth_nqueens.reporting
+
+- stallworth_nqueens.profiles
+  role_hints: leaf_package
+  module_count: 2
+  modules:
+    - stallworth_nqueens.profiles
+    - stallworth_nqueens.profiles.registry
+  depends_on:
+    - dataclasses
+  depended_on_by:
+    - stallworth_nqueens.cli
+
+- stallworth_nqueens.reporting
+  role_hints: leaf_package
+  module_count: 2
+  modules:
+    - stallworth_nqueens.reporting
+    - stallworth_nqueens.reporting.display
+  depends_on:
+    - logging
+    - stallworth_nqueens.models
+  depended_on_by:
+    - stallworth_nqueens.cli
+
+- stallworth_nqueens.solvers
+  role_hints: none
+  module_count: 3
+  modules:
+    - stallworth_nqueens.solvers
+    - stallworth_nqueens.solvers.constraint
+    - stallworth_nqueens.solvers.registry
+  depends_on:
+    - stallworth_nqueens
+    - stallworth_nqueens.abstract
+    - stallworth_nqueens.solvers.bitmask
+    - stallworth_nqueens.solvers.dfs
+  depended_on_by:
+    - stallworth_nqueens.benchmarking
+    - stallworth_nqueens.cli
+    - stallworth_nqueens.execution
+
+- stallworth_nqueens.solvers.bitmask
+  role_hints: none
+  module_count: 2
+  modules:
+    - stallworth_nqueens.solvers.bitmask
+    - stallworth_nqueens.solvers.bitmask.backtracking
+  depends_on:
+    - stallworth_nqueens
+    - stallworth_nqueens.abstract
+  depended_on_by:
+    - stallworth_nqueens.solvers
+
+- stallworth_nqueens.solvers.dfs
+  role_hints: none
+  module_count: 2
+  modules:
+    - stallworth_nqueens.solvers.dfs
+    - stallworth_nqueens.solvers.dfs.backtracking
+  depends_on:
+    - stallworth_nqueens
+    - stallworth_nqueens.abstract
+  depended_on_by:
+    - stallworth_nqueens.solvers
+
+Findings
+========
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.codeviz_demo
+    - inbound_package_dependencies=0
+    - outbound_package_dependencies=0
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.codeviz_demo
+stallworth_nqueens.codeviz_demo.api
+stallworth_nqueens.codeviz_demo.backtracking
+stallworth_nqueens.codeviz_demo.board
+stallworth_nqueens.codeviz_demo.candidates
+stallworth_nqueens.codeviz_demo.columns
+stallworth_nqueens.codeviz_demo.diagonals
+stallworth_nqueens.codeviz_demo.formatting
+stallworth_nqueens.codeviz_demo.hub
+stallworth_nqueens.codeviz_demo.metrics
+stallworth_nqueens.codeviz_demo.models
+stallworth_nqueens.codeviz_demo.orchestrator
+stallworth_nqueens.codeviz_demo.placement
+stallworth_nqueens.codeviz_demo.solutions
+stallworth_nqueens.codeviz_demo.summary
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.
+
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.common
+    - inbound_package_dependencies=0
+    - outbound_package_dependencies=0
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.common
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.
+
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.common.logging
+    - inbound_package_dependencies=1
+    - outbound_package_dependencies=0
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.common.logging
+stallworth_nqueens.common.logging.logger
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.
+
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.models
+    - inbound_package_dependencies=1
+    - outbound_package_dependencies=1
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.models
+stallworth_nqueens.models.board
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.
+
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.profiles
+    - inbound_package_dependencies=1
+    - outbound_package_dependencies=0
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.profiles
+stallworth_nqueens.profiles.registry
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.
+
+- [Light] Leaf package observed
+  code: PackageFindingCode.LEAF_PACKAGE
+  summary: This package has little or no inward or outward coupling and appears relatively isolated.
+  evidence:
+    - Inbound package dependencies remain limited.
+    - Outbound package dependencies remain limited.
+    - package_name=stallworth_nqueens.reporting
+    - inbound_package_dependencies=1
+    - outbound_package_dependencies=1
+    - role_threshold=10
+  module_paths:
+stallworth_nqueens.reporting
+stallworth_nqueens.reporting.display
+  suggestion: Treat isolated packages as useful stability seams. Revisit only if the package was expected to participate more broadly.

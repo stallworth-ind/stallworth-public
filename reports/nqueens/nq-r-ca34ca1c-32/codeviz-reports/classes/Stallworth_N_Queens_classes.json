@@ -1,0 +1,1159 @@
+{
+  "report_type": "class_relationships",
+  "schema_version": 3,
+  "graph_name": "Stallworth N-Queens",
+  "project_path": "./src",
+  "analysis_maturity": "provisional",
+  "summary": {
+    "node_count": 23,
+    "internal_class_count": 20,
+    "referenced_class_count": 3,
+    "edge_count": 16,
+    "inheritance_edge_count": 8,
+    "reference_edge_count": 8,
+    "finding_count": 2,
+    "node_counts_by_kind": {
+      "internal": 20,
+      "external": 0,
+      "stdlib": 3,
+      "unresolved": 0
+    }
+  },
+  "finding_thresholds": {
+    "shared_base_direct_subclasses": {
+      "minimum": 3,
+      "percentile": 75,
+      "observed_positive_values": [
+        1,
+        1,
+        3
+      ],
+      "effective": 3
+    },
+    "deep_inheritance_depth": {
+      "minimum": 3,
+      "percentile": 75,
+      "observed_positive_values": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        3
+      ],
+      "effective": 3
+    }
+  },
+  "findings": [
+    {
+      "code": "shared_base_class",
+      "strength": "Light",
+      "title": "Shared base class observed",
+      "summary": "This class is used as a direct base by multiple analyzed classes.",
+      "node_id": "stallworth_nqueens.codeviz_demo.models.DemoStage",
+      "metric": {
+        "name": "direct_subclass_count",
+        "value": 3,
+        "threshold": 3
+      },
+      "related_node_ids": [
+        "stallworth_nqueens.codeviz_demo.models.BoardStage",
+        "stallworth_nqueens.codeviz_demo.models.ResultStage",
+        "stallworth_nqueens.codeviz_demo.models.SearchStage"
+      ],
+      "inheritance_path": [],
+      "evidence": [
+        "Direct subclass count meets the project-derived threshold.",
+        "base_class=stallworth_nqueens.codeviz_demo.models.DemoStage",
+        "direct_subclass_count=3",
+        "direct_subclass_threshold=3",
+        "direct_subclasses=stallworth_nqueens.codeviz_demo.models.BoardStage,stallworth_nqueens.codeviz_demo.models.ResultStage,stallworth_nqueens.codeviz_demo.models.SearchStage"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.codeviz_demo.models"
+      ],
+      "suggestion": "Shared base classes can provide a useful contract. Review changes with their subclasses in mind as the hierarchy evolves.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 4,
+          "end_line_number": 5
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 8,
+          "end_line_number": 9
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 16,
+          "end_line_number": 17
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 12,
+          "end_line_number": 13
+        }
+      ]
+    },
+    {
+      "code": "deep_inheritance_chain",
+      "strength": "Moderate",
+      "title": "Long inheritance chain observed",
+      "summary": "This class participates in a longer inheritance chain than the configured minimum and nearby project classes.",
+      "node_id": "stallworth_nqueens.codeviz_demo.models.DetailedSearchStage",
+      "metric": {
+        "name": "inheritance_depth",
+        "value": 3,
+        "threshold": 3
+      },
+      "related_node_ids": [
+        "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage",
+        "stallworth_nqueens.codeviz_demo.models.SearchStage",
+        "stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "inheritance_path": [
+        "stallworth_nqueens.codeviz_demo.models.DetailedSearchStage",
+        "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage",
+        "stallworth_nqueens.codeviz_demo.models.SearchStage",
+        "stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "evidence": [
+        "Resolved inheritance depth meets the project-derived threshold.",
+        "class=stallworth_nqueens.codeviz_demo.models.DetailedSearchStage",
+        "inheritance_depth=3",
+        "inheritance_depth_threshold=3",
+        "inheritance_path=stallworth_nqueens.codeviz_demo.models.DetailedSearchStage -> stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage -> stallworth_nqueens.codeviz_demo.models.SearchStage -> stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.codeviz_demo.models"
+      ],
+      "suggestion": "Confirm that behavior remains easy to locate across the hierarchy. Prefer composition when additional inheritance levels would obscure ownership.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 24,
+          "end_line_number": 25
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 20,
+          "end_line_number": 21
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 12,
+          "end_line_number": 13
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 4,
+          "end_line_number": 5
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "argparse.ArgumentParser",
+      "name": "ArgumentParser",
+      "kind": "stdlib",
+      "module": "argparse",
+      "package": null,
+      "location": null,
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [
+        "stallworth_nqueens.cli.args.NQueensArgumentParser"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "builtins.RuntimeError",
+      "name": "RuntimeError",
+      "kind": "stdlib",
+      "module": "builtins",
+      "package": null,
+      "location": null,
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSolverFailure"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter",
+      "name": "NQueensAdapter",
+      "kind": "internal",
+      "module": "stallworth_nqueens.benchmarking.adapter",
+      "package": "stallworth_nqueens.benchmarking",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "line_number": 49,
+        "end_line_number": 152
+      },
+      "decorator_names": [],
+      "method_count": 3,
+      "method_names": [
+        "run",
+        "to_benchmark_result",
+        "to_failed_benchmark_result"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.args.NQueensArgumentParser",
+      "name": "NQueensArgumentParser",
+      "kind": "internal",
+      "module": "stallworth_nqueens.cli.args",
+      "package": "stallworth_nqueens.cli",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/args.py",
+        "line_number": 6,
+        "end_line_number": 8
+      },
+      "decorator_names": [],
+      "method_count": 1,
+      "method_names": [
+        "error"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "argparse.ArgumentParser"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.BoardStage",
+      "name": "BoardStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 8,
+        "end_line_number": 9
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.DemoStage",
+      "name": "DemoStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 4,
+        "end_line_number": 5
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [
+        "stallworth_nqueens.codeviz_demo.models.BoardStage",
+        "stallworth_nqueens.codeviz_demo.models.SearchStage",
+        "stallworth_nqueens.codeviz_demo.models.ResultStage"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": [
+        "shared_base_class"
+      ]
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.DetailedSearchStage",
+      "name": "DetailedSearchStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 24,
+        "end_line_number": 25
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": [
+        "deep_inheritance_chain"
+      ]
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage",
+      "name": "InstrumentedSearchStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 20,
+        "end_line_number": 21
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "stallworth_nqueens.codeviz_demo.models.SearchStage"
+      ],
+      "derived_class_ids": [
+        "stallworth_nqueens.codeviz_demo.models.DetailedSearchStage"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.ResultStage",
+      "name": "ResultStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 16,
+        "end_line_number": 17
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.SearchStage",
+      "name": "SearchStage",
+      "kind": "internal",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 12,
+        "end_line_number": 13
+      },
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "stallworth_nqueens.codeviz_demo.models.DemoStage"
+      ],
+      "derived_class_ids": [
+        "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter",
+      "name": "DomainBenchmarkAdapter",
+      "kind": "internal",
+      "module": "stallworth_nqueens.common.benchmarking.adapters",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "line_number": 6,
+        "end_line_number": 28
+      },
+      "decorator_names": [],
+      "method_count": 3,
+      "method_names": [
+        "run",
+        "to_benchmark_result",
+        "to_failed_benchmark_result"
+      ],
+      "is_abstract": false,
+      "is_protocol": true,
+      "declared_base_ids": [
+        "typing.Protocol"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [
+        "stallworth_nqueens.common.benchmarking.models.BenchmarkResult"
+      ],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.models.BenchmarkResult",
+      "name": "BenchmarkResult",
+      "kind": "internal",
+      "module": "stallworth_nqueens.common.benchmarking.models",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/models.py",
+        "line_number": 9,
+        "end_line_number": 14
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [
+        "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter",
+        "stallworth_nqueens.common.benchmarking.models.CommonExecutionMetrics"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.models.CommonExecutionMetrics",
+      "name": "CommonExecutionMetrics",
+      "kind": "internal",
+      "module": "stallworth_nqueens.common.benchmarking.models",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/models.py",
+        "line_number": 18,
+        "end_line_number": 48
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 1,
+      "method_names": [
+        "from_benchmark_result"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [
+        "stallworth_nqueens.common.benchmarking.models.BenchmarkResult"
+      ],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensBacktrackingCounters",
+      "name": "NQueensBacktrackingCounters",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 40,
+        "end_line_number": 44
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensBitmaskCounters",
+      "name": "NQueensBitmaskCounters",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 48,
+        "end_line_number": 53
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensConstraintCounters",
+      "name": "NQueensConstraintCounters",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 32,
+        "end_line_number": 36
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "name": "NQueensSearchMetrics",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 57,
+        "end_line_number": 189
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 15,
+      "method_names": [
+        "visit_state",
+        "consider_placement",
+        "enter_search_state",
+        "enter_child_state",
+        "record_leaf_state",
+        "check_constraint",
+        "record_backtrack",
+        "record_dead_end",
+        "compute_available_mask",
+        "extract_candidate_bit",
+        "capability_metrics_payload",
+        "_search_shape",
+        "_constraint",
+        "_backtracking",
+        "_bitmask"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [
+        "stallworth_nqueens.metrics.NQueensBacktrackingCounters",
+        "stallworth_nqueens.metrics.NQueensBitmaskCounters",
+        "stallworth_nqueens.metrics.NQueensConstraintCounters",
+        "stallworth_nqueens.metrics.NQueensSearchShapeCounters"
+      ],
+      "referencing_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSolverExecution",
+        "stallworth_nqueens.metrics.NQueensSolverFailure"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchShapeCounters",
+      "name": "NQueensSearchShapeCounters",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 22,
+        "end_line_number": 28
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSolverExecution",
+      "name": "NQueensSolverExecution",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 193,
+        "end_line_number": 197
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSolverFailure",
+      "name": "NQueensSolverFailure",
+      "kind": "internal",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 200,
+        "end_line_number": 210
+      },
+      "decorator_names": [],
+      "method_count": 1,
+      "method_names": [
+        "__init__"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [
+        "builtins.RuntimeError"
+      ],
+      "derived_class_ids": [],
+      "referenced_class_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics"
+      ],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard",
+      "name": "NQueensBoard",
+      "kind": "internal",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 11,
+        "end_line_number": 76
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 6,
+      "method_names": [
+        "__post_init__",
+        "from_columns",
+        "queen_positions",
+        "is_valid",
+        "to_ascii",
+        "__str__"
+      ],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.profiles.registry.NQueensProfile",
+      "name": "NQueensProfile",
+      "kind": "internal",
+      "module": "stallworth_nqueens.profiles.registry",
+      "package": "stallworth_nqueens.profiles",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/profiles/registry.py",
+        "line_number": 5,
+        "end_line_number": 19
+      },
+      "decorator_names": [
+        "dataclass"
+      ],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    },
+    {
+      "id": "typing.Protocol",
+      "name": "Protocol",
+      "kind": "stdlib",
+      "module": "typing",
+      "package": null,
+      "location": null,
+      "decorator_names": [],
+      "method_count": 0,
+      "method_names": [],
+      "is_abstract": false,
+      "is_protocol": false,
+      "declared_base_ids": [],
+      "derived_class_ids": [
+        "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter"
+      ],
+      "referenced_class_ids": [],
+      "referencing_class_ids": [],
+      "finding_codes": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "stallworth_nqueens.cli.args.NQueensArgumentParser",
+      "target": "argparse.ArgumentParser",
+      "type": "inherits",
+      "target_kind": "stdlib",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "argparse.ArgumentParser",
+          "file_path": "./src/stallworth_nqueens/cli/args.py",
+          "line_number": 6,
+          "end_line_number": 6
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.BoardStage",
+      "target": "stallworth_nqueens.codeviz_demo.models.DemoStage",
+      "type": "inherits",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "DemoStage",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 8,
+          "end_line_number": 8
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.DetailedSearchStage",
+      "target": "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage",
+      "type": "inherits",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "InstrumentedSearchStage",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 24,
+          "end_line_number": 24
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.InstrumentedSearchStage",
+      "target": "stallworth_nqueens.codeviz_demo.models.SearchStage",
+      "type": "inherits",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "SearchStage",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 20,
+          "end_line_number": 20
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.ResultStage",
+      "target": "stallworth_nqueens.codeviz_demo.models.DemoStage",
+      "type": "inherits",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "DemoStage",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 16,
+          "end_line_number": 16
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.SearchStage",
+      "target": "stallworth_nqueens.codeviz_demo.models.DemoStage",
+      "type": "inherits",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "DemoStage",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 12,
+          "end_line_number": 12
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter",
+      "target": "stallworth_nqueens.common.benchmarking.models.BenchmarkResult",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "BenchmarkResult",
+          "referenced_name": "BenchmarkResult",
+          "context": "method_return",
+          "member_name": "to_benchmark_result",
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+          "line_number": 18,
+          "end_line_number": 18
+        },
+        {
+          "kind": "type_annotation",
+          "annotation": "BenchmarkResult",
+          "referenced_name": "BenchmarkResult",
+          "context": "method_return",
+          "member_name": "to_failed_benchmark_result",
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+          "line_number": 27,
+          "end_line_number": 27
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter",
+      "target": "typing.Protocol",
+      "type": "inherits",
+      "target_kind": "stdlib",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "Protocol",
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+          "line_number": 6,
+          "end_line_number": 6
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.models.CommonExecutionMetrics",
+      "target": "stallworth_nqueens.common.benchmarking.models.BenchmarkResult",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "BenchmarkResult",
+          "referenced_name": "BenchmarkResult",
+          "context": "method_parameter",
+          "member_name": "from_benchmark_result.result",
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/models.py",
+          "line_number": 29,
+          "end_line_number": 29
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "target": "stallworth_nqueens.metrics.NQueensBacktrackingCounters",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensBacktrackingCounters | None",
+          "referenced_name": "NQueensBacktrackingCounters",
+          "context": "class_attribute",
+          "member_name": "backtracking",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 70,
+          "end_line_number": 70
+        },
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensBacktrackingCounters",
+          "referenced_name": "NQueensBacktrackingCounters",
+          "context": "method_return",
+          "member_name": "_backtracking",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 181,
+          "end_line_number": 181
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "target": "stallworth_nqueens.metrics.NQueensBitmaskCounters",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensBitmaskCounters | None",
+          "referenced_name": "NQueensBitmaskCounters",
+          "context": "class_attribute",
+          "member_name": "bitmask",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 71,
+          "end_line_number": 71
+        },
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensBitmaskCounters",
+          "referenced_name": "NQueensBitmaskCounters",
+          "context": "method_return",
+          "member_name": "_bitmask",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 186,
+          "end_line_number": 186
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "target": "stallworth_nqueens.metrics.NQueensConstraintCounters",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensConstraintCounters | None",
+          "referenced_name": "NQueensConstraintCounters",
+          "context": "class_attribute",
+          "member_name": "constraint",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 69,
+          "end_line_number": 69
+        },
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensConstraintCounters",
+          "referenced_name": "NQueensConstraintCounters",
+          "context": "method_return",
+          "member_name": "_constraint",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 176,
+          "end_line_number": 176
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "target": "stallworth_nqueens.metrics.NQueensSearchShapeCounters",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensSearchShapeCounters | None",
+          "referenced_name": "NQueensSearchShapeCounters",
+          "context": "class_attribute",
+          "member_name": "search_shape",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 68,
+          "end_line_number": 68
+        },
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensSearchShapeCounters",
+          "referenced_name": "NQueensSearchShapeCounters",
+          "context": "method_return",
+          "member_name": "_search_shape",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 171,
+          "end_line_number": 171
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSolverExecution",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensSearchMetrics",
+          "referenced_name": "NQueensSearchMetrics",
+          "context": "class_attribute",
+          "member_name": "metrics",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 197,
+          "end_line_number": 197
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSolverFailure",
+      "target": "builtins.RuntimeError",
+      "type": "inherits",
+      "target_kind": "stdlib",
+      "evidence": [
+        {
+          "kind": "declared_base",
+          "declared_base": "RuntimeError",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 200,
+          "end_line_number": 200
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSolverFailure",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics",
+      "type": "references",
+      "target_kind": "internal",
+      "evidence": [
+        {
+          "kind": "type_annotation",
+          "annotation": "NQueensSearchMetrics",
+          "referenced_name": "NQueensSearchMetrics",
+          "context": "method_parameter",
+          "member_name": "__init__.metrics",
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 206,
+          "end_line_number": 206
+        }
+      ]
+    }
+  ],
+  "report_finding": {
+    "finding_strength": "Moderate",
+    "summary": "1 long inheritance chain observed. Confirm that behavior remains easy to locate across each hierarchy.",
+    "display": "[Moderate] 1 long inheritance chain observed. Confirm that behavior remains easy to locate across each hierarchy."
+  },
+  "report_voice": {
+    "finding_strength": "Moderate",
+    "tagline": "This graph has stories.",
+    "display": "[Moderate] This graph has stories."
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.2.2",
+    "source_tree_sha256": "39132e288add81fdeef7b1dbbcc69d7219ec1fd59a323b76d1c4b64d8da136af",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:5b2f40d77a3664baf5ec39b5fb236ec3b13656153e1969f051640785cf39990a",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}

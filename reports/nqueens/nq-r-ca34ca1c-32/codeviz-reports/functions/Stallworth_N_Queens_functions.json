@@ -1,0 +1,5161 @@
+{
+  "report_type": "function_calls",
+  "schema_version": 6,
+  "graph_name": "Stallworth N-Queens",
+  "project_path": "./src",
+  "analysis_maturity": "provisional",
+  "explicit_exclusions": [
+    "inherited, overridden, and dynamic method dispatch",
+    "methods called through arbitrary object expressions",
+    "nested functions, closures, and lambdas",
+    "callables stored in variables or collections",
+    "dependency-injected and callback targets",
+    "decorated replacement callables",
+    "dynamic imports and reflection",
+    "undeclared or unclassified third-party imports",
+    "builtins without an explicit import binding",
+    "module-level assignment rebinding of imported names",
+    "function and class definition-time expressions",
+    "class-body executable calls"
+  ],
+  "summary": {
+    "node_count": 101,
+    "top_level_function_node_count": 58,
+    "method_node_count": 30,
+    "module_execution_node_count": 6,
+    "async_callable_node_count": 0,
+    "direct_call_edge_count": 73,
+    "analyzed_call_site_count": 268,
+    "resolved_call_site_count": 86,
+    "unresolved_call_site_count": 182,
+    "awaited_call_site_count": 0,
+    "resolved_awaited_call_site_count": 0,
+    "unresolved_awaited_call_site_count": 0,
+    "finding_count": 2,
+    "node_counts_by_kind": {
+      "internal": 94,
+      "external": 0,
+      "stdlib": 7,
+      "unresolved": 0
+    }
+  },
+  "findings": [
+    {
+      "code": "resolved_call_cycle",
+      "strength": "Observation",
+      "title": "Resolved call cycle observed",
+      "summary": "These analyzed callables participate in a statically resolved multi-callable cycle.",
+      "node_ids": [
+        "stallworth_nqueens.codeviz_demo.models.even_row",
+        "stallworth_nqueens.codeviz_demo.models.odd_row"
+      ],
+      "relationship_edges": [
+        {
+          "source": "stallworth_nqueens.codeviz_demo.models.even_row",
+          "target": "stallworth_nqueens.codeviz_demo.models.odd_row"
+        },
+        {
+          "source": "stallworth_nqueens.codeviz_demo.models.odd_row",
+          "target": "stallworth_nqueens.codeviz_demo.models.even_row"
+        }
+      ],
+      "resolved_call_site_count": 2,
+      "evidence": [
+        "Every participating callable is reachable from the others through resolved CALLS relationships.",
+        "callable_count=2",
+        "callables=stallworth_nqueens.codeviz_demo.models.even_row,stallworth_nqueens.codeviz_demo.models.odd_row",
+        "resolved_relationships=stallworth_nqueens.codeviz_demo.models.even_row->stallworth_nqueens.codeviz_demo.models.odd_row,stallworth_nqueens.codeviz_demo.models.odd_row->stallworth_nqueens.codeviz_demo.models.even_row",
+        "resolved_call_site_count=2"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.codeviz_demo.models"
+      ],
+      "suggestion": "No change is implied. Inspect the participating callables together when tracing this control flow.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 39,
+          "end_line_number": 39
+        },
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 46,
+          "end_line_number": 46
+        }
+      ]
+    },
+    {
+      "code": "direct_recursion",
+      "strength": "Observation",
+      "title": "Direct recursion observed",
+      "summary": "This analyzed callable directly calls itself through a statically resolved call relationship.",
+      "node_ids": [
+        "stallworth_nqueens.codeviz_demo.models.remaining_rows"
+      ],
+      "relationship_edges": [
+        {
+          "source": "stallworth_nqueens.codeviz_demo.models.remaining_rows",
+          "target": "stallworth_nqueens.codeviz_demo.models.remaining_rows"
+        }
+      ],
+      "resolved_call_site_count": 1,
+      "evidence": [
+        "A resolved CALLS relationship returns to its source callable.",
+        "callable=stallworth_nqueens.codeviz_demo.models.remaining_rows",
+        "resolved_call_site_count=1",
+        "call_site=remaining_rows(size - 1)@./src/stallworth_nqueens/codeviz_demo/models.py:32"
+      ],
+      "module_paths": [
+        "stallworth_nqueens.codeviz_demo.models"
+      ],
+      "suggestion": "No change is implied. Inspect the termination condition when tracing this control flow.",
+      "locations": [
+        {
+          "module_name": "stallworth_nqueens.codeviz_demo.models",
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 32,
+          "end_line_number": 32
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "id": "difflib.get_close_matches",
+      "name": "get_close_matches",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "difflib",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "inspect.signature",
+      "name": "signature",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "inspect",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.metrics.execute_with_metrics"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "logging.basicConfig",
+      "name": "basicConfig",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "logging",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.common.logging.logger.setup_logging"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "logging.getLogger",
+      "name": "getLogger",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "logging",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.<module>",
+        "stallworth_nqueens.reporting.display.<module>"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.bitmask.available_positions",
+      "name": "available_positions",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.bitmask",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/bitmask.py",
+        "line_number": 8,
+        "end_line_number": 9
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "full",
+        "cols",
+        "diag1",
+        "diag2"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.bitmask.full_mask",
+      "name": "full_mask",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.bitmask",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/bitmask.py",
+        "line_number": 4,
+        "end_line_number": 5
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "n"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [
+        "stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.bitmask.next_state",
+      "name": "next_state",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.bitmask",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/bitmask.py",
+        "line_number": 12,
+        "end_line_number": 17
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "cols",
+        "diag1",
+        "diag2",
+        "bit"
+      ],
+      "is_async": false,
+      "return_annotation": "tuple[int, int, int]",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.constraints.is_safe",
+      "name": "is_safe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.constraints",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+        "line_number": 14,
+        "end_line_number": 20
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "row",
+        "col",
+        "cols",
+        "diag1",
+        "diag2"
+      ],
+      "is_async": false,
+      "return_annotation": "bool",
+      "caller_ids": [
+        "stallworth_nqueens.abstract.constraints.valid_columns"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.abstract.constraints.major_diagonal",
+        "stallworth_nqueens.abstract.constraints.minor_diagonal"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.constraints.major_diagonal",
+      "name": "major_diagonal",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.constraints",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+        "line_number": 4,
+        "end_line_number": 6
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "row",
+        "col"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [
+        "stallworth_nqueens.abstract.constraints.is_safe",
+        "stallworth_nqueens.abstract.constraints.place",
+        "stallworth_nqueens.models.board.NQueensBoard.is_valid"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+      "name": "minor_diagonal",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.constraints",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "row",
+        "col"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [
+        "stallworth_nqueens.abstract.constraints.is_safe",
+        "stallworth_nqueens.abstract.constraints.place",
+        "stallworth_nqueens.models.board.NQueensBoard.is_valid"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.constraints.place",
+      "name": "place",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.constraints",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+        "line_number": 23,
+        "end_line_number": 29
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "row",
+        "col",
+        "cols",
+        "diag1",
+        "diag2"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.abstract.constraints.major_diagonal",
+        "stallworth_nqueens.abstract.constraints.minor_diagonal"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.abstract.constraints.valid_columns",
+      "name": "valid_columns",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.abstract.constraints",
+      "package": "stallworth_nqueens.abstract",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+        "line_number": 32,
+        "end_line_number": 34
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "row",
+        "n",
+        "cols",
+        "diag1",
+        "diag2"
+      ],
+      "is_async": false,
+      "return_annotation": "list[int]",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.abstract.constraints.is_safe"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run",
+      "name": "run",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.benchmarking.adapter",
+      "package": "stallworth_nqueens.benchmarking",
+      "owner_class": "NQueensAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "line_number": 54,
+        "end_line_number": 61
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.execute_with_metrics"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result",
+      "name": "to_benchmark_result",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.benchmarking.adapter",
+      "package": "stallworth_nqueens.benchmarking",
+      "owner_class": "NQueensAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "line_number": 63,
+        "end_line_number": 109
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "raw_result",
+        "elapsed",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "BenchmarkResult",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.benchmarking.adapter.find_sample_solution"
+      ],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_failed_benchmark_result",
+      "name": "to_failed_benchmark_result",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.benchmarking.adapter",
+      "package": "stallworth_nqueens.benchmarking",
+      "owner_class": "NQueensAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "line_number": 111,
+        "end_line_number": 152
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "error",
+        "elapsed",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "BenchmarkResult",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.benchmarking.adapter.find_sample_solution",
+      "name": "find_sample_solution",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.benchmarking.adapter",
+      "package": "stallworth_nqueens.benchmarking",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+        "line_number": 10,
+        "end_line_number": 46
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "n"
+      ],
+      "is_async": false,
+      "return_annotation": "tuple[int, ...] | None",
+      "caller_ids": [
+        "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.args.NQueensArgumentParser.error",
+      "name": "error",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.cli.args",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": "NQueensArgumentParser",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/args.py",
+        "line_number": 7,
+        "end_line_number": 8
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "message"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.args.build_args",
+      "name": "build_args",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.cli.args",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/args.py",
+        "line_number": 50,
+        "end_line_number": 67
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "solver_names",
+        "profile_names"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.cli.args.build_parser",
+        "stallworth_nqueens.profiles.registry.get_profile"
+      ],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.args.build_parser",
+      "name": "build_parser",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.cli.args",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/args.py",
+        "line_number": 11,
+        "end_line_number": 47
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "solver_names",
+        "profile_names"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.args.build_args",
+        "stallworth_nqueens.cli.args.format_usage"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 7,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.args.format_usage",
+      "name": "format_usage",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.cli.args",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/args.py",
+        "line_number": 70,
+        "end_line_number": 72
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "solver_names",
+        "profile_names"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.cli.args.build_parser"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.n_queens_cli.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.cli.n_queens_cli",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+        "line_number": 16,
+        "end_line_number": 16
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "logging.getLogger"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "name": "run_n_queens_cli",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.cli.n_queens_cli",
+      "package": "stallworth_nqueens.cli",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+        "line_number": 18,
+        "end_line_number": 52
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.main.main"
+      ],
+      "direct_callee_ids": [
+        "difflib.get_close_matches",
+        "stallworth_nqueens.cli.args.build_args",
+        "stallworth_nqueens.cli.args.format_usage",
+        "stallworth_nqueens.common.logging.logger.format_unexpected_error",
+        "stallworth_nqueens.common.logging.logger.setup_logging",
+        "stallworth_nqueens.execution.engine.execute",
+        "stallworth_nqueens.profiles.registry.get_profile",
+        "stallworth_nqueens.profiles.registry.get_profile_names",
+        "stallworth_nqueens.reporting.display.display_execution_result",
+        "stallworth_nqueens.reporting.display.display_run_header",
+        "stallworth_nqueens.reporting.display.display_unexpected_error",
+        "stallworth_nqueens.reporting.display.display_unknown_solver",
+        "stallworth_nqueens.reporting.display.display_usage",
+        "stallworth_nqueens.solvers.registry.get_solver_names"
+      ],
+      "analyzed_call_site_count": 27,
+      "resolved_call_site_count": 20,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.api.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.codeviz_demo.api",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/api.py",
+        "line_number": 11,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.api.export_names"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.api.export_names",
+      "name": "export_names",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.api",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/api.py",
+        "line_number": 6,
+        "end_line_number": 8
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.codeviz_demo.api.<module>"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.backtracking.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.backtracking",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/backtracking.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.board.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.board",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/board.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.candidates.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.candidates",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/candidates.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.columns.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.columns",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/columns.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.diagonals.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.diagonals",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/diagonals.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.formatting.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.formatting",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/formatting.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "name": "stage_names",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.hub",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/hub.py",
+        "line_number": 18,
+        "end_line_number": 31
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.codeviz_demo.backtracking.describe",
+        "stallworth_nqueens.codeviz_demo.board.describe",
+        "stallworth_nqueens.codeviz_demo.candidates.describe",
+        "stallworth_nqueens.codeviz_demo.columns.describe",
+        "stallworth_nqueens.codeviz_demo.diagonals.describe",
+        "stallworth_nqueens.codeviz_demo.formatting.describe",
+        "stallworth_nqueens.codeviz_demo.metrics.describe",
+        "stallworth_nqueens.codeviz_demo.placement.describe",
+        "stallworth_nqueens.codeviz_demo.solutions.describe",
+        "stallworth_nqueens.codeviz_demo.summary.describe"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.metrics.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.metrics",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/metrics.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.even_row",
+      "name": "even_row",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 35,
+        "end_line_number": 39
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "size"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.codeviz_demo.models.odd_row"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.models.odd_row"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": [
+        "resolved_call_cycle"
+      ]
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.odd_row",
+      "name": "odd_row",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 42,
+        "end_line_number": 46
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "size"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.codeviz_demo.models.even_row"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.models.even_row"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": [
+        "resolved_call_cycle"
+      ]
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.models.remaining_rows",
+      "name": "remaining_rows",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.models",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+        "line_number": 28,
+        "end_line_number": 32
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "size"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.codeviz_demo.models.remaining_rows"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.models.remaining_rows"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": [
+        "direct_recursion"
+      ]
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.orchestrator.stage_names",
+      "name": "stage_names",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.orchestrator",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/orchestrator.py",
+        "line_number": 15,
+        "end_line_number": 28
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.placement.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.placement",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/placement.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.solutions.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.solutions",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/solutions.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.codeviz_demo.summary.describe",
+      "name": "describe",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.codeviz_demo.summary",
+      "package": "stallworth_nqueens.codeviz_demo",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/codeviz_demo/summary.py",
+        "line_number": 9,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "stage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.codeviz_demo.hub.stage_names"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.run",
+      "name": "run",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.common.benchmarking.adapters",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": "DomainBenchmarkAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "line_number": 9,
+        "end_line_number": 10
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "Any",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.to_benchmark_result",
+      "name": "to_benchmark_result",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.common.benchmarking.adapters",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": "DomainBenchmarkAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "line_number": 12,
+        "end_line_number": 19
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "raw_result",
+        "elapsed",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "BenchmarkResult",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.adapters.DomainBenchmarkAdapter.to_failed_benchmark_result",
+      "name": "to_failed_benchmark_result",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.common.benchmarking.adapters",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": "DomainBenchmarkAdapter",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/adapters.py",
+        "line_number": 21,
+        "end_line_number": 28
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "solver",
+        "error",
+        "elapsed",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "BenchmarkResult",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.models.CommonExecutionMetrics.from_benchmark_result",
+      "name": "from_benchmark_result",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.common.benchmarking.models",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": "CommonExecutionMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/models.py",
+        "line_number": 27,
+        "end_line_number": 48
+      },
+      "decorator_names": [
+        "classmethod"
+      ],
+      "has_decorators": true,
+      "parameter_names": [
+        "cls",
+        "result"
+      ],
+      "is_async": false,
+      "return_annotation": "'CommonExecutionMetrics'",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.models.annotate_speedups",
+      "name": "annotate_speedups",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.common.benchmarking.models",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/models.py",
+        "line_number": 51,
+        "end_line_number": 85
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "results",
+        "baseline_solver"
+      ],
+      "is_async": false,
+      "return_annotation": "list[BenchmarkResult]",
+      "caller_ids": [
+        "stallworth_nqueens.common.benchmarking.runner.run_benchmarks"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.runner.run_benchmark",
+      "name": "run_benchmark",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.common.benchmarking.runner",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+        "line_number": 8,
+        "end_line_number": 48
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "adapter",
+        "solver",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "BenchmarkResult",
+      "caller_ids": [
+        "stallworth_nqueens.common.benchmarking.runner.run_benchmarks"
+      ],
+      "direct_callee_ids": [
+        "time.perf_counter"
+      ],
+      "analyzed_call_site_count": 10,
+      "resolved_call_site_count": 3,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.benchmarking.runner.run_benchmarks",
+      "name": "run_benchmarks",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.common.benchmarking.runner",
+      "package": "stallworth_nqueens.common.benchmarking",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+        "line_number": 51,
+        "end_line_number": 68
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "adapter",
+        "solvers",
+        "baseline_solver",
+        "kwargs"
+      ],
+      "is_async": false,
+      "return_annotation": "list[BenchmarkResult]",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.common.benchmarking.models.annotate_speedups",
+        "stallworth_nqueens.common.benchmarking.runner.run_benchmark"
+      ],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.logging.logger.format_unexpected_error",
+      "name": "format_unexpected_error",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.common.logging.logger",
+      "package": "stallworth_nqueens.common.logging",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/logging/logger.py",
+        "line_number": 14,
+        "end_line_number": 28
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "error"
+      ],
+      "is_async": false,
+      "return_annotation": "str",
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 7,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.common.logging.logger.setup_logging",
+      "name": "setup_logging",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.common.logging.logger",
+      "package": "stallworth_nqueens.common.logging",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/common/logging/logger.py",
+        "line_number": 5,
+        "end_line_number": 11
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "level"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [
+        "logging.basicConfig"
+      ],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.engine.execute",
+      "name": "execute",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.execution.engine",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/engine.py",
+        "line_number": 5,
+        "end_line_number": 32
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "choice",
+        "solver_names",
+        "profile_name"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.execution.runner.execute_all",
+        "stallworth_nqueens.execution.runner.execute_solver"
+      ],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.runner.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.execution.runner",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/runner.py",
+        "line_number": 10,
+        "end_line_number": 10
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.runner.collect_all",
+      "name": "collect_all",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.execution.runner",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/runner.py",
+        "line_number": 62,
+        "end_line_number": 69
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "solvers",
+        "baseline_label"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.runner.collect_single",
+      "name": "collect_single",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.execution.runner",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/runner.py",
+        "line_number": 13,
+        "end_line_number": 59
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "solver",
+        "label",
+        "show_timer"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.execute_with_metrics",
+        "threading.Thread",
+        "time.perf_counter"
+      ],
+      "analyzed_call_site_count": 8,
+      "resolved_call_site_count": 4,
+      "unresolved_call_site_count": 4,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.runner.execute_all",
+      "name": "execute_all",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.execution.runner",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/runner.py",
+        "line_number": 89,
+        "end_line_number": 95
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "baseline_label",
+        "solver_names"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.execution.engine.execute"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.execution.runner.execute_solver"
+      ],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.execution.runner.execute_solver",
+      "name": "execute_solver",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.execution.runner",
+      "package": "stallworth_nqueens.execution",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/execution/runner.py",
+        "line_number": 72,
+        "end_line_number": 86
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "solver_name"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.execution.engine.execute",
+        "stallworth_nqueens.execution.runner.execute_all"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.main.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.main",
+      "package": "stallworth_nqueens",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/main.py",
+        "line_number": 9,
+        "end_line_number": 9
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.main.main"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.main.main",
+      "name": "main",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.main",
+      "package": "stallworth_nqueens",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/main.py",
+        "line_number": 4,
+        "end_line_number": 5
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.main.<module>"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking",
+      "name": "_backtracking",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 181,
+        "end_line_number": 184
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensBacktrackingCounters",
+      "caller_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack",
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask",
+      "name": "_bitmask",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 186,
+        "end_line_number": 189
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensBitmaskCounters",
+      "caller_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask",
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint",
+      "name": "_constraint",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 176,
+        "end_line_number": 179
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensConstraintCounters",
+      "caller_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+      "name": "_search_shape",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 171,
+        "end_line_number": 174
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensSearchShapeCounters",
+      "caller_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state",
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state",
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.capability_metrics_payload",
+      "name": "capability_metrics_payload",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 128,
+        "end_line_number": 169
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "dict[str, dict[str, int | str]]",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint",
+      "name": "check_constraint",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 102,
+        "end_line_number": 111
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "accepted",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask",
+      "name": "compute_available_mask",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 119,
+        "end_line_number": 123
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "available"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.consider_placement",
+      "name": "consider_placement",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 76,
+        "end_line_number": 77
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state",
+      "name": "enter_child_state",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 96,
+        "end_line_number": 97
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state",
+      "name": "enter_search_state",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 79,
+        "end_line_number": 94
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "depth",
+        "root"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state"
+      ],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit",
+      "name": "extract_candidate_bit",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 125,
+        "end_line_number": 126
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack",
+      "name": "record_backtrack",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 113,
+        "end_line_number": 114
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end",
+      "name": "record_dead_end",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 116,
+        "end_line_number": 117
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state",
+      "name": "record_leaf_state",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 99,
+        "end_line_number": 100
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state",
+      "name": "visit_state",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSearchMetrics",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 73,
+        "end_line_number": 74
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "count"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [
+        "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.NQueensSolverFailure.__init__",
+      "name": "__init__",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": "NQueensSolverFailure",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 203,
+        "end_line_number": 210
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "cause",
+        "metrics"
+      ],
+      "is_async": false,
+      "return_annotation": "None",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.metrics.execute_with_metrics",
+      "name": "execute_with_metrics",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.metrics",
+      "package": "stallworth_nqueens",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/metrics.py",
+        "line_number": 213,
+        "end_line_number": 241
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "solver",
+        "problem_size"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensSolverExecution",
+      "caller_ids": [
+        "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run",
+        "stallworth_nqueens.execution.runner.collect_single"
+      ],
+      "direct_callee_ids": [
+        "inspect.signature"
+      ],
+      "analyzed_call_site_count": 8,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.__post_init__",
+      "name": "__post_init__",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 17,
+        "end_line_number": 26
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 4,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.__str__",
+      "name": "__str__",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 75,
+        "end_line_number": 76
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "str",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.models.board.NQueensBoard.to_ascii"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.from_columns",
+      "name": "from_columns",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 29,
+        "end_line_number": 31
+      },
+      "decorator_names": [
+        "classmethod"
+      ],
+      "has_decorators": true,
+      "parameter_names": [
+        "cls",
+        "columns_by_row"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.reporting.display.display_single_result"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.is_valid",
+      "name": "is_valid",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 38,
+        "end_line_number": 56
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "bool",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.abstract.constraints.major_diagonal",
+        "stallworth_nqueens.abstract.constraints.minor_diagonal"
+      ],
+      "analyzed_call_site_count": 10,
+      "resolved_call_site_count": 4,
+      "unresolved_call_site_count": 6,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.queen_positions",
+      "name": "queen_positions",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 34,
+        "end_line_number": 36
+      },
+      "decorator_names": [
+        "property"
+      ],
+      "has_decorators": true,
+      "parameter_names": [
+        "self"
+      ],
+      "is_async": false,
+      "return_annotation": "tuple[tuple[int, int], ...]",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.models.board.NQueensBoard.to_ascii",
+      "name": "to_ascii",
+      "kind": "internal",
+      "callable_kind": "method",
+      "module": "stallworth_nqueens.models.board",
+      "package": "stallworth_nqueens.models",
+      "owner_class": "NQueensBoard",
+      "location": {
+        "file_path": "./src/stallworth_nqueens/models/board.py",
+        "line_number": 58,
+        "end_line_number": 73
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "self",
+        "queen",
+        "empty",
+        "max_size"
+      ],
+      "is_async": false,
+      "return_annotation": "str",
+      "caller_ids": [
+        "stallworth_nqueens.models.board.NQueensBoard.__str__"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.profiles.registry.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.profiles.registry",
+      "package": "stallworth_nqueens.profiles",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/profiles/registry.py",
+        "line_number": 22,
+        "end_line_number": 22
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.profiles.registry.get_profile",
+      "name": "get_profile",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.profiles.registry",
+      "package": "stallworth_nqueens.profiles",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/profiles/registry.py",
+        "line_number": 30,
+        "end_line_number": 35
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "name"
+      ],
+      "is_async": false,
+      "return_annotation": "NQueensProfile",
+      "caller_ids": [
+        "stallworth_nqueens.cli.args.build_args",
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.profiles.registry.get_profile_names",
+      "name": "get_profile_names",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.profiles.registry",
+      "package": "stallworth_nqueens.profiles",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/profiles/registry.py",
+        "line_number": 25,
+        "end_line_number": 27
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": "list[str]",
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.<module>",
+      "name": "<module>",
+      "kind": "internal",
+      "callable_kind": "module_execution",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 5,
+        "end_line_number": 5
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "logging.getLogger"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display._metric_value",
+      "name": "_metric_value",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 8,
+        "end_line_number": 9
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "value"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.reporting.display.display_single_result"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display._speedup_value",
+      "name": "_speedup_value",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 12,
+        "end_line_number": 18
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "value",
+        "precision"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.reporting.display.display_benchmark_results"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_all_results",
+      "name": "display_all_results",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 121,
+        "end_line_number": 128
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "results"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.reporting.display.display_execution_result"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.reporting.display.display_single_result"
+      ],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 3,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_benchmark_results",
+      "name": "display_benchmark_results",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 99,
+        "end_line_number": 118
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "results"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.reporting.display._speedup_value"
+      ],
+      "analyzed_call_site_count": 9,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 7,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_execution_result",
+      "name": "display_execution_result",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 131,
+        "end_line_number": 138
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "execution_result"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.reporting.display.display_all_results",
+        "stallworth_nqueens.reporting.display.display_single_result"
+      ],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 2,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_run_header",
+      "name": "display_run_header",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 29,
+        "end_line_number": 35
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "problem_size",
+        "profile_name"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_single_result",
+      "name": "display_single_result",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 51,
+        "end_line_number": 96
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "result"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.reporting.display.display_all_results",
+        "stallworth_nqueens.reporting.display.display_execution_result"
+      ],
+      "direct_callee_ids": [
+        "stallworth_nqueens.models.board.NQueensBoard.from_columns",
+        "stallworth_nqueens.reporting.display._metric_value"
+      ],
+      "analyzed_call_site_count": 23,
+      "resolved_call_site_count": 3,
+      "unresolved_call_site_count": 20,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_unexpected_error",
+      "name": "display_unexpected_error",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 47,
+        "end_line_number": 48
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "message"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 1,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_unknown_solver",
+      "name": "display_unknown_solver",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 38,
+        "end_line_number": 44
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "choice",
+        "suggestions",
+        "solver_names"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 4,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 4,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.reporting.display.display_usage",
+      "name": "display_usage",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.reporting.display",
+      "package": "stallworth_nqueens.reporting",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/reporting/display.py",
+        "line_number": 23,
+        "end_line_number": 26
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "usage"
+      ],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.sast_demo.subprocess_example",
+      "name": "subprocess_example",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.sast_demo",
+      "package": "stallworth_nqueens",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/sast_demo.py",
+        "line_number": 11,
+        "end_line_number": 13
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "arguments"
+      ],
+      "is_async": false,
+      "return_annotation": "subprocess.CompletedProcess",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "subprocess.run"
+      ],
+      "analyzed_call_site_count": 1,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens",
+      "name": "solve_n_queens",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.solvers.bitmask.backtracking",
+      "package": "stallworth_nqueens.solvers.bitmask",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/solvers/bitmask/backtracking.py",
+        "line_number": 11,
+        "end_line_number": 47
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "n",
+        "metrics"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [],
+      "direct_callee_ids": [
+        "stallworth_nqueens.abstract.bitmask.full_mask"
+      ],
+      "analyzed_call_site_count": 3,
+      "resolved_call_site_count": 1,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.solvers.constraint.solve_n_queens",
+      "name": "solve_n_queens",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.solvers.constraint",
+      "package": "stallworth_nqueens.solvers",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/solvers/constraint.py",
+        "line_number": 11,
+        "end_line_number": 51
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "n",
+        "metrics"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 6,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 6,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.solvers.dfs.backtracking.solve_n_queens",
+      "name": "solve_n_queens",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.solvers.dfs.backtracking",
+      "package": "stallworth_nqueens.solvers.dfs",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/solvers/dfs/backtracking.py",
+        "line_number": 11,
+        "end_line_number": 51
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [
+        "n",
+        "metrics"
+      ],
+      "is_async": false,
+      "return_annotation": "int",
+      "caller_ids": [],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 5,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 5,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "stallworth_nqueens.solvers.registry.get_solver_names",
+      "name": "get_solver_names",
+      "kind": "internal",
+      "callable_kind": "function",
+      "module": "stallworth_nqueens.solvers.registry",
+      "package": "stallworth_nqueens.solvers",
+      "owner_class": null,
+      "location": {
+        "file_path": "./src/stallworth_nqueens/solvers/registry.py",
+        "line_number": 15,
+        "end_line_number": 16
+      },
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": false,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 2,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 2,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "subprocess.run",
+      "name": "run",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "subprocess",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.sast_demo.subprocess_example"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "threading.Thread",
+      "name": "Thread",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "threading",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.execution.runner.collect_single"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    },
+    {
+      "id": "time.perf_counter",
+      "name": "perf_counter",
+      "kind": "stdlib",
+      "callable_kind": "declared_callable",
+      "module": "time",
+      "package": null,
+      "owner_class": null,
+      "location": null,
+      "decorator_names": [],
+      "has_decorators": false,
+      "parameter_names": [],
+      "is_async": null,
+      "return_annotation": null,
+      "caller_ids": [
+        "stallworth_nqueens.common.benchmarking.runner.run_benchmark",
+        "stallworth_nqueens.execution.runner.collect_single"
+      ],
+      "direct_callee_ids": [],
+      "analyzed_call_site_count": 0,
+      "resolved_call_site_count": 0,
+      "unresolved_call_site_count": 0,
+      "awaited_call_site_count": 0,
+      "resolved_awaited_call_site_count": 0,
+      "unresolved_awaited_call_site_count": 0,
+      "finding_codes": []
+    }
+  ],
+  "edges": [
+    {
+      "source": "stallworth_nqueens.abstract.constraints.is_safe",
+      "target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "major_diagonal(row, col)",
+          "callee_name": "major_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+          "line_number": 18,
+          "end_line_number": 18
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.abstract.constraints.is_safe",
+      "target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "minor_diagonal(row, col)",
+          "callee_name": "minor_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+          "line_number": 19,
+          "end_line_number": 19
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.abstract.constraints.place",
+      "target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "major_diagonal(row, col)",
+          "callee_name": "major_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+          "line_number": 27,
+          "end_line_number": 27
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.abstract.constraints.place",
+      "target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "minor_diagonal(row, col)",
+          "callee_name": "minor_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+          "line_number": 28,
+          "end_line_number": 28
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.abstract.constraints.valid_columns",
+      "target": "stallworth_nqueens.abstract.constraints.is_safe",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "is_safe(row, col, cols, diag1, diag2)",
+          "callee_name": "is_safe",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.is_safe",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/abstract/constraints.py",
+          "line_number": 34,
+          "end_line_number": 34
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.run",
+      "target": "stallworth_nqueens.metrics.execute_with_metrics",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute_with_metrics(SOLVERS[solver], n)",
+          "callee_name": "execute_with_metrics",
+          "resolved_target": "stallworth_nqueens.metrics.execute_with_metrics",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+          "line_number": 61,
+          "end_line_number": 61
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.benchmarking.adapter.NQueensAdapter.to_benchmark_result",
+      "target": "stallworth_nqueens.benchmarking.adapter.find_sample_solution",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "find_sample_solution(n)",
+          "callee_name": "find_sample_solution",
+          "resolved_target": "stallworth_nqueens.benchmarking.adapter.find_sample_solution",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/benchmarking/adapter.py",
+          "line_number": 88,
+          "end_line_number": 88
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.args.build_args",
+      "target": "stallworth_nqueens.cli.args.build_parser",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "build_parser(solver_names, profile_names)",
+          "callee_name": "build_parser",
+          "resolved_target": "stallworth_nqueens.cli.args.build_parser",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/args.py",
+          "line_number": 51,
+          "end_line_number": 51
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.args.build_args",
+      "target": "stallworth_nqueens.profiles.registry.get_profile",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "get_profile(args.profile)",
+          "callee_name": "get_profile",
+          "resolved_target": "stallworth_nqueens.profiles.registry.get_profile",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/args.py",
+          "line_number": 55,
+          "end_line_number": 55
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.args.format_usage",
+      "target": "stallworth_nqueens.cli.args.build_parser",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "build_parser(solver_names, profile_names)",
+          "callee_name": "build_parser",
+          "resolved_target": "stallworth_nqueens.cli.args.build_parser",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/args.py",
+          "line_number": 71,
+          "end_line_number": 71
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.<module>",
+      "target": "logging.getLogger",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "logging.getLogger(__name__)",
+          "callee_name": "logging.getLogger",
+          "resolved_target": "logging.getLogger",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 16,
+          "end_line_number": 16
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "difflib.get_close_matches",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "get_close_matches(choice, solver_names, n=1)",
+          "callee_name": "get_close_matches",
+          "resolved_target": "difflib.get_close_matches",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 42,
+          "end_line_number": 42
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.cli.args.build_args",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "build_args(solver_names, profile_names)",
+          "callee_name": "build_args",
+          "resolved_target": "stallworth_nqueens.cli.args.build_args",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 23,
+          "end_line_number": 23
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.cli.args.format_usage",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "format_usage(solver_names, profile_names)",
+          "callee_name": "format_usage",
+          "resolved_target": "stallworth_nqueens.cli.args.format_usage",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 37,
+          "end_line_number": 37
+        },
+        {
+          "call_expression": "format_usage(solver_names, profile_names)",
+          "callee_name": "format_usage",
+          "resolved_target": "stallworth_nqueens.cli.args.format_usage",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 39,
+          "end_line_number": 39
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.common.logging.logger.format_unexpected_error",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "format_unexpected_error(exc)",
+          "callee_name": "format_unexpected_error",
+          "resolved_target": "stallworth_nqueens.common.logging.logger.format_unexpected_error",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 51,
+          "end_line_number": 51
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.common.logging.logger.setup_logging",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "setup_logging(args.log_level)",
+          "callee_name": "setup_logging",
+          "resolved_target": "stallworth_nqueens.common.logging.logger.setup_logging",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 24,
+          "end_line_number": 24
+        },
+        {
+          "call_expression": "setup_logging(\"info\")",
+          "callee_name": "setup_logging",
+          "resolved_target": "stallworth_nqueens.common.logging.logger.setup_logging",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 35,
+          "end_line_number": 35
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.execution.engine.execute",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute(args.n, choice, solver_names=solver_subset, profile_name=args.profile)",
+          "callee_name": "execute",
+          "resolved_target": "stallworth_nqueens.execution.engine.execute",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 29,
+          "end_line_number": 29
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.profiles.registry.get_profile",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "get_profile(args.profile)",
+          "callee_name": "get_profile",
+          "resolved_target": "stallworth_nqueens.profiles.registry.get_profile",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 26,
+          "end_line_number": 26
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.profiles.registry.get_profile_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "get_profile_names()",
+          "callee_name": "get_profile_names",
+          "resolved_target": "stallworth_nqueens.profiles.registry.get_profile_names",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 20,
+          "end_line_number": 20
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display.display_execution_result",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_execution_result(result)",
+          "callee_name": "display_execution_result",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_execution_result",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 30,
+          "end_line_number": 30
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display.display_run_header",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_run_header(args.n, profile_name=args.profile)",
+          "callee_name": "display_run_header",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_run_header",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 28,
+          "end_line_number": 28
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display.display_unexpected_error",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_unexpected_error(message)",
+          "callee_name": "display_unexpected_error",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_unexpected_error",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 40,
+          "end_line_number": 40
+        },
+        {
+          "call_expression": "display_unexpected_error(message)",
+          "callee_name": "display_unexpected_error",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_unexpected_error",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 45,
+          "end_line_number": 45
+        },
+        {
+          "call_expression": "display_unexpected_error(str(exc))",
+          "callee_name": "display_unexpected_error",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_unexpected_error",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 48,
+          "end_line_number": 48
+        },
+        {
+          "call_expression": "display_unexpected_error(format_unexpected_error(exc))",
+          "callee_name": "display_unexpected_error",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_unexpected_error",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 51,
+          "end_line_number": 51
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display.display_unknown_solver",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_unknown_solver(choice, suggestions, solver_names)",
+          "callee_name": "display_unknown_solver",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_unknown_solver",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 43,
+          "end_line_number": 43
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.reporting.display.display_usage",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_usage(format_usage(solver_names, profile_names))",
+          "callee_name": "display_usage",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_usage",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 37,
+          "end_line_number": 37
+        },
+        {
+          "call_expression": "display_usage(format_usage(solver_names, profile_names))",
+          "callee_name": "display_usage",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_usage",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 39,
+          "end_line_number": 39
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "target": "stallworth_nqueens.solvers.registry.get_solver_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "get_solver_names()",
+          "callee_name": "get_solver_names",
+          "resolved_target": "stallworth_nqueens.solvers.registry.get_solver_names",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/cli/n_queens_cli.py",
+          "line_number": 19,
+          "end_line_number": 19
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.api.<module>",
+      "target": "stallworth_nqueens.codeviz_demo.api.export_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "export_names()",
+          "callee_name": "export_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.api.export_names",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/api.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.backtracking.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/backtracking.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.board.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/board.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.candidates.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/candidates.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.columns.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/columns.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.diagonals.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/diagonals.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.formatting.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/formatting.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.metrics.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/metrics.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.even_row",
+      "target": "stallworth_nqueens.codeviz_demo.models.odd_row",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "odd_row(size - 1)",
+          "callee_name": "odd_row",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.models.odd_row",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 39,
+          "end_line_number": 39
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.odd_row",
+      "target": "stallworth_nqueens.codeviz_demo.models.even_row",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "even_row(size - 1)",
+          "callee_name": "even_row",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.models.even_row",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 46,
+          "end_line_number": 46
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.models.remaining_rows",
+      "target": "stallworth_nqueens.codeviz_demo.models.remaining_rows",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "remaining_rows(size - 1)",
+          "callee_name": "remaining_rows",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.models.remaining_rows",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/models.py",
+          "line_number": 32,
+          "end_line_number": 32
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.placement.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/placement.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.solutions.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/solutions.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.codeviz_demo.summary.describe",
+      "target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "hub.stage_names()",
+          "callee_name": "hub.stage_names",
+          "resolved_target": "stallworth_nqueens.codeviz_demo.hub.stage_names",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/codeviz_demo/summary.py",
+          "line_number": 11,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner.run_benchmark",
+      "target": "time.perf_counter",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "time.perf_counter()",
+          "callee_name": "time.perf_counter",
+          "resolved_target": "time.perf_counter",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+          "line_number": 14,
+          "end_line_number": 14
+        },
+        {
+          "call_expression": "time.perf_counter()",
+          "callee_name": "time.perf_counter",
+          "resolved_target": "time.perf_counter",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+          "line_number": 18,
+          "end_line_number": 18
+        },
+        {
+          "call_expression": "time.perf_counter()",
+          "callee_name": "time.perf_counter",
+          "resolved_target": "time.perf_counter",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+          "line_number": 42,
+          "end_line_number": 42
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner.run_benchmarks",
+      "target": "stallworth_nqueens.common.benchmarking.models.annotate_speedups",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "annotate_speedups(results, baseline_solver=baseline_solver)",
+          "callee_name": "annotate_speedups",
+          "resolved_target": "stallworth_nqueens.common.benchmarking.models.annotate_speedups",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+          "line_number": 68,
+          "end_line_number": 68
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.benchmarking.runner.run_benchmarks",
+      "target": "stallworth_nqueens.common.benchmarking.runner.run_benchmark",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "run_benchmark(adapter, solver=solver, **kwargs)",
+          "callee_name": "run_benchmark",
+          "resolved_target": "stallworth_nqueens.common.benchmarking.runner.run_benchmark",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/benchmarking/runner.py",
+          "line_number": 59,
+          "end_line_number": 59
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.common.logging.logger.setup_logging",
+      "target": "logging.basicConfig",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "logging.basicConfig(\n        level=numeric_level,\n        format=\"%(message)s\"\n    )",
+          "callee_name": "logging.basicConfig",
+          "resolved_target": "logging.basicConfig",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/common/logging/logger.py",
+          "line_number": 8,
+          "end_line_number": 11
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine.execute",
+      "target": "stallworth_nqueens.execution.runner.execute_all",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute_all(problem_size, solver_names=solver_names)",
+          "callee_name": "execute_all",
+          "resolved_target": "stallworth_nqueens.execution.runner.execute_all",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/engine.py",
+          "line_number": 20,
+          "end_line_number": 20
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.engine.execute",
+      "target": "stallworth_nqueens.execution.runner.execute_solver",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute_solver(problem_size, choice)",
+          "callee_name": "execute_solver",
+          "resolved_target": "stallworth_nqueens.execution.runner.execute_solver",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/engine.py",
+          "line_number": 31,
+          "end_line_number": 31
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner.collect_single",
+      "target": "stallworth_nqueens.metrics.execute_with_metrics",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute_with_metrics(solver, problem_size)",
+          "callee_name": "execute_with_metrics",
+          "resolved_target": "stallworth_nqueens.metrics.execute_with_metrics",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/runner.py",
+          "line_number": 36,
+          "end_line_number": 36
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner.collect_single",
+      "target": "threading.Thread",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "threading.Thread(target=timer)",
+          "callee_name": "threading.Thread",
+          "resolved_target": "threading.Thread",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/runner.py",
+          "line_number": 30,
+          "end_line_number": 30
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner.collect_single",
+      "target": "time.perf_counter",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "time.perf_counter()",
+          "callee_name": "time.perf_counter",
+          "resolved_target": "time.perf_counter",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/runner.py",
+          "line_number": 19,
+          "end_line_number": 19
+        },
+        {
+          "call_expression": "time.perf_counter()",
+          "callee_name": "time.perf_counter",
+          "resolved_target": "time.perf_counter",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/runner.py",
+          "line_number": 44,
+          "end_line_number": 44
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.execution.runner.execute_all",
+      "target": "stallworth_nqueens.execution.runner.execute_solver",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "execute_solver(problem_size, solver_name)",
+          "callee_name": "execute_solver",
+          "resolved_target": "stallworth_nqueens.execution.runner.execute_solver",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/execution/runner.py",
+          "line_number": 93,
+          "end_line_number": 93
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.main.<module>",
+      "target": "stallworth_nqueens.main.main",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "main()",
+          "callee_name": "main",
+          "resolved_target": "stallworth_nqueens.main.main",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/main.py",
+          "line_number": 9,
+          "end_line_number": 9
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.main.main",
+      "target": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "run_n_queens_cli()",
+          "callee_name": "run_n_queens_cli",
+          "resolved_target": "stallworth_nqueens.cli.n_queens_cli.run_n_queens_cli",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/main.py",
+          "line_number": 5,
+          "end_line_number": 5
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.check_constraint",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._constraint()",
+          "callee_name": "self._constraint",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._constraint",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 108,
+          "end_line_number": 108
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.compute_available_mask",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._bitmask()",
+          "callee_name": "self._bitmask",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 120,
+          "end_line_number": 120
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_child_state",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._search_shape()",
+          "callee_name": "self._search_shape",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 97,
+          "end_line_number": 97
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._search_shape()",
+          "callee_name": "self._search_shape",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 88,
+          "end_line_number": 88
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.enter_search_state",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self.visit_state()",
+          "callee_name": "self.visit_state",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics.visit_state",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 87,
+          "end_line_number": 87
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.extract_candidate_bit",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._bitmask()",
+          "callee_name": "self._bitmask",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._bitmask",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 126,
+          "end_line_number": 126
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_backtrack",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._backtracking()",
+          "callee_name": "self._backtracking",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 114,
+          "end_line_number": 114
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_dead_end",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._backtracking()",
+          "callee_name": "self._backtracking",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._backtracking",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 117,
+          "end_line_number": 117
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.NQueensSearchMetrics.record_leaf_state",
+      "target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self._search_shape()",
+          "callee_name": "self._search_shape",
+          "resolved_target": "stallworth_nqueens.metrics.NQueensSearchMetrics._search_shape",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 100,
+          "end_line_number": 100
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.metrics.execute_with_metrics",
+      "target": "inspect.signature",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "signature(solver)",
+          "callee_name": "signature",
+          "resolved_target": "inspect.signature",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/metrics.py",
+          "line_number": 221,
+          "end_line_number": 221
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.models.board.NQueensBoard.__str__",
+      "target": "stallworth_nqueens.models.board.NQueensBoard.to_ascii",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "self.to_ascii()",
+          "callee_name": "self.to_ascii",
+          "resolved_target": "stallworth_nqueens.models.board.NQueensBoard.to_ascii",
+          "resolution_kind": "same_class_instance",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/models/board.py",
+          "line_number": 76,
+          "end_line_number": 76
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.models.board.NQueensBoard.is_valid",
+      "target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "major_diagonal(row, col)",
+          "callee_name": "major_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/models/board.py",
+          "line_number": 47,
+          "end_line_number": 47
+        },
+        {
+          "call_expression": "major_diagonal(row, col)",
+          "callee_name": "major_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.major_diagonal",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/models/board.py",
+          "line_number": 53,
+          "end_line_number": 53
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.models.board.NQueensBoard.is_valid",
+      "target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "minor_diagonal(row, col)",
+          "callee_name": "minor_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/models/board.py",
+          "line_number": 48,
+          "end_line_number": 48
+        },
+        {
+          "call_expression": "minor_diagonal(row, col)",
+          "callee_name": "minor_diagonal",
+          "resolved_target": "stallworth_nqueens.abstract.constraints.minor_diagonal",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/models/board.py",
+          "line_number": 54,
+          "end_line_number": 54
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.<module>",
+      "target": "logging.getLogger",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "logging.getLogger(__name__)",
+          "callee_name": "logging.getLogger",
+          "resolved_target": "logging.getLogger",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 5,
+          "end_line_number": 5
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_all_results",
+      "target": "stallworth_nqueens.reporting.display.display_single_result",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_single_result(result)",
+          "callee_name": "display_single_result",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_single_result",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 128,
+          "end_line_number": 128
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_benchmark_results",
+      "target": "stallworth_nqueens.reporting.display._speedup_value",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "_speedup_value(result.payload.get('speedup_best'), 3)",
+          "callee_name": "_speedup_value",
+          "resolved_target": "stallworth_nqueens.reporting.display._speedup_value",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 116,
+          "end_line_number": 116
+        },
+        {
+          "call_expression": "_speedup_value(result.payload.get('speedup_baseline'), 2)",
+          "callee_name": "_speedup_value",
+          "resolved_target": "stallworth_nqueens.reporting.display._speedup_value",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 117,
+          "end_line_number": 117
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_execution_result",
+      "target": "stallworth_nqueens.reporting.display.display_all_results",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_all_results(\n            execution_result[\"results\"],\n        )",
+          "callee_name": "display_all_results",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_all_results",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 133,
+          "end_line_number": 135
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_execution_result",
+      "target": "stallworth_nqueens.reporting.display.display_single_result",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "display_single_result(execution_result[\"result\"])",
+          "callee_name": "display_single_result",
+          "resolved_target": "stallworth_nqueens.reporting.display.display_single_result",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 138,
+          "end_line_number": 138
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_single_result",
+      "target": "stallworth_nqueens.models.board.NQueensBoard.from_columns",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "NQueensBoard.from_columns(sample_solution)",
+          "callee_name": "NQueensBoard.from_columns",
+          "resolved_target": "stallworth_nqueens.models.board.NQueensBoard.from_columns",
+          "resolution_kind": "imported_class",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 87,
+          "end_line_number": 87
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.reporting.display.display_single_result",
+      "target": "stallworth_nqueens.reporting.display._metric_value",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "_metric_value(data.payload.get(\"states_visited\"))",
+          "callee_name": "_metric_value",
+          "resolved_target": "stallworth_nqueens.reporting.display._metric_value",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 63,
+          "end_line_number": 63
+        },
+        {
+          "call_expression": "_metric_value(\n            data.payload.get(\"candidate_placements_considered\")\n        )",
+          "callee_name": "_metric_value",
+          "resolved_target": "stallworth_nqueens.reporting.display._metric_value",
+          "resolution_kind": "same_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/reporting/display.py",
+          "line_number": 67,
+          "end_line_number": 69
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.sast_demo.subprocess_example",
+      "target": "subprocess.run",
+      "type": "calls",
+      "target_kind": "stdlib",
+      "source_is_async": false,
+      "target_is_async": null,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "subprocess.run(arguments, check=True)",
+          "callee_name": "subprocess.run",
+          "resolved_target": "subprocess.run",
+          "resolution_kind": "imported_module",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/sast_demo.py",
+          "line_number": 13,
+          "end_line_number": 13
+        }
+      ]
+    },
+    {
+      "source": "stallworth_nqueens.solvers.bitmask.backtracking.solve_n_queens",
+      "target": "stallworth_nqueens.abstract.bitmask.full_mask",
+      "type": "calls",
+      "target_kind": "internal",
+      "source_is_async": false,
+      "target_is_async": false,
+      "awaited_call_site_count": 0,
+      "evidence": [
+        {
+          "call_expression": "full_mask(n)",
+          "callee_name": "full_mask",
+          "resolved_target": "stallworth_nqueens.abstract.bitmask.full_mask",
+          "resolution_kind": "imported_function",
+          "is_awaited": false,
+          "file_path": "./src/stallworth_nqueens/solvers/bitmask/backtracking.py",
+          "line_number": 16,
+          "end_line_number": 16
+        }
+      ]
+    }
+  ],
+  "report_finding": {
+    "finding_strength": "Observation",
+    "summary": "1 directly recursive callable and 1 resolved multi-callable cycle observed. No change is implied; inspect these call paths when tracing control flow.",
+    "display": "[Observation] 1 directly recursive callable and 1 resolved multi-callable cycle observed. No change is implied; inspect these call paths when tracing control flow."
+  },
+  "report_voice": {
+    "finding_strength": "Observation",
+    "tagline": "No alarm. Just a useful path to trace.",
+    "display": "[Observation] No alarm. Just a useful path to trace."
+  },
+  "example_provenance": {
+    "subject": "Stallworth N-Queens",
+    "distribution": "stallworth-nqueens",
+    "version": "0.2.2",
+    "source_tree_sha256": "39132e288add81fdeef7b1dbbcc69d7219ec1fd59a323b76d1c4b64d8da136af",
+    "upstream": {
+      "project": "algobox",
+      "read_mode": "committed-git-blobs",
+      "revision": "5b54bdbc8a56d08c879d32421eb345805cc5a2f9",
+      "tag": "v0.1.1",
+      "tag_object": "dc68a1b22f956e08161e265c7d729ddf3241af49"
+    },
+    "recipe_revision": "sha256:5b2f40d77a3664baf5ec39b5fb236ec3b13656153e1969f051640785cf39990a",
+    "solvers": [
+      "dfs_backtracking",
+      "constraint",
+      "bitmask_backtracking"
+    ],
+    "profiles": {
+      "standard": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common",
+          "search_shape",
+          "constraint",
+          "backtracking",
+          "bitmask"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 92,
+        "problem_size": 8,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      },
+      "toy": {
+        "baseline_solver": "dfs_backtracking",
+        "comparison_metric_groups": [
+          "common"
+        ],
+        "default_solver": "all",
+        "expected_solutions": 2,
+        "problem_size": 4,
+        "solver_names": [
+          "dfs_backtracking",
+          "constraint",
+          "bitmask_backtracking"
+        ]
+      }
+    }
+  }
+}
